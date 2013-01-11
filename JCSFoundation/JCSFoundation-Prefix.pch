@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JCSFoundation' target in the 'JCSFoundation' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
