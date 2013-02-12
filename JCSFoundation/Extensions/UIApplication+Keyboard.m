@@ -14,6 +14,12 @@
  * limitations under the License.
  */
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
+#import "UIApplication+Keyboard.h"
+
+@implementation UIApplication (Keyboard)
+
++ (void)dismissKeyboard {
+  [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
+
+@end

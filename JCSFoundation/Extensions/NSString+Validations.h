@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
+#import <Foundation/Foundation.h>
+
+@interface NSString (Validations)
+
+- (BOOL)hasValue;
+
+@end

@@ -6,31 +6,49 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		EA69987516AD438700B20033 /* FoundationFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EA69987616AD438700B20033 /* Build configuration list for PBXAggregateTarget "FoundationFramework" */;
+			buildPhases = (
+				EA69987B16AD43A100B20033 /* ShellScript */,
+			);
+			dependencies = (
+				EA69987A16AD439200B20033 /* PBXTargetDependency */,
+			);
+			name = FoundationFramework;
+			productName = FoundationFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */; };
+		EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */; };
+		EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+Validations.m */; };
+		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+Validations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
-		EAD0635616A092D000FF6BA9 /* JCSFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; };
-		EAD0635816A092D000FF6BA9 /* JCSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD0635716A092D000FF6BA9 /* JCSFoundation.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EAD0634B16A092D000FF6BA9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-				EAD0635616A092D000FF6BA9 /* JCSFoundation.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		EA69987916AD439200B20033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAD0634416A092D000FF6BA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD0634C16A092D000FF6BA9;
+			remoteInfo = JCSFoundation;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
+		EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Keyboard.m"; sourceTree = "<group>"; };
+		EA69986116AD3DCF00B20033 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
+		EA69986216AD3DCF00B20033 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
 		EAD0634D16A092D000FF6BA9 /* libJCSFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJCSFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD0635016A092D000FF6BA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCSFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
-		EAD0635716A092D000FF6BA9 /* JCSFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCSFoundation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,9 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA69985F16AD3DB400B20033 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA69986116AD3DCF00B20033 /* NSString+Validations.h */,
+				EA69986216AD3DCF00B20033 /* NSString+Validations.m */,
+				EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */,
+				EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */,
+			);
+			name = Extensions;
+			path = JCSFoundation/Extensions;
+			sourceTree = "<group>";
+		};
 		EAD0634216A092D000FF6BA9 = {
 			isa = PBXGroup;
 			children = (
+				EA69985F16AD3DB400B20033 /* Extensions */,
 				EAD0635216A092D000FF6BA9 /* JCSFoundation */,
 				EAD0634F16A092D000FF6BA9 /* Frameworks */,
 				EAD0634E16A092D000FF6BA9 /* Products */,
@@ -74,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
-				EAD0635716A092D000FF6BA9 /* JCSFoundation.m */,
 				EAD0635316A092D000FF6BA9 /* Supporting Files */,
 			);
 			path = JCSFoundation;
@@ -90,6 +120,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EA69987216AD42A000B20033 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
+				EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */,
+				EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		EAD0634C16A092D000FF6BA9 /* JCSFoundation */ = {
 			isa = PBXNativeTarget;
@@ -97,7 +140,8 @@
 			buildPhases = (
 				EAD0634916A092D000FF6BA9 /* Sources */,
 				EAD0634A16A092D000FF6BA9 /* Frameworks */,
-				EAD0634B16A092D000FF6BA9 /* CopyFiles */,
+				EA69987216AD42A000B20033 /* Headers */,
+				EA69986E16AD403C00B20033 /* Prepare Framework */,
 			);
 			buildRules = (
 			);
@@ -130,22 +174,76 @@
 			projectRoot = "";
 			targets = (
 				EAD0634C16A092D000FF6BA9 /* JCSFoundation */,
+				EA69987516AD438700B20033 /* FoundationFramework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA69986E16AD403C00B20033 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"";
+		};
+		EA69987B16AD43A100B20033 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAD0634916A092D000FF6BA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD0635816A092D000FF6BA9 /* JCSFoundation.m in Sources */,
+				EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */,
+				EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA69987A16AD439200B20033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAD0634C16A092D000FF6BA9 /* JCSFoundation */;
+			targetProxy = EA69987916AD439200B20033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EA69987716AD438700B20033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA69987816AD438700B20033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EAD0635916A092D000FF6BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -196,30 +294,47 @@
 		EAD0635C16A092D000FF6BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
 		EAD0635D16A092D000FF6BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA69987616AD438700B20033 /* Build configuration list for PBXAggregateTarget "FoundationFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA69987716AD438700B20033 /* Debug */,
+				EA69987816AD438700B20033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EAD0634716A092D000FF6BA9 /* Build configuration list for PBXProject "JCSFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -236,6 +351,7 @@
 				EAD0635D16A092D000FF6BA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

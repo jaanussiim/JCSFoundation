@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
+#import <UIKit/UIKit.h>
+
+@interface UIApplication (Keyboard)
+
++ (void)dismissKeyboard;
+
+@end

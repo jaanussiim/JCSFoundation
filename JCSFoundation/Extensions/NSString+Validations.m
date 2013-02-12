@@ -14,6 +14,12 @@
  * limitations under the License.
  */
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
+#import "NSString+Validations.h"
+
+@implementation NSString (Validations)
+
+- (BOOL)hasValue {
+  return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0;
+}
+
+@end
