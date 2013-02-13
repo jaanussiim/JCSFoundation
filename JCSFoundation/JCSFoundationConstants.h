@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#define JCSFLog(s, ...) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
-#import "NSString+Validations.h"
-#import "UIApplication+Keyboard.h"
-
-#import "JCSAlertView.h"
-#import "JCSFoundationConstants.h"
+typedef void (^JCSActionBlock)();

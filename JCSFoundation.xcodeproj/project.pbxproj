@@ -24,6 +24,10 @@
 /* Begin PBXBuildFile section */
 		EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */; };
 		EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */; };
+		EA5D033516CAD4E400D4D42D /* JCSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D033316CAD4E400D4D42D /* JCSAlertView.h */; };
+		EA5D033616CAD4E400D4D42D /* JCSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D033416CAD4E400D4D42D /* JCSAlertView.m */; };
+		EA5D034516CAD92D00D4D42D /* UIView+LoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D034316CAD92D00D4D42D /* UIView+LoadView.h */; };
+		EA5D034616CAD92D00D4D42D /* UIView+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D034416CAD92D00D4D42D /* UIView+LoadView.m */; };
 		EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+Validations.m */; };
 		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+Validations.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +47,11 @@
 /* Begin PBXFileReference section */
 		EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
 		EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Keyboard.m"; sourceTree = "<group>"; };
+		EA5D033316CAD4E400D4D42D /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
+		EA5D033416CAD4E400D4D42D /* JCSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSAlertView.m; sourceTree = "<group>"; };
+		EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundationConstants.h; sourceTree = "<group>"; };
+		EA5D034316CAD92D00D4D42D /* UIView+LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadView.h"; sourceTree = "<group>"; };
+		EA5D034416CAD92D00D4D42D /* UIView+LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadView.m"; sourceTree = "<group>"; };
 		EA69986116AD3DCF00B20033 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
 		EA69986216AD3DCF00B20033 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
 		EAD0634D16A092D000FF6BA9 /* libJCSFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJCSFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +72,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA5D033116CAD48E00D4D42D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D033216CAD48E00D4D42D /* Alert */,
+				EA5D034316CAD92D00D4D42D /* UIView+LoadView.h */,
+				EA5D034416CAD92D00D4D42D /* UIView+LoadView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA5D033216CAD48E00D4D42D /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D033316CAD4E400D4D42D /* JCSAlertView.h */,
+				EA5D033416CAD4E400D4D42D /* JCSAlertView.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		EA69985F16AD3DB400B20033 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,16 +99,15 @@
 				EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */,
 				EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */,
 			);
-			name = Extensions;
-			path = JCSFoundation/Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EAD0634216A092D000FF6BA9 = {
 			isa = PBXGroup;
 			children = (
-				EA69985F16AD3DB400B20033 /* Extensions */,
-				EAD0635216A092D000FF6BA9 /* JCSFoundation */,
 				EAD0634F16A092D000FF6BA9 /* Frameworks */,
+				EAD0635216A092D000FF6BA9 /* JCSFoundation */,
+				EAD0635316A092D000FF6BA9 /* Supporting Files */,
 				EAD0634E16A092D000FF6BA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,8 +131,10 @@
 		EAD0635216A092D000FF6BA9 /* JCSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				EA69985F16AD3DB400B20033 /* Extensions */,
+				EA5D033116CAD48E00D4D42D /* Views */,
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
-				EAD0635316A092D000FF6BA9 /* Supporting Files */,
+				EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */,
 			);
 			path = JCSFoundation;
 			sourceTree = "<group>";
@@ -116,6 +145,7 @@
 				EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = JCSFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +158,8 @@
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
 				EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */,
 				EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */,
+				EA5D033516CAD4E400D4D42D /* JCSAlertView.h in Headers */,
+				EA5D034516CAD92D00D4D42D /* UIView+LoadView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +248,8 @@
 			files = (
 				EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */,
 				EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */,
+				EA5D033616CAD4E400D4D42D /* JCSAlertView.m in Sources */,
+				EA5D034616CAD92D00D4D42D /* UIView+LoadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +333,7 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
@@ -315,6 +350,7 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
