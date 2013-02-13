@@ -29,6 +29,7 @@
 + (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message;
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle cancelButtonTitle:(NSString *)cancelTitle;
+- (void)setConfirmButtonTitle:(NSString *)confirmTitle;
 - (void)show;
 
 @end

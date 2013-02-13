@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "JCSAlertView.h"
 #import "UIView+LoadView.h"
 
@@ -57,6 +58,15 @@ static NSTimeInterval const kAnimationTime = 0.3;
 - (void)setTitle:(NSString *)title message:(NSString *)message {
   [self.titleLabel setText:title];
   [self.messageLabel setText:message];
+}
+
+- (void)setConfirmButtonTitle:(NSString *)confirmTitle {
+  [self.confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
+  [self.cancelButton removeFromSuperview];
+
+  CGRect confirmFrame = self.cancelButton.frame;
+  confirmFrame.origin.x = (CGRectGetWidth(self.frame) - CGRectGetWidth(confirmFrame)) / 2;
+  [self.confirmButton setFrame:confirmFrame];
 }
 
 - (void)show {
