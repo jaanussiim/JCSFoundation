@@ -14,22 +14,12 @@
  * limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
-#import "JCSFoundationConstants.h"
+#import "JCSPopupView.h"
 
-@interface JCSAlertView : UIView
+@interface JCSActivityView : JCSPopupView
 
-@property (nonatomic, copy) JCSActionBlock confirmAction;
-@property (nonatomic, strong, readonly) IBOutlet UIButton *confirmButton;
-@property (nonatomic, strong, readonly) IBOutlet UIButton *cancelButton;
-@property (nonatomic, strong, readonly) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong, readonly) IBOutlet UILabel *messageLabel;
 
-
-+ (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message;
-
-- (void)setConfirmButtonTitle:(NSString *)confirmTitle cancelButtonTitle:(NSString *)cancelTitle;
-- (void)setConfirmButtonTitle:(NSString *)confirmTitle;
-- (void)show;
++ (instancetype)activityViewWithMessage:(NSString *)message;
 
 @end

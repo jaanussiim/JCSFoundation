@@ -18,15 +18,12 @@
 #import "JCSAlertView.h"
 #import "UIView+LoadView.h"
 
-static NSTimeInterval const kAnimationTime = 0.3;
-
 @interface JCSAlertView ()
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *messageLabel;
 @property (nonatomic, strong) IBOutlet UIButton *confirmButton;
 @property (nonatomic, strong) IBOutlet UIButton *cancelButton;
-@property (nonatomic, strong) UIView *dimView;
 
 - (IBAction)confirmPressed:(id)sender;
 - (IBAction)cancelPressed:(id)sender;
@@ -69,28 +66,6 @@ static NSTimeInterval const kAnimationTime = 0.3;
   [self.confirmButton setFrame:confirmFrame];
 }
 
-- (void)show {
-  UIWindow *window = [UIApplication sharedApplication].keyWindow;
-
-  UIView *dimView = [[UIView alloc] initWithFrame:window.bounds];
-  [dimView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.4]];
-
-  [self setDimView:dimView];
-  [self setCenter:window.center];
-
-  [dimView setAlpha:0];
-  [self setAlpha:0];
-
-  [window addSubview:self];
-  [window insertSubview:dimView belowSubview:self];
-
-  [UIView animateWithDuration:kAnimationTime
-                   animations:^{
-                     [dimView setAlpha:1];
-                     [self setAlpha:1];
-                   }];
-}
-
 - (IBAction)confirmPressed:(id)sender {
   [self executeActionAndDismiss:self.confirmAction];
 }
@@ -104,13 +79,7 @@ static NSTimeInterval const kAnimationTime = 0.3;
     actionBlock();
   }
 
-  [UIView animateWithDuration:kAnimationTime animations:^{
-    [self.dimView setAlpha:0];
-    [self setAlpha:0];
-  } completion:^(BOOL finished) {
-    [self.dimView removeFromSuperview];
-    [self removeFromSuperview];
-  }];
+  [self dismiss];
 }
 
 @end
