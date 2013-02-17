@@ -36,6 +36,12 @@
 		EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9516CFC3F200177B30 /* JCSActivityView.h */; };
 		EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD9616CFC3F200177B30 /* JCSActivityView.m */; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
+		EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */; };
+		EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */; };
+		EAEB273816D0D3CB00D126BD /* JCSSingleSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */; };
+		EAEB273916D0D3CB00D126BD /* JCSSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273716D0D3CB00D126BD /* JCSSingleSelectionViewController.m */; };
+		EAEB273C16D0D3E100D126BD /* JCSMultiSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */; };
+		EAEB273D16D0D3E100D126BD /* JCSMultiSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		EAD0635016A092D000FF6BA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCSFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
+		EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionViewController.h; sourceTree = "<group>"; };
+		EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionViewController.m; sourceTree = "<group>"; };
+		EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleSelectionViewController.h; sourceTree = "<group>"; };
+		EAEB273716D0D3CB00D126BD /* JCSSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleSelectionViewController.m; sourceTree = "<group>"; };
+		EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSMultiSelectionViewController.h; sourceTree = "<group>"; };
+		EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSMultiSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,7 @@
 			children = (
 				EA69985F16AD3DB400B20033 /* Extensions */,
 				EA5D033116CAD48E00D4D42D /* Views */,
+				EAEB273016D0D35A00D126BD /* ViewControllers */,
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
 				EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */,
 			);
@@ -158,6 +171,27 @@
 			);
 			name = "Supporting Files";
 			path = JCSFoundation;
+			sourceTree = "<group>";
+		};
+		EAEB273016D0D35A00D126BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAEB273116D0D38E00D126BD /* Selection */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EAEB273116D0D38E00D126BD /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */,
+				EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */,
+				EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */,
+				EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */,
+				EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */,
+				EAEB273716D0D3CB00D126BD /* JCSSingleSelectionViewController.m */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +208,9 @@
 				EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */,
 				EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */,
 				EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */,
+				EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */,
+				EAEB273816D0D3CB00D126BD /* JCSSingleSelectionViewController.h in Headers */,
+				EAEB273C16D0D3E100D126BD /* JCSMultiSelectionViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +303,9 @@
 				EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */,
 				EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */,
 				EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */,
+				EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */,
+				EAEB273916D0D3CB00D126BD /* JCSSingleSelectionViewController.m in Sources */,
+				EAEB273D16D0D3E100D126BD /* JCSMultiSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
