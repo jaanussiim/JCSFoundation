@@ -18,6 +18,8 @@
 
 @interface JCSMultiSelectionViewController ()
 
+@property (nonatomic, strong) NSMutableArray *selected;
+
 @end
 
 @implementation JCSMultiSelectionViewController
@@ -38,6 +40,31 @@
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)setSelectedObjects:(NSArray *)selectedObjects {
+  [self setSelected:[NSMutableArray arrayWithArray:selectedObjects]];
+}
+
+- (NSArray *)selectedObjects {
+  return [NSArray arrayWithArray:self.selected];
+}
+
+
+- (BOOL)isSelected:(id <JCSSelectable>)selectable {
+  return [self.selectedObjects containsObject:selectable];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  id<JCSSelectable> selected = [self.allSelectableObjects objectAtIndexPath:indexPath];
+
+  if ([self isSelected:selected]) {
+    [self.selected removeObject:selected];
+  } else {
+    [self.selected addObject:selected];
+  }
+
+  [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

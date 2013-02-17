@@ -15,6 +15,7 @@
  */
 
 #import "JCSSingleSelectionViewController.h"
+#import "JCSSelectable.h"
 
 @interface JCSSingleSelectionViewController ()
 
@@ -38,6 +39,30 @@
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)isSelected:(id <JCSSelectable>)selectable {
+  return selectable == self.selected;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  id<JCSSelectable> selected = [self.allSelectableObjects objectAtIndexPath:indexPath];
+
+  if (selected == self.selected) {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  } else {
+    NSIndexPath *index = [self.allSelectableObjects indexPathForObject:self.selected];
+    [self setSelected:selected];
+    [tableView reloadRowsAtIndexPaths:@[indexPath, index] withRowAnimation:UITableViewRowAnimationAutomatic];
+  }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+
+  if (self.selectionCompletionBlock) {
+    self.selectionCompletionBlock(self.selected);
+  }
 }
 
 @end

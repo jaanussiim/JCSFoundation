@@ -14,15 +14,10 @@
  * limitations under the License.
  */
 
-#import "JCSSelectionViewController.h"
+#import <Foundation/Foundation.h>
 
-@protocol JCSSelectable;
+@protocol JCSSelectable <NSObject>
 
-typedef void (^JCSSingleSelectionBlock)(id<JCSSelectable> selected);
-
-@interface JCSSingleSelectionViewController : JCSSelectionViewController
-
-@property (nonatomic, copy) JCSSingleSelectionBlock selectionCompletionBlock;
-@property (nonatomic, strong) id<JCSSelectable> selected;
+- (NSString *)name;
 
 @end

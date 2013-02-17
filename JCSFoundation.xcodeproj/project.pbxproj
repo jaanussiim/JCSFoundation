@@ -42,6 +42,9 @@
 		EAEB273916D0D3CB00D126BD /* JCSSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273716D0D3CB00D126BD /* JCSSingleSelectionViewController.m */; };
 		EAEB273C16D0D3E100D126BD /* JCSMultiSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */; };
 		EAEB273D16D0D3E100D126BD /* JCSMultiSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */; };
+		EAEB274B16D1076A00D126BD /* JCSSelectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB274916D1076A00D126BD /* JCSSelectionCell.h */; };
+		EAEB274C16D1076A00D126BD /* JCSSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB274A16D1076A00D126BD /* JCSSelectionCell.m */; };
+		EAEB276916D11BE500D126BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB276816D11BE500D126BD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,10 @@
 		EAEB273716D0D3CB00D126BD /* JCSSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleSelectionViewController.m; sourceTree = "<group>"; };
 		EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSMultiSelectionViewController.h; sourceTree = "<group>"; };
 		EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSMultiSelectionViewController.m; sourceTree = "<group>"; };
+		EAEB274516D0D52A00D126BD /* JCSSelectable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSSelectable.h; sourceTree = "<group>"; };
+		EAEB274916D1076A00D126BD /* JCSSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionCell.h; sourceTree = "<group>"; };
+		EAEB274A16D1076A00D126BD /* JCSSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionCell.m; sourceTree = "<group>"; };
+		EAEB276816D11BE500D126BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEB276916D11BE500D126BD /* CoreData.framework in Frameworks */,
 				EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +155,7 @@
 		EAD0634F16A092D000FF6BA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAEB276816D11BE500D126BD /* CoreData.framework */,
 				EAD0635016A092D000FF6BA9 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -186,6 +195,9 @@
 			children = (
 				EAEB273A16D0D3E100D126BD /* JCSMultiSelectionViewController.h */,
 				EAEB273B16D0D3E100D126BD /* JCSMultiSelectionViewController.m */,
+				EAEB274516D0D52A00D126BD /* JCSSelectable.h */,
+				EAEB274916D1076A00D126BD /* JCSSelectionCell.h */,
+				EAEB274A16D1076A00D126BD /* JCSSelectionCell.m */,
 				EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */,
 				EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */,
 				EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */,
@@ -211,6 +223,7 @@
 				EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */,
 				EAEB273816D0D3CB00D126BD /* JCSSingleSelectionViewController.h in Headers */,
 				EAEB273C16D0D3E100D126BD /* JCSMultiSelectionViewController.h in Headers */,
+				EAEB274B16D1076A00D126BD /* JCSSelectionCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +319,7 @@
 				EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */,
 				EAEB273916D0D3CB00D126BD /* JCSSingleSelectionViewController.m in Sources */,
 				EAEB273D16D0D3E100D126BD /* JCSMultiSelectionViewController.m in Sources */,
+				EAEB274C16D1076A00D126BD /* JCSSelectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

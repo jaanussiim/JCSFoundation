@@ -16,6 +16,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JCSSelectable;
+
 @interface JCSSelectionViewController : UITableViewController
+
+@property (nonatomic, strong) NSFetchedResultsController *allSelectableObjects;
+@property (nonatomic, strong) UINib *selectionCellNib;
+
+- (BOOL)isSelected:(id <JCSSelectable>)selectable;
 
 @end

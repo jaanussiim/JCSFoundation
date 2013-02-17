@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-#import "JCSSelectionViewController.h"
+#import <UIKit/UIKit.h>
 
 @protocol JCSSelectable;
 
-typedef void (^JCSSingleSelectionBlock)(id<JCSSelectable> selected);
+@interface JCSSelectionCell : UITableViewCell
 
-@interface JCSSingleSelectionViewController : JCSSelectionViewController
-
-@property (nonatomic, copy) JCSSingleSelectionBlock selectionCompletionBlock;
-@property (nonatomic, strong) id<JCSSelectable> selected;
+- (void)configureWithSelectable:(id<JCSSelectable>)selectable;
+- (void)markSelected:(BOOL)isSelected;
 
 @end

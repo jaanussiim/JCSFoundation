@@ -18,4 +18,6 @@
 
 @interface JCSMultiSelectionViewController : JCSSelectionViewController
 
+@property (nonatomic, strong) NSArray *selectedObjects;
+
 @end

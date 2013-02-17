@@ -15,8 +15,14 @@
  */
 
 #import "JCSSelectionViewController.h"
+#import "JCSSelectionCell.h"
+#import "JCSSelectable.h"
+
+NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 
 @interface JCSSelectionViewController ()
+
+@property (nonatomic, strong) JCSSelectionCell *measureCell;
 
 @end
 
@@ -33,11 +39,8 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // Uncomment the following line to preserve selection between presentations.
-  // self.clearsSelectionOnViewWillAppear = NO;
-
-  // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  [self.tableView registerNib:self.selectionCellNib forCellReuseIdentifier:kJCSSelectionCellIdentifier];
+  [self setMeasureCell:[self.tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,77 +49,35 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-  // Return the number of sections.
-  return 0;
+  return [[self.allSelectableObjects sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-  // Return the number of rows in the section.
-  return 0;
+  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.allSelectableObjects sections] objectAtIndex:(NSUInteger) section];
+  return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  static NSString *CellIdentifier = @"Cell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+  JCSSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier];
 
-  // Configure the cell...
+  id<JCSSelectable> selectable = [self.allSelectableObjects objectAtIndexPath:indexPath];
+  [cell configureWithSelectable:selectable];
+  [cell markSelected:[self isSelected:selectable]];
 
   return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+  id<JCSSelectable> selectable = [self.allSelectableObjects objectAtIndexPath:indexPath];
+  [self.measureCell configureWithSelectable:selectable];
+  return CGRectGetHeight(self.measureCell.frame);
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  // Navigation logic may go here. Create and push another view controller.
-  /*
-   <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-   // ...
-   // Pass the selected object to the new view controller.
-   [self.navigationController pushViewController:detailViewController animated:YES];
-   */
+- (BOOL)isSelected:(id <JCSSelectable>)selectable {
+  //TODO jaanus: some kind of warning here
+  return NO;
 }
 
 @end
