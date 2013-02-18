@@ -67,4 +67,12 @@
   [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+
+  if (self.selectionCompletionBlock) {
+    self.selectionCompletionBlock([NSArray arrayWithArray:self.selected]);
+  }
+}
+
 @end
