@@ -15,6 +15,7 @@
  */
 
 #import "JCSMultiSelectionViewController.h"
+#import "JCSSelectable.h"
 
 @interface JCSMultiSelectionViewController ()
 
@@ -44,6 +45,12 @@
 
 - (void)setSelectedObjects:(NSArray *)selectedObjects {
   [self setSelected:[NSMutableArray arrayWithArray:selectedObjects]];
+}
+
+- (void)addToSelected:(id <JCSSelectable>)selectable {
+  [self.selected addObject:selectable];
+  NSIndexPath *indexPath = [self.allSelectableObjects indexPathForObject:selectable];
+  [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (NSArray *)selectedObjects {

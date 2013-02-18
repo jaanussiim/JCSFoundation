@@ -16,11 +16,15 @@
 
 #import "JCSSelectionViewController.h"
 
+@protocol JCSSelectable;
+
 typedef void (^JCSMultiSelectionBlock)(NSArray *selected);
 
 @interface JCSMultiSelectionViewController : JCSSelectionViewController
 
 @property (nonatomic, copy) JCSMultiSelectionBlock selectionCompletionBlock;
 @property (nonatomic, strong) NSArray *selectedObjects;
+
+- (void)addToSelected:(id<JCSSelectable>)selectable;
 
 @end
