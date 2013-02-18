@@ -20,9 +20,10 @@
 
 NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 
-@interface JCSSelectionViewController ()
+@interface JCSSelectionViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) JCSSelectionCell *measureCell;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *rightBarButton;
 
 @end
 
@@ -41,11 +42,21 @@ NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 
   [self.tableView registerNib:self.selectionCellNib forCellReuseIdentifier:kJCSSelectionCellIdentifier];
   [self setMeasureCell:[self.tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier]];
+
+  if (self.rightBarButton) {
+    [self.navigationItem setRightBarButtonItem:self.rightBarButton];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+
+  [self.allSelectableObjects setDelegate:self];
 }
 
 #pragma mark - Table view data source
@@ -78,6 +89,37 @@ NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
   //TODO jaanus: some kind of warning here
   return NO;
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+  [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+  UITableView *tableView = self.tableView;
+
+  switch (type) {
+
+    case NSFetchedResultsChangeInsert:
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      break;
+    case NSFetchedResultsChangeDelete:
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      break;
+    case NSFetchedResultsChangeUpdate:
+      [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      break;
+    case NSFetchedResultsChangeMove:
+      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      break;
+  }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+  [self.tableView endUpdates];
 }
 
 @end
