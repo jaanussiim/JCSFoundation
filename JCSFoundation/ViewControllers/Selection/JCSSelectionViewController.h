@@ -20,9 +20,12 @@
 
 @interface JCSSelectionViewController : UITableViewController
 
-@property (nonatomic, strong) NSFetchedResultsController *allSelectableObjects;
+@property (nonatomic, strong) NSFetchedResultsController *selectableObjectsController;
+@property (nonatomic, strong) NSArray *selectableObjectsArray;
 @property (nonatomic, strong) UINib *selectionCellNib;
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable;
+- (id <JCSSelectable>)objectAtIndexPath:(NSIndexPath *)indexPath;
+- (NSIndexPath *)indexPathForObject:(id<JCSSelectable>)object;
 
 @end

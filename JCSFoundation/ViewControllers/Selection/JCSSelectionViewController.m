@@ -56,23 +56,31 @@ NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
 
-  [self.allSelectableObjects setDelegate:self];
+  [self.selectableObjectsController setDelegate:self];
 }
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [[self.allSelectableObjects sections] count];
+  if (self.selectableObjectsController) {
+    return [[self.selectableObjectsController sections] count];
+  }
+
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.allSelectableObjects sections] objectAtIndex:(NSUInteger) section];
-  return [sectionInfo numberOfObjects];
+  if (self.selectableObjectsController) {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.selectableObjectsController sections] objectAtIndex:(NSUInteger) section];
+    return [sectionInfo numberOfObjects];
+  }
+
+  return [self.selectableObjectsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   JCSSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier];
 
-  id<JCSSelectable> selectable = [self.allSelectableObjects objectAtIndexPath:indexPath];
+  id<JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
   [cell configureWithSelectable:selectable];
   [cell markSelected:[self isSelected:selectable]];
 
@@ -80,9 +88,26 @@ NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  id<JCSSelectable> selectable = [self.allSelectableObjects objectAtIndexPath:indexPath];
+  id<JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
   [self.measureCell configureWithSelectable:selectable];
   return CGRectGetHeight(self.measureCell.frame);
+}
+
+- (id<JCSSelectable>)objectAtIndexPath:(NSIndexPath *)indexPath {
+  if (self.selectableObjectsController) {
+    return [self.selectableObjectsController objectAtIndexPath:indexPath];
+  } else {
+    return [self.selectableObjectsArray objectAtIndex:(NSUInteger) indexPath.row];
+  }
+}
+
+- (NSIndexPath *)indexPathForObject:(id <JCSSelectable>)object {
+  if (self.selectableObjectsController) {
+    return [self.selectableObjectsController indexPathForObject:object];
+  }
+
+  NSUInteger indexOfObject = [self.selectableObjectsArray indexOfObject:object];
+  return [NSIndexPath indexPathForRow:indexOfObject inSection:0];
 }
 
 

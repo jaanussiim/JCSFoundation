@@ -49,7 +49,7 @@
 
 - (void)addToSelected:(id <JCSSelectable>)selectable {
   [self.selected addObject:selectable];
-  NSIndexPath *indexPath = [self.allSelectableObjects indexPathForObject:selectable];
+  NSIndexPath *indexPath = [self indexPathForObject:selectable];
   [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -63,7 +63,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  id<JCSSelectable> selected = [self.allSelectableObjects objectAtIndexPath:indexPath];
+  id<JCSSelectable> selected = [self objectAtIndexPath:indexPath];
 
   if ([self isSelected:selected]) {
     [self.selected removeObject:selected];
