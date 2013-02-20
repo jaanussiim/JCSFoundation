@@ -29,6 +29,8 @@
 		EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+Validations.m */; };
 		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+Validations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71D11016D499950059CC4D /* JCSObjectModel.h */; };
+		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
 		EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */; };
 		EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */; };
 		EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */; };
@@ -67,6 +69,8 @@
 		EA5D034416CAD92D00D4D42D /* UIView+LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadView.m"; sourceTree = "<group>"; };
 		EA69986116AD3DCF00B20033 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
 		EA69986216AD3DCF00B20033 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
+		EA71D11016D499950059CC4D /* JCSObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSObjectModel.h; sourceTree = "<group>"; };
+		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
 		EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
 		EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSAlertView.m; sourceTree = "<group>"; };
 		EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EA71D10F16D4997D0059CC4D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA71D11016D499950059CC4D /* JCSObjectModel.h */,
+				EA71D11116D499950059CC4D /* JCSObjectModel.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		EA84DD8C16CFC3C800177B30 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +181,7 @@
 		EAD0635216A092D000FF6BA9 /* JCSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				EA71D10F16D4997D0059CC4D /* CoreData */,
 				EA69985F16AD3DB400B20033 /* Extensions */,
 				EA5D033116CAD48E00D4D42D /* Views */,
 				EAEB273016D0D35A00D126BD /* ViewControllers */,
@@ -239,6 +253,7 @@
 				EAEB273C16D0D3E100D126BD /* JCSMultiSelectionViewController.h in Headers */,
 				EAEB274B16D1076A00D126BD /* JCSSelectionCell.h in Headers */,
 				EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */,
+				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +351,7 @@
 				EAEB273D16D0D3E100D126BD /* JCSMultiSelectionViewController.m in Sources */,
 				EAEB274C16D1076A00D126BD /* JCSSelectionCell.m in Sources */,
 				EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */,
+				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
