@@ -15,6 +15,7 @@
  */
 
 #import "JCSObjectModel.h"
+#import "JCSFoundationConstants.h"
 
 @interface JCSObjectModel ()
 
@@ -37,6 +38,28 @@
   }
 
   return self;
+}
+
+- (NSFetchRequest *)fetchRequestForEntity:(NSString *)entity sortDescriptors:(NSArray *)sortDescriptors {
+  NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entity];
+  [fetchRequest setSortDescriptors:sortDescriptors];
+  return fetchRequest;
+}
+
+- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors {
+  NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName sortDescriptors:sortDescriptors];
+  NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
+      initWithFetchRequest:fetchRequest
+      managedObjectContext:self.managedObjectContext
+        sectionNameKeyPath:nil cacheName:nil];
+
+  NSError *fetchError = nil;
+  [controller performFetch:&fetchError];
+  if (fetchError) {
+    JCSFLog(@"Fetch error - %@", fetchError);
+  }
+
+  return controller;
 }
 
 - (void)saveContext {

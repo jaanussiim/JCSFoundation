@@ -14,18 +14,26 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "JCSFetchedTableCell.h"
 
-@interface JCSObjectModel : NSObject
+@implementation JCSFetchedTableCell
 
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+  self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+  if (self) {
+    // Initialization code
+  }
+  return self;
+}
 
-- (id)initWithStoreURL:(NSURL *)storeURL storeType:(NSString *)storeType;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+  [super setSelected:selected animated:animated];
 
-- (void)saveContext;
+  // Configure the view for the selected state
+}
 
-- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
+- (void)configureWithObject:(id)object {
 
-+ (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
+}
 
 @end

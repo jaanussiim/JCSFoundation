@@ -14,18 +14,10 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface JCSObjectModel : NSObject
+@interface JCSFetchedTableViewController : UITableViewController
 
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
-
-- (id)initWithStoreURL:(NSURL *)storeURL storeType:(NSString *)storeType;
-
-- (void)saveContext;
-
-- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
-
-+ (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
+- (NSFetchedResultsController *)createFetchedController;
 
 @end
