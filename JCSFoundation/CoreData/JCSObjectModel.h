@@ -18,6 +18,7 @@
 
 @interface JCSObjectModel : NSObject
 
+@property (nonatomic, assign) BOOL wipeDatabaseOnSchemaConflict;
 @property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 
 - (id)initWithStoreURL:(NSURL *)storeURL storeType:(NSString *)storeType;
@@ -25,6 +26,8 @@
 - (void)saveContext;
 
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
+
+- (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 
