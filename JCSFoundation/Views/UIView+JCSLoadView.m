@@ -1,14 +1,19 @@
 //
-//  UIView+LoadView.m
+//  UIView+JCSLoadView.m
 //  JCSFoundation
 //
 //  Created by Jaanus Siim on 2/12/13.
 //  Copyright (c) 2013 JaanusSiim. All rights reserved.
 //
 
-#import "UIView+LoadView.h"
+#import "UIView+JCSLoadView.h"
 
-@implementation UIView (LoadView)
+@implementation UIView (JCSLoadView)
+
++ (id)loadInstance {
+  NSString *expectedNibName = NSStringFromClass([self class]);
+  return [UIView loadViewFromXib:expectedNibName];
+}
 
 + (UIView *)loadViewFromXib:(NSString *)xibName {
   UIView *result = nil;

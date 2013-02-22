@@ -1,5 +1,5 @@
 //
-//  UIView+LoadView.h
+//  UIView+JCSLoadView.h
 //  JCSFoundation
 //
 //  Created by Jaanus Siim on 2/12/13.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (LoadView)
+@interface UIView (JCSLoadView)
 
++ (id)loadInstance;
 + (UIView *)loadViewFromXib:(NSString *)xibName;
 
 @end

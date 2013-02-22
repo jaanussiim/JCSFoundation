@@ -16,7 +16,7 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import "JCSAlertView.h"
-#import "UIView+LoadView.h"
+#import "UIView+JCSLoadView.h"
 
 @interface JCSAlertView ()
 
@@ -31,11 +31,6 @@
 @end
 
 @implementation JCSAlertView
-
-@synthesize confirmButton;
-@synthesize cancelButton;
-@synthesize titleLabel;
-@synthesize messageLabel;
 
 + (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
   NSString *expectedNibName = NSStringFromClass([self class]);

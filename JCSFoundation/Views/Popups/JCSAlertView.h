@@ -21,10 +21,10 @@
 @interface JCSAlertView : JCSPopupView
 
 @property (nonatomic, copy) JCSActionBlock confirmAction;
-@property (nonatomic, strong, readonly) IBOutlet UIButton *confirmButton;
-@property (nonatomic, strong, readonly) IBOutlet UIButton *cancelButton;
-@property (nonatomic, strong, readonly) IBOutlet UILabel *titleLabel;
-@property (nonatomic, strong, readonly) IBOutlet UILabel *messageLabel;
+@property (nonatomic, strong, readonly) UIButton *confirmButton;
+@property (nonatomic, strong, readonly) UIButton *cancelButton;
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
+@property (nonatomic, strong, readonly) UILabel *messageLabel;
 
 
 + (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message;

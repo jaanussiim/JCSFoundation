@@ -18,7 +18,7 @@
 
 @interface JCSActivityView : JCSPopupView
 
-@property (nonatomic, strong, readonly) IBOutlet UILabel *messageLabel;
+@property (nonatomic, strong, readonly) UILabel *messageLabel;
 
 + (instancetype)activityViewWithMessage:(NSString *)message;
 

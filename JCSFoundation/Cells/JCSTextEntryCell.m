@@ -14,24 +14,29 @@
  * limitations under the License.
  */
 
-#import "JCSActivityView.h"
-#import "UIView+JCSLoadView.h"
+#import "JCSTextEntryCell.h"
 
-@interface JCSActivityView ()
+@interface JCSTextEntryCell ()
 
-@property (nonatomic, strong) IBOutlet UILabel *messageLabel;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UITextField *entryField;
 
 @end
 
-@implementation JCSActivityView
+@implementation JCSTextEntryCell
 
-+ (instancetype)activityViewWithMessage:(NSString *)message {
-  NSString *expectedNibName = NSStringFromClass([self class]);
-  JCSActivityView *activityView = (JCSActivityView *) [UIView loadViewFromXib:expectedNibName];
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+  self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+  if (self) {
+    // Initialization code
+  }
+  return self;
+}
 
-  [activityView.messageLabel setText:message];
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+  [super setSelected:selected animated:animated];
 
-  return activityView;
+  // Configure the view for the selected state
 }
 
 @end

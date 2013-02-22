@@ -16,13 +16,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef BOOL (^JCSSingeInputEntryValidationBlock)(NSString *input);
-typedef void (^JCSSingeInputEntryCompletionBlock)(NSString *input);
-
-@interface JCSSingleInputEntryViewController : UIViewController
-
-@property (nonatomic, strong, readonly) UITextField *entryField;
-@property (nonatomic, copy) JCSSingeInputEntryValidationBlock entryValidationBlock;
-@property (nonatomic, copy) JCSSingeInputEntryCompletionBlock completionBlock;
+@interface JCSTextEntryCell : UITableViewCell
 
 @end
