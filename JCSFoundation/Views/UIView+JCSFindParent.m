@@ -14,26 +14,19 @@
  * limitations under the License.
  */
 
-#import "UIView+JCSLoadView.h"
+#import "UIView+JCSFindParent.h"
 
-@implementation UIView (JCSLoadView)
+@implementation UIView (JCSFindParent)
 
-+ (id)loadInstance {
-  NSString *expectedNibName = NSStringFromClass([self class]);
-  return [UIView loadViewFromXib:expectedNibName];
-}
-
-+ (UIView *)loadViewFromXib:(NSString *)xibName {
-  UIView *result = nil;
-  NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil];
-  for (id currentObject in topLevelObjects) {
-    if ([currentObject isKindOfClass:[UIView class]]) {
-      result = (UIView *) currentObject;
-      break;
+- (UIView *)findParentViewOfType:(Class)class {
+  UIView *checked = self;
+  while ((checked = [checked superview]) != nil) {
+    if ([checked isKindOfClass:class]) {
+      return checked;
     }
   }
 
-  return result;
+  return nil;
 }
 
 @end

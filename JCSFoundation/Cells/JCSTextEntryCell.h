@@ -18,4 +18,6 @@
 
 @interface JCSTextEntryCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) UITextField *entryField;
+
 @end

@@ -15,8 +15,11 @@
  */
 
 #import "JCSInputCellsViewController.h"
+#import "JCSTextEntryCell.h"
+#import "JCSFoundationConstants.h"
+#import "UIView+JCSFindParent.h"
 
-@interface JCSInputCellsViewController ()
+@interface JCSInputCellsViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray *presentedCells;
 
@@ -65,6 +68,50 @@
 
 - (void)addCellForPresentation:(UITableViewCell *)cell {
   [self.presentedCells addObject:cell];
+
+  if ([cell isKindOfClass:[JCSTextEntryCell class]]) {
+    JCSTextEntryCell *entryCell = (JCSTextEntryCell *) cell;
+    [entryCell.entryField setDelegate:self];
+  }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+
+  UIView *containing = [textField findParentViewOfType:[UITableViewCell class]];
+  if ([containing isKindOfClass:[JCSTextEntryCell class]]) {
+    [self moveFocusToNextEntryCell:(UITableViewCell *) containing];
+  }
+
+  return YES;
+}
+
+- (void)moveFocusToNextEntryCell:(UITableViewCell *)cell {
+  NSUInteger index = [self.presentedCells indexOfObject:cell];
+  if (index == NSNotFound) {
+    return;
+  }
+
+  index++;
+  while (index < [self.presentedCells count]) {
+    UITableViewCell *nextCell = [self.presentedCells objectAtIndex:index];
+    if ([self isEntryCell:nextCell]) {
+      [self moveFocusToCell:nextCell];
+      return;
+    }
+    index++;
+  }
+}
+
+- (void)moveFocusToCell:(UITableViewCell *)cell {
+  if ([cell isKindOfClass:[JCSTextEntryCell class]]) {
+    JCSTextEntryCell *entryCell = (JCSTextEntryCell *) cell;
+    [entryCell.entryField becomeFirstResponder];
+  }
+}
+
+- (BOOL)isEntryCell:(UITableViewCell *)cell {
+  return [cell isKindOfClass:[JCSTextEntryCell class]];
 }
 
 @end
