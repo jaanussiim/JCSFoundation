@@ -64,6 +64,11 @@
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+  UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  if ([self isEntryCell:cell]) {
+    [self moveFocusToCell:cell];
+  }
 }
 
 - (void)addCellForPresentation:(UITableViewCell *)cell {
