@@ -14,28 +14,10 @@
  * limitations under the License.
  */
 
-#import "JCSTextEntryCell.h"
+#import <UIKit/UIKit.h>
 
-@interface JCSTextEntryCell ()
+@interface UITableViewCell (JCSPositioning)
 
-@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
-@property (nonatomic, strong) IBOutlet UITextField *entryField;
-
-@end
-
-@implementation JCSTextEntryCell
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-  self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-  if (self) {
-    // Initialization code
-  }
-  return self;
-}
-
-- (void)setTitle:(NSString *)title value:(NSString *)value {
-  [self.titleLabel setText:title];
-  [self.entryField setText:value];
-}
+- (void)adjustWidthTitle:(UIView *)title value:(UIView *)value;
 
 @end

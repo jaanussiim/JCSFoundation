@@ -18,6 +18,9 @@
 
 @interface JCSTextEntryCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) UILabel *titleLabel;
 @property (nonatomic, strong, readonly) UITextField *entryField;
+
+- (void)setTitle:(NSString *)title value:(NSString *)value;
 
 @end

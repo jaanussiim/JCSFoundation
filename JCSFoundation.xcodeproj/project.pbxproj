@@ -31,6 +31,8 @@
 		EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+Validations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71D11016D499950059CC4D /* JCSObjectModel.h */; };
 		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
+		EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */; };
+		EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */; };
 		EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */; };
 		EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */; };
 		EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */; };
@@ -81,6 +83,8 @@
 		EA69986216AD3DCF00B20033 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
 		EA71D11016D499950059CC4D /* JCSObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSObjectModel.h; sourceTree = "<group>"; };
 		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
+		EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JCSPositioning.h"; sourceTree = "<group>"; };
+		EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JCSPositioning.m"; sourceTree = "<group>"; };
 		EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
 		EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSAlertView.m; sourceTree = "<group>"; };
 		EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			children = (
 				EAAEEFEB16D73E72008CBBA2 /* JCSTextEntryCell.h */,
 				EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */,
+				EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */,
+				EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				EAAEEFE916D73E54008CBBA2 /* JCSInputCellsViewController.h in Headers */,
 				EAAEEFED16D73E72008CBBA2 /* JCSTextEntryCell.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
+				EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +415,7 @@
 				EAAEEFEA16D73E54008CBBA2 /* JCSInputCellsViewController.m in Sources */,
 				EAAEEFEE16D73E72008CBBA2 /* JCSTextEntryCell.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
+				EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
