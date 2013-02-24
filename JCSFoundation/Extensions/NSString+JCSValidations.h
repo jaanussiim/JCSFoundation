@@ -16,8 +16,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Validations)
+@interface NSString (JCSValidations)
 
 - (BOOL)hasValue;
+- (BOOL)isDecimalNumber;
+- (BOOL)isNumber;
 
 @end

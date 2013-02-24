@@ -15,6 +15,7 @@
  */
 
 #import "JCSFetchedTableCell.h"
+#import "JCSFoundationConstants.h"
 
 @implementation JCSFetchedTableCell
 
@@ -33,7 +34,7 @@
 }
 
 - (void)configureWithObject:(id)object {
-
+  JCS_ABSTRACT_METHOD;
 }
 
 @end

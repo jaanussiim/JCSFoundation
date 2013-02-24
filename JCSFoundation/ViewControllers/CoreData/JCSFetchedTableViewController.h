@@ -18,6 +18,8 @@
 
 @interface JCSFetchedTableViewController : UITableViewController
 
+@property (nonatomic, strong) UINib *fetchedEntityCellNib;
+
 - (NSFetchedResultsController *)createFetchedController;
 
 @end

@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSString+Validations.h"
+#import "NSString+JCSValidations.h"
 #import "UIApplication+Keyboard.h"
 
 #import "JCSAlertView.h"

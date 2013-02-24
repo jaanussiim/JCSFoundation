@@ -26,9 +26,9 @@
 		EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */; };
 		EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA5D034616CAD92D00D4D42D /* UIView+JCSLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D034416CAD92D00D4D42D /* UIView+JCSLoadView.m */; };
-		EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+Validations.m */; };
+		EA69986316AD3DCF00B20033 /* NSString+JCSValidations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */; };
 		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+Validations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA69987416AD42B900B20033 /* NSString+JCSValidations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71D11016D499950059CC4D /* JCSObjectModel.h */; };
 		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
 		EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */; };
@@ -79,8 +79,8 @@
 		EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundationConstants.h; sourceTree = "<group>"; };
 		EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSLoadView.h"; sourceTree = "<group>"; };
 		EA5D034416CAD92D00D4D42D /* UIView+JCSLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSLoadView.m"; sourceTree = "<group>"; };
-		EA69986116AD3DCF00B20033 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
-		EA69986216AD3DCF00B20033 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
+		EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JCSValidations.h"; sourceTree = "<group>"; };
+		EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCSValidations.m"; sourceTree = "<group>"; };
 		EA71D11016D499950059CC4D /* JCSObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSObjectModel.h; sourceTree = "<group>"; };
 		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
 		EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JCSPositioning.h"; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 		EA69985F16AD3DB400B20033 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EA69986116AD3DCF00B20033 /* NSString+Validations.h */,
-				EA69986216AD3DCF00B20033 /* NSString+Validations.m */,
+				EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */,
+				EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */,
 				EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */,
 				EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */,
 			);
@@ -294,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
-				EA69987416AD42B900B20033 /* NSString+Validations.h in Headers */,
+				EA69987416AD42B900B20033 /* NSString+JCSValidations.h in Headers */,
 				EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */,
 				EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */,
 				EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */,
@@ -398,7 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA69986316AD3DCF00B20033 /* NSString+Validations.m in Sources */,
+				EA69986316AD3DCF00B20033 /* NSString+JCSValidations.m in Sources */,
 				EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */,
 				EA5D034616CAD92D00D4D42D /* UIView+JCSLoadView.m in Sources */,
 				EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */,

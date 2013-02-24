@@ -22,5 +22,6 @@
 @property (nonatomic, strong, readonly) UITextField *entryField;
 
 - (void)setTitle:(NSString *)title value:(NSString *)value;
+- (NSString *)value;
 
 @end

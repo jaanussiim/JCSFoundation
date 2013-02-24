@@ -38,4 +38,8 @@
   [self.entryField setText:value];
 }
 
+- (NSString *)value {
+  return [self.entryField text];
+}
+
 @end

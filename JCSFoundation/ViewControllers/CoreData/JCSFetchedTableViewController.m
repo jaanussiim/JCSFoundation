@@ -38,6 +38,8 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  [self.tableView registerNib:self.fetchedEntityCellNib forCellReuseIdentifier:kJCSFetchedTableViewCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {

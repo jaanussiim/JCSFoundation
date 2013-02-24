@@ -14,12 +14,32 @@
  * limitations under the License.
  */
 
-#import "NSString+Validations.h"
+#import "NSString+JCSValidations.h"
 
-@implementation NSString (Validations)
+@implementation NSString (JCSValidations)
 
 - (BOOL)hasValue {
   return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0;
+}
+
+- (BOOL)isDecimalNumber {
+  if (![self hasValue]) {
+    return NO;
+  }
+
+  NSString *value = [NSString stringWithString:self];
+  value = [value stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+
+  return ![value hasValue];
+}
+
+- (BOOL)isNumber {
+  if (![self hasValue]) {
+    return NO;
+  }
+
+  NSDecimalNumber *number = [NSDecimalNumber decimalNumberWithString:self locale:[NSLocale currentLocale]];
+  return [self isEqualToString:[number stringValue]];
 }
 
 @end
