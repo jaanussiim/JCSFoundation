@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "JCSAlertView.h"
 
-#import "NSString+JCSValidations.h"
-#import "UIApplication+Keyboard.h"
+@interface JCSQuickAlertView : UIAlertView <JCSAlertView>
 
-#import "JCSPopupAlertView.h"
-#import "JCSFoundationConstants.h"
+@end

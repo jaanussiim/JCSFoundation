@@ -17,8 +17,9 @@
 #import <UIKit/UIKit.h>
 #import "JCSFoundationConstants.h"
 #import "JCSPopupView.h"
+#import "JCSAlertView.h"
 
-@interface JCSAlertView : JCSPopupView
+@interface JCSPopupAlertView : JCSPopupView <JCSAlertView>
 
 @property (nonatomic, copy) JCSActionBlock confirmAction;
 @property (nonatomic, strong, readonly) UIButton *confirmButton;

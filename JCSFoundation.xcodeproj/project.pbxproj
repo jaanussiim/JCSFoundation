@@ -33,8 +33,10 @@
 		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
 		EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */; };
 		EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */; };
-		EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */; };
-		EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */; };
+		EA7AC30E16D9FC1D00633E52 /* JCSQuickAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */; };
+		EA7AC30F16D9FC1D00633E52 /* JCSQuickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */; };
+		EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */; };
+		EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */; };
 		EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */; };
 		EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */; };
 		EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9516CFC3F200177B30 /* JCSActivityView.h */; };
@@ -85,8 +87,11 @@
 		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
 		EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JCSPositioning.h"; sourceTree = "<group>"; };
 		EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JCSPositioning.m"; sourceTree = "<group>"; };
-		EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
-		EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSAlertView.m; sourceTree = "<group>"; };
+		EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickAlertView.h; sourceTree = "<group>"; };
+		EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickAlertView.m; sourceTree = "<group>"; };
+		EA7AC31016DA00C900633E52 /* JCSAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
+		EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
+		EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupAlertView.m; sourceTree = "<group>"; };
 		EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
 		EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupView.m; sourceTree = "<group>"; };
 		EA84DD9516CFC3F200177B30 /* JCSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActivityView.h; sourceTree = "<group>"; };
@@ -136,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				EA84DD8C16CFC3C800177B30 /* Popups */,
+				EA7AC31016DA00C900633E52 /* JCSAlertView.h */,
+				EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */,
+				EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
 				EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */,
 				EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */,
@@ -169,8 +177,8 @@
 			children = (
 				EA84DD9516CFC3F200177B30 /* JCSActivityView.h */,
 				EA84DD9616CFC3F200177B30 /* JCSActivityView.m */,
-				EA84DD8D16CFC3C800177B30 /* JCSAlertView.h */,
-				EA84DD8E16CFC3C800177B30 /* JCSAlertView.m */,
+				EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */,
+				EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */,
 				EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */,
 				EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */,
 			);
@@ -297,7 +305,7 @@
 				EA69987416AD42B900B20033 /* NSString+JCSValidations.h in Headers */,
 				EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */,
 				EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */,
-				EA84DD8F16CFC3C800177B30 /* JCSAlertView.h in Headers */,
+				EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */,
 				EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */,
 				EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */,
 				EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */,
@@ -312,6 +320,7 @@
 				EAAEEFED16D73E72008CBBA2 /* JCSTextEntryCell.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */,
+				EA7AC30E16D9FC1D00633E52 /* JCSQuickAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +410,7 @@
 				EA69986316AD3DCF00B20033 /* NSString+JCSValidations.m in Sources */,
 				EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */,
 				EA5D034616CAD92D00D4D42D /* UIView+JCSLoadView.m in Sources */,
-				EA84DD9016CFC3C800177B30 /* JCSAlertView.m in Sources */,
+				EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */,
 				EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */,
 				EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */,
 				EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */,
@@ -416,6 +425,7 @@
 				EAAEEFEE16D73E72008CBBA2 /* JCSTextEntryCell.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */,
+				EA7AC30F16D9FC1D00633E52 /* JCSQuickAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

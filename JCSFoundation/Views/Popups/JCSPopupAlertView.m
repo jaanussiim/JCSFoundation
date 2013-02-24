@@ -15,10 +15,10 @@
  */
 
 #import <CoreGraphics/CoreGraphics.h>
-#import "JCSAlertView.h"
+#import "JCSPopupAlertView.h"
 #import "UIView+JCSLoadView.h"
 
-@interface JCSAlertView ()
+@interface JCSPopupAlertView ()
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *messageLabel;
@@ -30,11 +30,11 @@
 
 @end
 
-@implementation JCSAlertView
+@implementation JCSPopupAlertView
 
 + (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
   NSString *expectedNibName = NSStringFromClass([self class]);
-  JCSAlertView *alertView = (JCSAlertView *) [UIView loadViewFromXib:expectedNibName];
+  JCSPopupAlertView *alertView = (JCSPopupAlertView *) [UIView loadViewFromXib:expectedNibName];
 
   [alertView setTitle:alertTitle message:message];
 
