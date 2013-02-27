@@ -32,7 +32,7 @@
 
 @implementation JCSPopupAlertView
 
-+ (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
++ (id)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
   NSString *expectedNibName = NSStringFromClass([self class]);
   JCSPopupAlertView *alertView = (JCSPopupAlertView *) [UIView loadViewFromXib:expectedNibName];
 

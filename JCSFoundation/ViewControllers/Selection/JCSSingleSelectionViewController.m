@@ -41,6 +41,18 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+
+  [self scrollToSelectedCell];
+}
+
+- (void)scrollToSelectedCell {
+  NSIndexPath *indexPath = [self indexPathForObject:self.selected];
+  [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+}
+
+
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
   return selectable == self.selected;
 }

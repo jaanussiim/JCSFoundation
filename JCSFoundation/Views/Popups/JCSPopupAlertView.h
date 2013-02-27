@@ -28,7 +28,7 @@
 @property (nonatomic, strong, readonly) UILabel *messageLabel;
 
 
-+ (instancetype)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message;
++ (id)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message;
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle cancelButtonTitle:(NSString *)cancelTitle;
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle;
