@@ -42,4 +42,12 @@
   return [self.entryField text];
 }
 
+- (void)useNumbersKeyboard {
+  [self.entryField setKeyboardType:UIKeyboardTypeNumberPad];
+}
+
+- (void)useNumbersAndPunctuationKeyboard {
+  [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+}
+
 @end

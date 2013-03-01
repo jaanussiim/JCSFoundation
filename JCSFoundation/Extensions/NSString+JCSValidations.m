@@ -39,7 +39,8 @@
   }
 
   NSDecimalNumber *number = [NSDecimalNumber decimalNumberWithString:self locale:[NSLocale currentLocale]];
-  return [self isEqualToString:[number stringValue]];
+  //TODO jaanus: check this. ',' may have been replaced with '.', but should have same length
+  return [self length] == [[number stringValue] length];
 }
 
 @end

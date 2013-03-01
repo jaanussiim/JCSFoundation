@@ -23,5 +23,7 @@
 
 - (void)setTitle:(NSString *)title value:(NSString *)value;
 - (NSString *)value;
+- (void)useNumbersKeyboard;
+- (void)useNumbersAndPunctuationKeyboard;
 
 @end
