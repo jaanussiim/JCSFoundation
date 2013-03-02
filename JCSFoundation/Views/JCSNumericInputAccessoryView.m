@@ -14,19 +14,20 @@
  * limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import "JCSNumericInputAccessoryView.h"
 
-@class JCSNumericInputAccessoryView;
+@implementation JCSNumericInputAccessoryView
 
-@interface JCSTextEntryCell : UITableViewCell
+- (id)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
+  if (self) {
+    // Initialization code
+  }
+  return self;
+}
 
-@property (nonatomic, strong, readonly) UILabel *titleLabel;
-@property (nonatomic, strong, readonly) UITextField *entryField;
-
-- (void)setTitle:(NSString *)title value:(NSString *)value;
-- (NSString *)value;
-- (void)useNumbersKeyboard;
-- (void)useNumbersAndPunctuationKeyboard;
-- (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view;
+- (void)setNextButtonTitle:(NSString *)title action:(JCSActionBlock)action {
+  JCS_ABSTRACT_METHOD;
+}
 
 @end

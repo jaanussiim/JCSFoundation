@@ -51,6 +51,8 @@
 		EAAEEFEE16D73E72008CBBA2 /* JCSTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
 		EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */; };
+		EACE155E16E0801100A5CCCD /* JCSNumericInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */; };
+		EACE155F16E0801100A5CCCD /* JCSNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
 		EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */; };
 		EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */; };
@@ -106,6 +108,8 @@
 		EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSTextEntryCell.m; sourceTree = "<group>"; };
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
 		EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSFindParent.m"; sourceTree = "<group>"; };
+		EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNumericInputAccessoryView.h; sourceTree = "<group>"; };
+		EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNumericInputAccessoryView.m; sourceTree = "<group>"; };
 		EAD0634D16A092D000FF6BA9 /* libJCSFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJCSFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD0635016A092D000FF6BA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCSFoundation-Prefix.pch"; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 			children = (
 				EA84DD8C16CFC3C800177B30 /* Popups */,
 				EA7AC31016DA00C900633E52 /* JCSAlertView.h */,
+				EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */,
+				EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */,
 				EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */,
 				EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
@@ -321,6 +327,7 @@
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */,
 				EA7AC30E16D9FC1D00633E52 /* JCSQuickAlertView.h in Headers */,
+				EACE155E16E0801100A5CCCD /* JCSNumericInputAccessoryView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +433,7 @@
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */,
 				EA7AC30F16D9FC1D00633E52 /* JCSQuickAlertView.m in Sources */,
+				EACE155F16E0801100A5CCCD /* JCSNumericInputAccessoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,18 +15,10 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "JCSFoundationConstants.h"
 
-@class JCSNumericInputAccessoryView;
+@interface JCSNumericInputAccessoryView : UIView
 
-@interface JCSTextEntryCell : UITableViewCell
-
-@property (nonatomic, strong, readonly) UILabel *titleLabel;
-@property (nonatomic, strong, readonly) UITextField *entryField;
-
-- (void)setTitle:(NSString *)title value:(NSString *)value;
-- (NSString *)value;
-- (void)useNumbersKeyboard;
-- (void)useNumbersAndPunctuationKeyboard;
-- (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view;
+- (void)setNextButtonTitle:(NSString *)title action:(JCSActionBlock)action;
 
 @end

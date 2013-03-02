@@ -15,6 +15,7 @@
  */
 
 #import "JCSTextEntryCell.h"
+#import "JCSNumericInputAccessoryView.h"
 
 @interface JCSTextEntryCell ()
 
@@ -48,6 +49,13 @@
 
 - (void)useNumbersAndPunctuationKeyboard {
   [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+}
+
+- (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
+  [self.entryField setInputAccessoryView:view];
+  [view setNextButtonTitle:NSLocalizedString(@"JCS.button.title.next", nil) action:^{
+    [self.entryField.delegate textFieldShouldReturn:self.entryField];
+  }];
 }
 
 @end
