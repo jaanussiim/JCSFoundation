@@ -31,4 +31,6 @@
 
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 
+- (void)deleteObject:(NSManagedObject *)object;
+
 @end
