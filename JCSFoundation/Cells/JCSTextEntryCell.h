@@ -28,5 +28,7 @@
 - (void)useNumbersKeyboard;
 - (void)useNumbersAndPunctuationKeyboard;
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view;
+- (void)setAutocapitalizationType:(UITextAutocapitalizationType)type;
+- (void)setReturnKeyType:(UIReturnKeyType)type;
 
 @end

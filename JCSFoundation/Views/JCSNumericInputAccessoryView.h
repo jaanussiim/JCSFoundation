@@ -19,6 +19,7 @@
 
 @interface JCSNumericInputAccessoryView : UIView
 
-- (void)setNextButtonTitle:(NSString *)title action:(JCSActionBlock)action;
+//TODO jaanus: action should go to private interface
+- (void)setReturnButtonTitle:(NSString *)title action:(JCSActionBlock)action;
 
 @end

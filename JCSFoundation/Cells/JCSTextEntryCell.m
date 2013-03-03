@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UITextField *entryField;
+@property (nonatomic, strong) JCSNumericInputAccessoryView *numberAccessoryView;
 
 @end
 
@@ -53,9 +54,29 @@
 
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
   [self.entryField setInputAccessoryView:view];
-  [view setNextButtonTitle:NSLocalizedString(@"JCS.button.title.next", nil) action:^{
-    [self.entryField.delegate textFieldShouldReturn:self.entryField];
+  [self setNumberAccessoryView:view];
+  [self updateNumberAccessoryButton];
+}
+
+- (void)setAutocapitalizationType:(UITextAutocapitalizationType)type {
+  [self.entryField setAutocapitalizationType:type];
+}
+
+- (void)setReturnKeyType:(UIReturnKeyType)type {
+  [self.entryField setReturnKeyType:type];
+  [self updateNumberAccessoryButton];
+}
+
+- (void)updateNumberAccessoryButton {
+  __block __weak JCSTextEntryCell *weakSelf = self;
+
+  NSString *returnButtonTitle = self.entryField.returnKeyType == UIReturnKeyNext
+      ? NSLocalizedString(@"JCS.button.title.next", nil) : NSLocalizedString(@"JCS.button.title.done", nil);
+
+  [self.numberAccessoryView setReturnButtonTitle:returnButtonTitle action:^{
+    [weakSelf.entryField.delegate textFieldShouldReturn:weakSelf.entryField];
   }];
 }
+
 
 @end

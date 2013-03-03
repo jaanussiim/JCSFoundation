@@ -47,6 +47,23 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+
+  JCSTextEntryCell *lastCell;
+  for (UITableViewCell *cell in self.presentedCells) {
+    if (![self isEntryCell:cell]) {
+      continue;
+    }
+
+    JCSTextEntryCell *textEntryCell = (JCSTextEntryCell *) cell;
+    [textEntryCell setReturnKeyType:UIReturnKeyNext];
+    lastCell = textEntryCell;
+  }
+
+  [lastCell setReturnKeyType:UIReturnKeyDone];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

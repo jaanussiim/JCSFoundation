@@ -26,7 +26,7 @@
   return self;
 }
 
-- (void)setNextButtonTitle:(NSString *)title action:(JCSActionBlock)action {
+- (void)setReturnButtonTitle:(NSString *)title action:(JCSActionBlock)action {
   JCS_ABSTRACT_METHOD;
 }
 
