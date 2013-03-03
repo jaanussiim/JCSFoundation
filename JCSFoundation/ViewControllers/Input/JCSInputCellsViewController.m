@@ -16,7 +16,6 @@
 
 #import "JCSInputCellsViewController.h"
 #import "JCSTextEntryCell.h"
-#import "JCSFoundationConstants.h"
 #import "UIView+JCSFindParent.h"
 
 @interface JCSInputCellsViewController () <UITextFieldDelegate>
@@ -86,6 +85,11 @@
   if ([self isEntryCell:cell]) {
     [self moveFocusToCell:cell];
   }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [self.presentedCells objectAtIndex:(NSUInteger) indexPath.row];
+  return CGRectGetHeight(cell.frame);
 }
 
 - (void)addCellForPresentation:(UITableViewCell *)cell {
