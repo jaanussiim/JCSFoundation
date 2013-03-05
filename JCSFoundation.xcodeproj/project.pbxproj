@@ -26,6 +26,8 @@
 		EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2347B616E349DB000C63A0 /* JCSPhotoCaptureView.m */; };
 		EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2347C716E46E3D000C63A0 /* JCSCameraCapture.h */; };
 		EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2347C816E46E3D000C63A0 /* JCSCameraCapture.m */; };
+		EA2DB38F16E678F300BD26C4 /* JCSQuickActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2DB38D16E678F300BD26C4 /* JCSQuickActionSheet.h */; };
+		EA2DB39016E678F300BD26C4 /* JCSQuickActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2DB38E16E678F300BD26C4 /* JCSQuickActionSheet.m */; };
 		EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */; };
 		EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */; };
 		EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +88,9 @@
 		EA2347B616E349DB000C63A0 /* JCSPhotoCaptureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPhotoCaptureView.m; sourceTree = "<group>"; };
 		EA2347C716E46E3D000C63A0 /* JCSCameraCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCameraCapture.h; sourceTree = "<group>"; };
 		EA2347C816E46E3D000C63A0 /* JCSCameraCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCameraCapture.m; sourceTree = "<group>"; };
+		EA2DB38C16E678D100BD26C4 /* JCSActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSActionSheet.h; sourceTree = "<group>"; };
+		EA2DB38D16E678F300BD26C4 /* JCSQuickActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickActionSheet.h; sourceTree = "<group>"; };
+		EA2DB38E16E678F300BD26C4 /* JCSQuickActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickActionSheet.m; sourceTree = "<group>"; };
 		EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
 		EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Keyboard.m"; sourceTree = "<group>"; };
 		EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundationConstants.h; sourceTree = "<group>"; };
@@ -164,9 +169,12 @@
 			isa = PBXGroup;
 			children = (
 				EA84DD8C16CFC3C800177B30 /* Popups */,
+				EA2DB38C16E678D100BD26C4 /* JCSActionSheet.h */,
 				EA7AC31016DA00C900633E52 /* JCSAlertView.h */,
 				EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */,
 				EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */,
+				EA2DB38D16E678F300BD26C4 /* JCSQuickActionSheet.h */,
+				EA2DB38E16E678F300BD26C4 /* JCSQuickActionSheet.m */,
 				EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */,
 				EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
@@ -266,8 +274,8 @@
 				EAAEEFE616D73E22008CBBA2 /* Cells */,
 				EA71D10F16D4997D0059CC4D /* CoreData */,
 				EA69985F16AD3DB400B20033 /* Extensions */,
-				EA5D033116CAD48E00D4D42D /* Views */,
 				EAEB273016D0D35A00D126BD /* ViewControllers */,
+				EA5D033116CAD48E00D4D42D /* Views */,
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
 				EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */,
 			);
@@ -350,6 +358,7 @@
 				EACE155E16E0801100A5CCCD /* JCSNumericInputAccessoryView.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
 				EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */,
+				EA2DB38F16E678F300BD26C4 /* JCSQuickActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +467,7 @@
 				EACE155F16E0801100A5CCCD /* JCSNumericInputAccessoryView.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
 				EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */,
+				EA2DB39016E678F300BD26C4 /* JCSQuickActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
