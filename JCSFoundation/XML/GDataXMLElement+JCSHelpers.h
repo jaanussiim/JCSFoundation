@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "GDataXMLNode.h"
 
-@interface NSDate (JCSCalculations)
+@interface GDataXMLElement (JCSHelpers)
 
-- (NSDate *)nextDay;
-- (NSDate *)previousDay;
-- (NSDate *)dateAtStartOfDay;
+- (NSString *)firstValueForField:(NSString *)fieldName;
+- (GDataXMLElement *)firstElementNamed:(NSString *)elementName;
+- (NSInteger)firstIntegerValueForField:(NSString *)fieldName;
+- (BOOL)hasFieldNamed:(NSString *)fieldName;
 
 @end

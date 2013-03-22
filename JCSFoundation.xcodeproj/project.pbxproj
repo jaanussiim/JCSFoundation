@@ -61,6 +61,10 @@
 		EAAEEFEE16D73E72008CBBA2 /* JCSTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
 		EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */; };
+		EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */; };
+		EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */; };
+		EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */; };
+		EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E416FD1052000BFCAA /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EACE155E16E0801100A5CCCD /* JCSNumericInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */; };
 		EACE155F16E0801100A5CCCD /* JCSNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
@@ -129,6 +133,10 @@
 		EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSTextEntryCell.m; sourceTree = "<group>"; };
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
 		EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSFindParent.m"; sourceTree = "<group>"; };
+		EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+JCSHelpers.h"; sourceTree = "<group>"; };
+		EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+JCSHelpers.m"; sourceTree = "<group>"; };
+		EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		EACDE6E416FD1052000BFCAA /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		EACE155C16E0801100A5CCCD /* JCSNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNumericInputAccessoryView.h; sourceTree = "<group>"; };
 		EACE155D16E0801100A5CCCD /* JCSNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNumericInputAccessoryView.m; sourceTree = "<group>"; };
 		EAD0634D16A092D000FF6BA9 /* libJCSFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJCSFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +267,17 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		EACDE6E016FD1052000BFCAA /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */,
+				EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */,
+				EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */,
+				EACDE6E416FD1052000BFCAA /* GDataXMLNode.m */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
 		EAD0634216A092D000FF6BA9 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +315,7 @@
 				EA0183EB16EDA2AB005E1DAC /* Localization */,
 				EAEB273016D0D35A00D126BD /* ViewControllers */,
 				EA5D033116CAD48E00D4D42D /* Views */,
+				EACDE6E016FD1052000BFCAA /* XML */,
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
 				EA5D034216CAD81200D4D42D /* JCSFoundationConstants.h */,
 			);
@@ -381,6 +401,8 @@
 				EA2DB38F16E678F300BD26C4 /* JCSQuickActionSheet.h in Headers */,
 				EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */,
 				EA5094B216FA3BE10064B88A /* NSDate+JCSCalculations.h in Headers */,
+				EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */,
+				EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +514,8 @@
 				EA2DB39016E678F300BD26C4 /* JCSQuickActionSheet.m in Sources */,
 				EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */,
 				EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */,
+				EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */,
+				EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +600,7 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -595,6 +620,7 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

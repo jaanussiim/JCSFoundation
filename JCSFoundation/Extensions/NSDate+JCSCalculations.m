@@ -26,10 +26,24 @@
   return [self dateByAddinDays:-1];
 }
 
+- (NSDate *)dateAtStartOfDay {
+  return [NSDate dateForUnit:NSDayCalendarUnit beforeDate:self];
+}
+
+
 - (NSDate *)dateByAddinDays:(NSInteger)numberOfDaysToAdd {
   NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
   [dateComponents setDay:numberOfDaysToAdd];
   return [[NSDate gregorian] dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
++ (NSDate *)dateForUnit:(NSCalendarUnit)unit beforeDate:(NSDate *)date {
+  NSDate *result;
+  [[NSDate gregorian] rangeOfUnit:unit
+                        startDate:&result
+                         interval:0
+                          forDate:date];
+  return result;
 }
 
 static NSCalendar *__gregorian;

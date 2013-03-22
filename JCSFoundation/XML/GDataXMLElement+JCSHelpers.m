@@ -1,0 +1,43 @@
+/*
+ * Copyright 2013 JaanusSiim
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#import "GDataXMLElement+JCSHelpers.h"
+
+@implementation GDataXMLElement (JCSHelpers)
+
+- (NSString *)firstValueForField:(NSString *)fieldName {
+  return [[[self firstElementNamed:fieldName] stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
+- (GDataXMLElement *)firstElementNamed:(NSString *)elementName {
+  NSArray *elements = [self elementsForName:elementName];
+  if ([elements count] > 0) {
+    return elements[0];
+  }
+
+  return nil;
+}
+
+- (NSInteger)firstIntegerValueForField:(NSString *)fieldName {
+  NSString *value = [self firstValueForField:fieldName];
+  return [value integerValue];
+}
+
+- (BOOL)hasFieldNamed:(NSString *)fieldName {
+  return [[self elementsForName:fieldName] count] > 0;
+}
+
+@end
