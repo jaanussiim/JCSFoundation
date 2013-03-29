@@ -19,11 +19,11 @@
 @implementation NSDate (JCSCalculations)
 
 - (NSDate *)nextDay {
-  return [self dateByAddinDays:1];
+  return [self dateByAddingDays:1];
 }
 
 - (NSDate *)previousDay {
-  return [self dateByAddinDays:-1];
+  return [self dateByAddingDays:-1];
 }
 
 - (NSDate *)dateAtStartOfDay {
@@ -31,7 +31,7 @@
 }
 
 
-- (NSDate *)dateByAddinDays:(NSInteger)numberOfDaysToAdd {
+- (NSDate *)dateByAddingDays:(NSInteger)numberOfDaysToAdd {
   NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
   [dateComponents setDay:numberOfDaysToAdd];
   return [[NSDate gregorian] dateByAddingComponents:dateComponents toDate:self options:0];

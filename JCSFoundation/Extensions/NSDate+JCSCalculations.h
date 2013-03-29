@@ -21,5 +21,6 @@
 - (NSDate *)nextDay;
 - (NSDate *)previousDay;
 - (NSDate *)dateAtStartOfDay;
+- (NSDate *)dateByAddingDays:(NSInteger)numberOfDaysToAdd;
 
 @end
