@@ -21,7 +21,8 @@
 @property (nonatomic, assign) BOOL wipeDatabaseOnSchemaConflict;
 @property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 
-- (id)initWithStoreURL:(NSURL *)storeURL storeType:(NSString *)storeType;
+- (id)initWithDataModelName:(NSString *)modelName storeType:(NSString *)storeType;
+- (id)initWithDataModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType;
 
 - (void)saveContext;
 

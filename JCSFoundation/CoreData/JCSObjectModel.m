@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSURL *storeURL;
 @property (nonatomic, copy) NSString *storeType;
+@property (nonatomic, copy) NSString *dataModelName;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -29,10 +30,16 @@
 
 @implementation JCSObjectModel
 
-- (id)initWithStoreURL:(NSURL *)storeURL storeType:(NSString *)storeType {
+- (id)initWithDataModelName:(NSString *)modelName storeType:(NSString *)storeType {
+    NSURL *databaseURL = [JCSObjectModel fileUrlInDocumentsFolder:[NSString stringWithFormat:@"%@.sqlite", modelName]];
+    return [self initWithDataModelName:modelName storeURL:databaseURL storeType:storeType];
+}
+
+- (id)initWithDataModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType {
   self = [super init];
 
   if (self) {
+    _dataModelName = modelName;
     _storeURL = storeURL;
     _storeType = storeType;
   }
@@ -128,7 +135,7 @@
   if (_managedObjectModel != nil) {
     return _managedObjectModel;
   }
-  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Beer" withExtension:@"momd"];
+  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:self.dataModelName withExtension:@"momd"];
   _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
   return _managedObjectModel;
 }
