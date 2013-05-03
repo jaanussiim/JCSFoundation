@@ -17,7 +17,7 @@
 #import "JCSTextEntryCell.h"
 #import "JCSNumericInputAccessoryView.h"
 
-@interface JCSTextEntryCell ()
+@interface JCSTextEntryCell () <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UITextField *entryField;
@@ -34,6 +34,13 @@
   }
   return self;
 }
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+
+    [self.entryField setDelegate:self];
+}
+
 
 - (void)setTitle:(NSString *)title value:(NSString *)value {
   [self.titleLabel setText:title];
@@ -76,6 +83,14 @@
   [self.numberAccessoryView setReturnButtonTitle:returnButtonTitle action:^{
     [weakSelf.entryField.delegate textFieldShouldReturn:weakSelf.entryField];
   }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (self.finishedEditingHandler) {
+        self.finishedEditingHandler(self);
+    }
+
+    return YES;
 }
 
 

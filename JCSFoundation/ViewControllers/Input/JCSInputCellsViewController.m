@@ -16,9 +16,8 @@
 
 #import "JCSInputCellsViewController.h"
 #import "JCSTextEntryCell.h"
-#import "UIView+JCSFindParent.h"
 
-@interface JCSInputCellsViewController () <UITextFieldDelegate>
+@interface JCSInputCellsViewController ()
 
 @property (nonatomic, strong) NSMutableArray *presentedCells;
 
@@ -97,19 +96,11 @@
 
   if ([cell isKindOfClass:[JCSTextEntryCell class]]) {
     JCSTextEntryCell *entryCell = (JCSTextEntryCell *) cell;
-    [entryCell.entryField setDelegate:self];
+      [entryCell setFinishedEditingHandler:^(JCSTextEntryCell *textCell) {
+          [textCell.entryField resignFirstResponder];
+          [self moveFocusToNextEntryCell:textCell];
+      }];
   }
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-  [textField resignFirstResponder];
-
-  UIView *containing = [textField findParentViewOfType:[UITableViewCell class]];
-  if ([containing isKindOfClass:[JCSTextEntryCell class]]) {
-    [self moveFocusToNextEntryCell:(UITableViewCell *) containing];
-  }
-
-  return YES;
 }
 
 - (void)moveFocusToNextEntryCell:(UITableViewCell *)cell {

@@ -17,11 +17,15 @@
 #import <UIKit/UIKit.h>
 
 @class JCSNumericInputAccessoryView;
+@class JCSTextEntryCell;
+
+typedef void (^JCSTextEntryCellActionBlock)(JCSTextEntryCell *cell);
 
 @interface JCSTextEntryCell : UITableViewCell
 
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 @property (nonatomic, strong, readonly) UITextField *entryField;
+@property (nonatomic, copy) JCSTextEntryCellActionBlock finishedEditingHandler;
 
 - (void)setTitle:(NSString *)title value:(NSString *)value;
 - (NSString *)value;
