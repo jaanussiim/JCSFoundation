@@ -16,12 +16,15 @@
 
 #import "JCSTextEntryCell.h"
 #import "JCSNumericInputAccessoryView.h"
+#import "JCSInputValidation.h"
+#import "JCSDecimalInputValidation.h"
 
 @interface JCSTextEntryCell () <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UITextField *entryField;
 @property (nonatomic, strong) JCSNumericInputAccessoryView *numberAccessoryView;
+@property (nonatomic, strong) id<JCSInputValidation> inputValidation;
 
 @end
 
@@ -57,6 +60,7 @@
 
 - (void)useNumbersAndPunctuationKeyboard {
   [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+  [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
 }
 
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
@@ -93,5 +97,12 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (!self.inputValidation) {
+        return YES;
+    }
+
+    return [self.inputValidation textField:textField shouldChangeCharactersInRange:range replacementString:string];
+}
 
 @end

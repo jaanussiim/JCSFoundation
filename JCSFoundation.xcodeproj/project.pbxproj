@@ -55,6 +55,8 @@
 		EAA2A65316D4C1D800001229 /* JCSFetchedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65116D4C1D800001229 /* JCSFetchedTableViewController.m */; };
 		EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */; };
 		EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */; };
+		EAA54F231733871F00B65BF3 /* JCSDecimalInputValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA54F211733871F00B65BF3 /* JCSDecimalInputValidation.h */; };
+		EAA54F241733871F00B65BF3 /* JCSDecimalInputValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA54F221733871F00B65BF3 /* JCSDecimalInputValidation.m */; };
 		EAAEEFE916D73E54008CBBA2 /* JCSInputCellsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFE716D73E54008CBBA2 /* JCSInputCellsViewController.h */; };
 		EAAEEFEA16D73E54008CBBA2 /* JCSInputCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFE816D73E54008CBBA2 /* JCSInputCellsViewController.m */; };
 		EAAEEFED16D73E72008CBBA2 /* JCSTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFEB16D73E72008CBBA2 /* JCSTextEntryCell.h */; };
@@ -127,6 +129,9 @@
 		EAA2A65116D4C1D800001229 /* JCSFetchedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableViewController.m; sourceTree = "<group>"; };
 		EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableCell.h; sourceTree = "<group>"; };
 		EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableCell.m; sourceTree = "<group>"; };
+		EAA54F201733870400B65BF3 /* JCSInputValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSInputValidation.h; sourceTree = "<group>"; };
+		EAA54F211733871F00B65BF3 /* JCSDecimalInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDecimalInputValidation.h; sourceTree = "<group>"; };
+		EAA54F221733871F00B65BF3 /* JCSDecimalInputValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDecimalInputValidation.m; sourceTree = "<group>"; };
 		EAAEEFE716D73E54008CBBA2 /* JCSInputCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInputCellsViewController.h; sourceTree = "<group>"; };
 		EAAEEFE816D73E54008CBBA2 /* JCSInputCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSInputCellsViewController.m; sourceTree = "<group>"; };
 		EAAEEFEB16D73E72008CBBA2 /* JCSTextEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSTextEntryCell.h; sourceTree = "<group>"; };
@@ -259,6 +264,9 @@
 		EAAEEFE616D73E22008CBBA2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EAA54F211733871F00B65BF3 /* JCSDecimalInputValidation.h */,
+				EAA54F221733871F00B65BF3 /* JCSDecimalInputValidation.m */,
+				EAA54F201733870400B65BF3 /* JCSInputValidation.h */,
 				EAAEEFEB16D73E72008CBBA2 /* JCSTextEntryCell.h */,
 				EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */,
 				EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */,
@@ -403,6 +411,7 @@
 				EA5094B216FA3BE10064B88A /* NSDate+JCSCalculations.h in Headers */,
 				EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */,
 				EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */,
+				EAA54F231733871F00B65BF3 /* JCSDecimalInputValidation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +525,7 @@
 				EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */,
 				EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */,
 				EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */,
+				EAA54F241733871F00B65BF3 /* JCSDecimalInputValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
