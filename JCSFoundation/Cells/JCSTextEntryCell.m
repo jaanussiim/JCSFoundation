@@ -18,6 +18,7 @@
 #import "JCSNumericInputAccessoryView.h"
 #import "JCSInputValidation.h"
 #import "JCSDecimalInputValidation.h"
+#import "JCSQuickNumericInputAccessoryView.h"
 
 @interface JCSTextEntryCell () <UITextFieldDelegate>
 
@@ -56,11 +57,19 @@
 
 - (void)useNumbersKeyboard {
   [self.entryField setKeyboardType:UIKeyboardTypeNumberPad];
+
+  if (!self.entryField.inputAccessoryView) {
+    [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
+  }
 }
 
 - (void)useNumbersAndPunctuationKeyboard {
   [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
   [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
+
+  if (!self.entryField.inputAccessoryView) {
+    [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
+  }
 }
 
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
