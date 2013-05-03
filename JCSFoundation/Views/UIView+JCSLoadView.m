@@ -36,4 +36,9 @@
   return result;
 }
 
++ (UINib *)viewNib {
+    NSString *expectedNibName = NSStringFromClass([self class]);
+    return [UINib nibWithNibName:expectedNibName bundle:nil];
+}
+
 @end

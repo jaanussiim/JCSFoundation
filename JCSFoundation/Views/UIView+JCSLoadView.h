@@ -20,5 +20,6 @@
 
 + (id)loadInstance;
 + (UIView *)loadViewFromXib:(NSString *)xibName;
++ (UINib *)viewNib;
 
 @end
