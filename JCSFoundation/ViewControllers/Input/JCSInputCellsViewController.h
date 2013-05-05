@@ -19,5 +19,6 @@
 @interface JCSInputCellsViewController : UITableViewController
 
 - (void)addCellForPresentation:(UITableViewCell *)cell;
+- (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

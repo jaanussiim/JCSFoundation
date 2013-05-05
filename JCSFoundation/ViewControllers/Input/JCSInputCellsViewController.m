@@ -16,6 +16,7 @@
 
 #import "JCSInputCellsViewController.h"
 #import "JCSTextEntryCell.h"
+#import "JCSFoundationConstants.h"
 
 @interface JCSInputCellsViewController ()
 
@@ -83,6 +84,8 @@
   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
   if ([self isEntryCell:cell]) {
     [self moveFocusToCell:cell];
+  } else {
+    [self tappedCellAtIndexPath:indexPath];
   }
 }
 
@@ -129,6 +132,10 @@
 
 - (BOOL)isEntryCell:(UITableViewCell *)cell {
   return [cell isKindOfClass:[JCSTextEntryCell class]];
+}
+
+- (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath {
+    JCSFLog(@"tappedCellAtIndexPath:%@", indexPath);
 }
 
 @end
