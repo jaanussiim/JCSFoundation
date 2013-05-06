@@ -29,6 +29,9 @@
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
 
 - (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (id)fetchEntityNamed:(NSString *)entityName atOffset:(NSUInteger)offset;
+
+- (NSUInteger)countInstancesOfEntity:(NSString *)entityName;
 
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 

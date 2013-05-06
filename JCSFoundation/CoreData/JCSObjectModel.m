@@ -79,7 +79,16 @@
 }
 
 - (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
+    return [self fetchEntityNamed:entityName withPredicate:predicate atOffset:0];
+}
+
+- (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate atOffset:(NSUInteger)offset {
   NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate];
+  [fetchRequest setFetchOffset:offset];
+
+  if (offset > 0) {
+    [fetchRequest setFetchLimit:1];
+  }
 
   NSError *error = nil;
   NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
@@ -93,6 +102,24 @@
   }
 
   return [objects lastObject];
+}
+
+- (id)fetchEntityNamed:(NSString *)entityName atOffset:(NSUInteger)offset {
+    return [self fetchEntityNamed:entityName withPredicate:nil atOffset:offset];
+}
+
+- (NSUInteger)countInstancesOfEntity:(NSString *)entityName {
+    NSFetchRequest *request = [self fetchRequestForEntity:entityName predicate:nil];
+
+    NSError *error = nil;
+    NSUInteger count = [self.managedObjectContext countForFetchRequest:request error:&error];
+
+    if (error != nil) {
+        JCSFLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+
+    return count;
 }
 
 - (void)saveContext {
