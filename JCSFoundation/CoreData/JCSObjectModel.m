@@ -182,6 +182,8 @@
         NSLog(@"Wipe error:%@", wipeError);
       }
 
+      _persistentStoreCoordinator = nil;
+
       return [self persistentStoreCoordinator];
     } else {
       abort();
