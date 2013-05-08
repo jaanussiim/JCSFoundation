@@ -74,6 +74,12 @@
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
 		EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */; };
 		EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */; };
+		EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B21173A17D700C22211 /* UIImage+Alpha.h */; };
+		EAD85B28173A17D700C22211 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B22173A17D700C22211 /* UIImage+Alpha.m */; };
+		EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B23173A17D700C22211 /* UIImage+Resize.h */; };
+		EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B24173A17D700C22211 /* UIImage+Resize.m */; };
+		EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */; };
+		EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */; };
 		EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */; };
 		EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */; };
 		EAEB273816D0D3CB00D126BD /* JCSSingleSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */; };
@@ -154,6 +160,12 @@
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
 		EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleInputEntryViewController.h; sourceTree = "<group>"; };
 		EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleInputEntryViewController.m; sourceTree = "<group>"; };
+		EAD85B21173A17D700C22211 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		EAD85B22173A17D700C22211 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		EAD85B23173A17D700C22211 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		EAD85B24173A17D700C22211 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionViewController.h; sourceTree = "<group>"; };
 		EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionViewController.m; sourceTree = "<group>"; };
 		EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleSelectionViewController.h; sourceTree = "<group>"; };
@@ -297,8 +309,9 @@
 			children = (
 				EAD0634F16A092D000FF6BA9 /* Frameworks */,
 				EAD0635216A092D000FF6BA9 /* JCSFoundation */,
-				EAD0635316A092D000FF6BA9 /* Supporting Files */,
 				EAD0634E16A092D000FF6BA9 /* Products */,
+				EAD0635316A092D000FF6BA9 /* Supporting Files */,
+				EAD85B1F173A17D700C22211 /* Thirdparty */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,6 +367,27 @@
 				EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */,
 			);
 			path = Input;
+			sourceTree = "<group>";
+		};
+		EAD85B1F173A17D700C22211 /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				EAD85B20173A17D700C22211 /* UIImageCategories */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		EAD85B20173A17D700C22211 /* UIImageCategories */ = {
+			isa = PBXGroup;
+			children = (
+				EAD85B21173A17D700C22211 /* UIImage+Alpha.h */,
+				EAD85B22173A17D700C22211 /* UIImage+Alpha.m */,
+				EAD85B23173A17D700C22211 /* UIImage+Resize.h */,
+				EAD85B24173A17D700C22211 /* UIImage+Resize.m */,
+				EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */,
+				EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */,
+			);
+			path = UIImageCategories;
 			sourceTree = "<group>";
 		};
 		EAEB273016D0D35A00D126BD /* ViewControllers */ = {
@@ -419,6 +453,9 @@
 				EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */,
 				EAA54F231733871F00B65BF3 /* JCSDecimalInputValidation.h in Headers */,
 				EAA54F2717338A6600B65BF3 /* JCSQuickNumericInputAccessoryView.h in Headers */,
+				EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */,
+				EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */,
+				EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +571,9 @@
 				EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */,
 				EAA54F241733871F00B65BF3 /* JCSDecimalInputValidation.m in Sources */,
 				EAA54F2817338A6600B65BF3 /* JCSQuickNumericInputAccessoryView.m in Sources */,
+				EAD85B28173A17D700C22211 /* UIImage+Alpha.m in Sources */,
+				EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */,
+				EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
