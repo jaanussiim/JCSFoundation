@@ -24,6 +24,8 @@
 /* Begin PBXBuildFile section */
 		EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */; };
 		EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */; };
+		EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */ = {isa = PBXBuildFile; fileRef = EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */; };
+		EA222E68173B662C00C5D613 /* UIImage+JCSImageSave.m in Sources */ = {isa = PBXBuildFile; fileRef = EA222E66173B662C00C5D613 /* UIImage+JCSImageSave.m */; };
 		EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2347B516E349DB000C63A0 /* JCSPhotoCaptureView.h */; };
 		EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2347B616E349DB000C63A0 /* JCSPhotoCaptureView.m */; };
 		EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2347C716E46E3D000C63A0 /* JCSCameraCapture.h */; };
@@ -104,6 +106,8 @@
 /* Begin PBXFileReference section */
 		EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSLocalization.h; sourceTree = "<group>"; };
 		EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSLocalization.m; sourceTree = "<group>"; };
+		EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JCSImageSave.h"; sourceTree = "<group>"; };
+		EA222E66173B662C00C5D613 /* UIImage+JCSImageSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JCSImageSave.m"; sourceTree = "<group>"; };
 		EA2347B516E349DB000C63A0 /* JCSPhotoCaptureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPhotoCaptureView.h; sourceTree = "<group>"; };
 		EA2347B616E349DB000C63A0 /* JCSPhotoCaptureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPhotoCaptureView.m; sourceTree = "<group>"; };
 		EA2347C716E46E3D000C63A0 /* JCSCameraCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCameraCapture.h; sourceTree = "<group>"; };
@@ -198,6 +202,15 @@
 				EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		EA222E64173B661800C5D613 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */,
+				EA222E66173B662C00C5D613 /* UIImage+JCSImageSave.m */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		EA2347B416E349AC000C63A0 /* Camera */ = {
@@ -339,6 +352,7 @@
 				EAAEEFE616D73E22008CBBA2 /* Cells */,
 				EA71D10F16D4997D0059CC4D /* CoreData */,
 				EA69985F16AD3DB400B20033 /* Extensions */,
+				EA222E64173B661800C5D613 /* Image */,
 				EA0183EB16EDA2AB005E1DAC /* Localization */,
 				EAEB273016D0D35A00D126BD /* ViewControllers */,
 				EA5D033116CAD48E00D4D42D /* Views */,
@@ -456,6 +470,7 @@
 				EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */,
 				EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */,
 				EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */,
+				EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +589,7 @@
 				EAD85B28173A17D700C22211 /* UIImage+Alpha.m in Sources */,
 				EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */,
 				EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */,
+				EA222E68173B662C00C5D613 /* UIImage+JCSImageSave.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
