@@ -15,6 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "JCSFoundationConstants.h"
 
 @interface JCSObjectModel : NSObject
 
@@ -25,6 +26,7 @@
 - (id)initWithDataModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType;
 
 - (void)saveContext;
+- (void)saveContext:(JCSActionBlock)completion;
 
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
 

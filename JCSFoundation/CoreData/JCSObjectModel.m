@@ -15,7 +15,6 @@
  */
 
 #import "JCSObjectModel.h"
-#import "JCSFoundationConstants.h"
 
 @interface JCSObjectModel ()
 
@@ -24,6 +23,7 @@
 @property (nonatomic, copy) NSString *dataModelName;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, strong) NSManagedObjectContext *writingContext;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end
@@ -123,16 +123,40 @@
 }
 
 - (void)saveContext {
-  NSError *error = nil;
-  NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-  if (managedObjectContext != nil) {
-    if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-      // Replace this implementation with code to handle the error appropriately.
-      // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-      NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-      abort();
+    [self saveContext:nil];
+}
+
+- (void)saveContext:(JCSActionBlock)completion {
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+
+    if (!managedObjectContext) {
+        return;
     }
-  }
+
+    void (^performSave)() = ^{
+        NSError *error = nil;
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+
+        void (^performWriterSave)() = ^{
+            NSError *saveError = nil;
+            if (![self.writingContext save:&saveError]) {
+                NSLog(@"Parent save error:%@", saveError);
+            }
+
+            if (completion) {
+                completion();
+            }
+        };
+
+        [self.writingContext performBlock:performWriterSave];
+    };
+
+    [managedObjectContext performBlock:performSave];
 }
 
 - (void)deleteObject:(NSManagedObject *)object {
@@ -149,10 +173,17 @@
   }
 
   NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-  if (coordinator != nil) {
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+  if (coordinator == nil) {
+      return nil;
   }
+
+  NSManagedObjectContext *savingContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+  [savingContext setPersistentStoreCoordinator:coordinator];
+  [self setWritingContext:savingContext];
+
+  _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+  [_managedObjectContext setParentContext:self.writingContext];
+
   return _managedObjectContext;
 }
 
@@ -176,7 +207,13 @@
 
   NSError *error = nil;
   _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-  if (![_persistentStoreCoordinator addPersistentStoreWithType:self.storeType configuration:nil URL:self.storeURL options:nil error:&error]) {
+
+  // Automatic migration
+  NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+          [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+          [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+
+  if (![_persistentStoreCoordinator addPersistentStoreWithType:self.storeType configuration:nil URL:self.storeURL options:options error:&error]) {
     /*
      Replace this implementation with code to handle the error appropriately.
 
