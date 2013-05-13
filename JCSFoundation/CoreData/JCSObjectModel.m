@@ -122,6 +122,17 @@
     return count;
 }
 
+- (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", attributeName, attributeValue];
+    id existing = [self fetchEntityNamed:entityName withPredicate:predicate];
+
+    if (!existing) {
+        return NO;
+    }
+
+    return [[attributeValue lowercaseString] isEqualToString:[[existing valueForKeyPath:attributeName] lowercaseString]];
+}
+
 - (void)saveContext {
     [self saveContext:nil];
 }

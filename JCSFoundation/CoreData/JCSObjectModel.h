@@ -35,6 +35,8 @@
 
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName;
 
+- (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue;
+
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 
 - (void)deleteObject:(NSManagedObject *)object;
