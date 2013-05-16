@@ -47,6 +47,21 @@
   return self;
 }
 
+- (id)initPrivateModelWithCoordinator:(NSPersistentStoreCoordinator *)coordinator writerContext:(NSManagedObjectContext *)context {
+    self = [super init];
+    if (self) {
+        _persistentStoreCoordinator = coordinator;
+        _writingContext = context;
+    }
+    return self;
+}
+
+- (id)spawnBackgroundInstance {
+    Class modelClass = [self class];
+    JCSObjectModel *model = [[modelClass alloc] initPrivateModelWithCoordinator:self.persistentStoreCoordinator writerContext:self.managedObjectContext];
+    return model;
+}
+
 - (NSFetchRequest *)fetchRequestForEntity:(NSString *)entity predicate:(NSPredicate *)predicate {
   return [self fetchRequestForEntity:entity predicate:predicate sortDescriptors:nil];
 }
@@ -60,6 +75,10 @@
   [fetchRequest setPredicate:predicate];
   [fetchRequest setSortDescriptors:sortDescriptors];
   return fetchRequest;
+}
+
+- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName {
+  return [self fetchedControllerForEntity:entityName sortDescriptors:@[]];
 }
 
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors {
@@ -188,11 +207,15 @@
       return nil;
   }
 
-  NSManagedObjectContext *savingContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-  [savingContext setPersistentStoreCoordinator:coordinator];
-  [self setWritingContext:savingContext];
+  BOOL isPrivateInstance = self.writingContext != nil;
 
-  _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+  if (!self.writingContext) {
+      NSManagedObjectContext *savingContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+      [savingContext setPersistentStoreCoordinator:coordinator];
+      [self setWritingContext:savingContext];
+  }
+
+  _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:isPrivateInstance ? NSPrivateQueueConcurrencyType : NSMainQueueConcurrencyType];
   [_managedObjectContext setParentContext:self.writingContext];
 
   return _managedObjectContext;
