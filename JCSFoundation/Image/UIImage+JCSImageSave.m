@@ -25,7 +25,11 @@
 }
 
 - (void)saveJPEGToFile:(NSString *)path {
-    NSData *data = UIImageJPEGRepresentation(self, 0.8);
+    [self saveJPEGToFile:path compressionQuality:0.8];
+}
+
+- (void)saveJPEGToFile:(NSString *)path compressionQuality:(CGFloat)quality {
+    NSData *data = UIImageJPEGRepresentation(self, quality);
     [self writeData:data toPath:path];
 }
 

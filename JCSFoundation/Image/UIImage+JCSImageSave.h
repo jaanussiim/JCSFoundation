@@ -20,5 +20,6 @@
 
 - (void)savePNGToFile:(NSString *)path;
 - (void)saveJPEGToFile:(NSString *)path;
+- (void)saveJPEGToFile:(NSString *)path compressionQuality:(CGFloat)quality;
 
 @end
