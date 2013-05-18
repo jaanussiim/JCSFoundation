@@ -26,9 +26,11 @@ typedef void (^JCSTextEntryCellActionBlock)(JCSTextEntryCell *cell);
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 @property (nonatomic, strong, readonly) UITextField *entryField;
 @property (nonatomic, copy) JCSTextEntryCellActionBlock finishedEditingHandler;
+@property (nonatomic, assign, getter=isEnabled) BOOL editable;
 
 - (void)setTitle:(NSString *)title value:(NSString *)value;
 - (NSString *)value;
+- (void)setValue:(NSString *)value;
 - (void)useNumbersKeyboard;
 - (void)useNumbersAndPunctuationKeyboard;
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view;

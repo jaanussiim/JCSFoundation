@@ -17,6 +17,7 @@
 #import "JCSInputCellsViewController.h"
 #import "JCSTextEntryCell.h"
 #import "JCSFoundationConstants.h"
+#import "UIApplication+Keyboard.h"
 
 @interface JCSInputCellsViewController ()
 
@@ -82,9 +83,10 @@
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  if ([self isEntryCell:cell]) {
+  if ([self isCellEditable:cell]) {
     [self moveFocusToCell:cell];
   } else {
+    [UIApplication dismissKeyboard];
     [self tappedCellAtIndexPath:indexPath];
   }
 }
@@ -132,6 +134,15 @@
 
 - (BOOL)isEntryCell:(UITableViewCell *)cell {
   return [cell isKindOfClass:[JCSTextEntryCell class]];
+}
+
+- (BOOL)isCellEditable:(UITableViewCell *)cell {
+    if (![self isEntryCell:cell]) {
+        return NO;
+    }
+
+    JCSTextEntryCell *entryCell = (JCSTextEntryCell *) cell;
+    return [entryCell isEnabled];
 }
 
 - (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath {

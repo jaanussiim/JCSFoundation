@@ -54,7 +54,7 @@
 
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
-  return selectable == self.selected;
+  return [selectable isEqual:self.selected];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

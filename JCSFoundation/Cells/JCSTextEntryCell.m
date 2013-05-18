@@ -34,13 +34,15 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
   self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
   if (self) {
-    // Initialization code
+
   }
   return self;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+
+    self.editable = YES;
 
     [self.entryField setDelegate:self];
 }
@@ -53,6 +55,10 @@
 
 - (NSString *)value {
   return [self.entryField text];
+}
+
+- (void)setValue:(NSString *)value {
+    self.entryField.text = value;
 }
 
 - (void)useNumbersKeyboard {
@@ -112,6 +118,12 @@
     }
 
     return [self.inputValidation textField:textField shouldChangeCharactersInRange:range replacementString:string];
+}
+
+- (void)setEditable:(BOOL)editable {
+    _editable = editable;
+
+    [self.entryField setUserInteractionEnabled:editable];
 }
 
 @end
