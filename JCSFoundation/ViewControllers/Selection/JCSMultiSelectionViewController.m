@@ -26,60 +26,60 @@
 @implementation JCSMultiSelectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view.
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)setSelectedObjects:(NSArray *)selectedObjects {
-  [self setSelected:[NSMutableArray arrayWithArray:selectedObjects]];
+    [self setSelected:[NSMutableArray arrayWithArray:selectedObjects]];
 }
 
 - (void)addToSelected:(id <JCSSelectable>)selectable {
-  [self.selected addObject:selectable];
-  NSIndexPath *indexPath = [self indexPathForObject:selectable];
-  [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.selected addObject:selectable];
+    NSIndexPath *indexPath = [self indexPathForObject:selectable];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (NSArray *)selectedObjects {
-  return [NSArray arrayWithArray:self.selected];
+    return [NSArray arrayWithArray:self.selected];
 }
 
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
-  return [self.selectedObjects containsObject:selectable];
+    return [self.selectedObjects containsObject:selectable];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  id<JCSSelectable> selected = [self objectAtIndexPath:indexPath];
+    id <JCSSelectable> selected = [self objectAtIndexPath:indexPath];
 
-  if ([self isSelected:selected]) {
-    [self.selected removeObject:selected];
-  } else {
-    [self.selected addObject:selected];
-  }
+    if ([self isSelected:selected]) {
+        [self.selected removeObject:selected];
+    } else {
+        [self.selected addObject:selected];
+    }
 
-  [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
 
-  if (self.selectionCompletionBlock) {
-    self.selectionCompletionBlock([NSArray arrayWithArray:self.selected]);
-  }
+    if (self.selectionCompletionBlock) {
+        self.selectionCompletionBlock([NSArray arrayWithArray:self.selected]);
+    }
 }
 
 @end

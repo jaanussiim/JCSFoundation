@@ -29,61 +29,61 @@
 @implementation JCSSingleInputEntryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
 
-  [self.navigationItem setRightBarButtonItem:self.doneButtonItem];
+    [self.navigationItem setRightBarButtonItem:self.doneButtonItem];
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
+    [super viewDidAppear:animated];
 
-  [self.entryField becomeFirstResponder];
+    [self.entryField becomeFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-  [UIApplication dismissKeyboard];
-  if ([self hasValidIput]) {
-    [self notifyCompletionHandler];
-  }
+    [UIApplication dismissKeyboard];
+    if ([self hasValidIput]) {
+        [self notifyCompletionHandler];
+    }
 
-  return YES;
+    return YES;
 }
 
 - (void)notifyCompletionHandler {
-  if (!self.completionBlock) {
-    return;
-  }
+    if (!self.completionBlock) {
+        return;
+    }
 
-  self.completionBlock(self.entryField.text);
+    self.completionBlock(self.entryField.text);
 }
 
 
 - (IBAction)donePressed:(id)sender {
-  [UIApplication dismissKeyboard];
-  if ([self hasValidIput]) {
-    [self notifyCompletionHandler];
-  }
+    [UIApplication dismissKeyboard];
+    if ([self hasValidIput]) {
+        [self notifyCompletionHandler];
+    }
 }
 
 - (BOOL)hasValidIput {
-  if (!self.entryValidationBlock) {
-    return YES;
-  }
+    if (!self.entryValidationBlock) {
+        return YES;
+    }
 
-  return self.entryValidationBlock(self.entryField.text);
+    return self.entryValidationBlock(self.entryField.text);
 }
 
 @end

@@ -25,18 +25,18 @@
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UITextField *entryField;
 @property (nonatomic, strong) JCSNumericInputAccessoryView *numberAccessoryView;
-@property (nonatomic, strong) id<JCSInputValidation> inputValidation;
+@property (nonatomic, strong) id <JCSInputValidation> inputValidation;
 
 @end
 
 @implementation JCSTextEntryCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-  self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-  if (self) {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
 
-  }
-  return self;
+    }
+    return self;
 }
 
 - (void)awakeFromNib {
@@ -49,12 +49,12 @@
 
 
 - (void)setTitle:(NSString *)title value:(NSString *)value {
-  [self.titleLabel setText:title];
-  [self.entryField setText:value];
+    [self.titleLabel setText:title];
+    [self.entryField setText:value];
 }
 
 - (NSString *)value {
-  return [self.entryField text];
+    return [self.entryField text];
 }
 
 - (void)setValue:(NSString *)value {
@@ -62,46 +62,46 @@
 }
 
 - (void)useNumbersKeyboard {
-  [self.entryField setKeyboardType:UIKeyboardTypeNumberPad];
+    [self.entryField setKeyboardType:UIKeyboardTypeNumberPad];
 
-  if (!self.entryField.inputAccessoryView) {
-    [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
-  }
+    if (!self.entryField.inputAccessoryView) {
+        [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
+    }
 }
 
 - (void)useNumbersAndPunctuationKeyboard {
-  [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
-  [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
+    [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+    [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
 
-  if (!self.entryField.inputAccessoryView) {
-    [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
-  }
+    if (!self.entryField.inputAccessoryView) {
+        [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
+    }
 }
 
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
-  [self.entryField setInputAccessoryView:view];
-  [self setNumberAccessoryView:view];
-  [self updateNumberAccessoryButton];
+    [self.entryField setInputAccessoryView:view];
+    [self setNumberAccessoryView:view];
+    [self updateNumberAccessoryButton];
 }
 
 - (void)setAutocapitalizationType:(UITextAutocapitalizationType)type {
-  [self.entryField setAutocapitalizationType:type];
+    [self.entryField setAutocapitalizationType:type];
 }
 
 - (void)setReturnKeyType:(UIReturnKeyType)type {
-  [self.entryField setReturnKeyType:type];
-  [self updateNumberAccessoryButton];
+    [self.entryField setReturnKeyType:type];
+    [self updateNumberAccessoryButton];
 }
 
 - (void)updateNumberAccessoryButton {
-  __block __weak JCSTextEntryCell *weakSelf = self;
+    __block __weak JCSTextEntryCell *weakSelf = self;
 
-  NSString *returnButtonTitle = self.entryField.returnKeyType == UIReturnKeyNext
-      ? NSLocalizedString(@"JCS.button.title.next", nil) : NSLocalizedString(@"JCS.button.title.done", nil);
+    NSString *returnButtonTitle = self.entryField.returnKeyType == UIReturnKeyNext
+            ? NSLocalizedString(@"JCS.button.title.next", nil) : NSLocalizedString(@"JCS.button.title.done", nil);
 
-  [self.numberAccessoryView setReturnButtonTitle:returnButtonTitle action:^{
-    [weakSelf.entryField.delegate textFieldShouldReturn:weakSelf.entryField];
-  }];
+    [self.numberAccessoryView setReturnButtonTitle:returnButtonTitle action:^{
+        [weakSelf.entryField.delegate textFieldShouldReturn:weakSelf.entryField];
+    }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

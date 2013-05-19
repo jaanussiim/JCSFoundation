@@ -19,40 +19,41 @@
 @implementation NSDate (JCSCalculations)
 
 - (NSDate *)nextDay {
-  return [self dateByAddingDays:1];
+    return [self dateByAddingDays:1];
 }
 
 - (NSDate *)previousDay {
-  return [self dateByAddingDays:-1];
+    return [self dateByAddingDays:-1];
 }
 
 - (NSDate *)dateAtStartOfDay {
-  return [NSDate dateForUnit:NSDayCalendarUnit beforeDate:self];
+    return [NSDate dateForUnit:NSDayCalendarUnit beforeDate:self];
 }
 
 
 - (NSDate *)dateByAddingDays:(NSInteger)numberOfDaysToAdd {
-  NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
-  [dateComponents setDay:numberOfDaysToAdd];
-  return [[NSDate gregorian] dateByAddingComponents:dateComponents toDate:self options:0];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setDay:numberOfDaysToAdd];
+    return [[NSDate gregorian] dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
 + (NSDate *)dateForUnit:(NSCalendarUnit)unit beforeDate:(NSDate *)date {
-  NSDate *result;
-  [[NSDate gregorian] rangeOfUnit:unit
-                        startDate:&result
-                         interval:0
-                          forDate:date];
-  return result;
+    NSDate *result;
+    [[NSDate gregorian] rangeOfUnit:unit
+                          startDate:&result
+                           interval:0
+                            forDate:date];
+    return result;
 }
 
 static NSCalendar *__gregorian;
-+ (NSCalendar *)gregorian {
-  if (!__gregorian) {
-    __gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-  }
 
-  return __gregorian;
++ (NSCalendar *)gregorian {
+    if (!__gregorian) {
+        __gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    }
+
+    return __gregorian;
 }
 
 @end

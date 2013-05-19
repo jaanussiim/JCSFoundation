@@ -19,28 +19,28 @@
 @implementation NSString (JCSValidations)
 
 - (BOOL)hasValue {
-  return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0;
+    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0;
 }
 
 - (BOOL)isDecimalNumber {
-  if (![self hasValue]) {
-    return NO;
-  }
+    if (![self hasValue]) {
+        return NO;
+    }
 
-  NSString *value = [NSString stringWithString:self];
-  value = [value stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    NSString *value = [NSString stringWithString:self];
+    value = [value stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
 
-  return ![value hasValue];
+    return ![value hasValue];
 }
 
 - (BOOL)isNumber {
-  if (![self hasValue]) {
-    return NO;
-  }
+    if (![self hasValue]) {
+        return NO;
+    }
 
-  NSDecimalNumber *number = [NSDecimalNumber decimalNumberWithString:self locale:[NSLocale currentLocale]];
-  //TODO jaanus: check this. ',' may have been replaced with '.', but should have same length
-  return [self length] == [[number stringValue] length];
+    NSDecimalNumber *number = [NSDecimalNumber decimalNumberWithString:self locale:[NSLocale currentLocale]];
+    //TODO jaanus: check this. ',' may have been replaced with '.', but should have same length
+    return [self length] == [[number stringValue] length];
 }
 
 @end

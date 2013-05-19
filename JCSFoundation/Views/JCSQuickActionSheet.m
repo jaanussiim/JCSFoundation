@@ -26,44 +26,44 @@
 @implementation JCSQuickActionSheet
 
 + (id)actionSheetWithMessage:(NSString *)message {
-  JCSQuickActionSheet *actionSheet = [[JCSQuickActionSheet alloc] initWithTitle:message
-                                                                       delegate:nil
-                                                              cancelButtonTitle:nil
-                                                         destructiveButtonTitle:nil
-                                                              otherButtonTitles:nil];
-  [actionSheet setDelegate:actionSheet];
-  return actionSheet;
+    JCSQuickActionSheet *actionSheet = [[JCSQuickActionSheet alloc] initWithTitle:message
+                                                                         delegate:nil
+                                                                cancelButtonTitle:nil
+                                                           destructiveButtonTitle:nil
+                                                                otherButtonTitles:nil];
+    [actionSheet setDelegate:actionSheet];
+    return actionSheet;
 }
 
 - (void)show {
-  UIWindow *window = [UIApplication sharedApplication].keyWindow;
-  [self showInView:window];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [self showInView:window];
 }
 
 - (void)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
-  NSInteger index = [self addButtonWithTitle:title];
-  [self.actionsMapping setObject:action forKey:@(index)];
+    NSInteger index = [self addButtonWithTitle:title];
+    [self.actionsMapping setObject:action forKey:@(index)];
 }
 
 - (void)addCancelButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
-  NSInteger index = [self addButtonWithTitle:title];
-  [self.actionsMapping setObject:action forKey:@(index)];
-  [self setCancelButtonIndex:index];
+    NSInteger index = [self addButtonWithTitle:title];
+    [self.actionsMapping setObject:action forKey:@(index)];
+    [self setCancelButtonIndex:index];
 }
 
 - (NSMutableDictionary *)actionsMapping {
-  if (!_actionsMapping) {
-    _actionsMapping = [[NSMutableDictionary alloc] init];
-  }
+    if (!_actionsMapping) {
+        _actionsMapping = [[NSMutableDictionary alloc] init];
+    }
 
-  return _actionsMapping;
+    return _actionsMapping;
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-  JCSActionBlock action = [self.actionsMapping objectForKey:@(buttonIndex)];
-  if (action) {
-    action();
-  }
+    JCSActionBlock action = [self.actionsMapping objectForKey:@(buttonIndex)];
+    if (action) {
+        action();
+    }
 }
 
 @end

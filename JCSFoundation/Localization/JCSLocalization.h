@@ -27,4 +27,4 @@
 @end
 
 #define JCSLocalizedString(key, comment) \
-	    [[JCSLocalization sharedInstance] localizedStringForKey:(key)]
+        [[JCSLocalization sharedInstance] localizedStringForKey:(key)]

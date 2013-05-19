@@ -24,57 +24,57 @@
 @implementation JCSSingleSelectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view.
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+    [super viewWillAppear:animated];
 
-  [self scrollToSelectedCell];
+    [self scrollToSelectedCell];
 }
 
 - (void)scrollToSelectedCell {
-  NSIndexPath *indexPath = [self indexPathForObject:self.selected];
-  [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    NSIndexPath *indexPath = [self indexPathForObject:self.selected];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 }
 
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
-  return [selectable isEqual:self.selected];
+    return [selectable isEqual:self.selected];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  id<JCSSelectable> selected = [self objectAtIndexPath:indexPath];
+    id <JCSSelectable> selected = [self objectAtIndexPath:indexPath];
 
-  if (selected == self.selected) {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  } else {
-    NSIndexPath *index = [self indexPathForObject:self.selected];
-    [self setSelected:selected];
-    [tableView reloadRowsAtIndexPaths:@[indexPath, index] withRowAnimation:UITableViewRowAnimationAutomatic];
-  }
+    if (selected == self.selected) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    } else {
+        NSIndexPath *index = [self indexPathForObject:self.selected];
+        [self setSelected:selected];
+        [tableView reloadRowsAtIndexPaths:@[indexPath, index] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];
 
-  if (self.selectionCompletionBlock) {
-    self.selectionCompletionBlock(self.selected);
-  }
+    if (self.selectionCompletionBlock) {
+        self.selectionCompletionBlock(self.selected);
+    }
 }
 
 @end

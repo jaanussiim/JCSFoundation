@@ -29,40 +29,40 @@
 @implementation JCSPhotoCaptureView
 
 - (id)initWithFrame:(CGRect)frame {
-  self = [super initWithFrame:frame];
-  if (self) {
-    // Initialization code
-  }
-  return self;
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
 }
 
 - (void)startPreview {
-  JCSFLog(@"startPreview");
-  if (!self.cameraCapture) {
-    [self createCameraCapture];
-  }
+    JCSFLog(@"startPreview");
+    if (!self.cameraCapture) {
+        [self createCameraCapture];
+    }
 
-  AVCaptureVideoPreviewLayer *previewLayer = [self.cameraCapture previewLayer];
-  [previewLayer setFrame:self.bounds];
-  [self.layer addSublayer:previewLayer];
+    AVCaptureVideoPreviewLayer *previewLayer = [self.cameraCapture previewLayer];
+    [previewLayer setFrame:self.bounds];
+    [self.layer addSublayer:previewLayer];
 
-  [self.cameraCapture startSession];
+    [self.cameraCapture startSession];
 }
 
 - (void)stopPreview {
-  [self.cameraCapture stopSession];
+    [self.cameraCapture stopSession];
 }
 
 - (void)captureImageWithCompletionHandler:(JCSPhotoCaptureBlock)completionHandler {
-  [self.cameraCapture captureImageWithCompletionHandler:^(NSURL *pathToCapturedImage) {
-    completionHandler(pathToCapturedImage);
-  }];
+    [self.cameraCapture captureImageWithCompletionHandler:^(NSURL *pathToCapturedImage) {
+        completionHandler(pathToCapturedImage);
+    }];
 }
 
 - (void)createCameraCapture {
-  JCSCameraCapture *capture = [[JCSCameraCapture alloc] init];
-  [capture setUp];
-  [self setCameraCapture:capture];
+    JCSCameraCapture *capture = [[JCSCameraCapture alloc] init];
+    [capture setUp];
+    [self setCameraCapture:capture];
 }
 
 @end

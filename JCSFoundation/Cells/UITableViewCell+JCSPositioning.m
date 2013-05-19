@@ -20,16 +20,16 @@
 @implementation UITableViewCell (JCSPositioning)
 
 - (void)adjustWidthTitle:(UIView *)title value:(UIView *)value {
-  CGRect titleFrame = title.frame;
-  CGSize titleSize = [title sizeThatFits:CGSizeMake(NSUIntegerMax, CGRectGetHeight(titleFrame))];
-  CGFloat widthChange = titleSize.width - CGRectGetWidth(titleFrame);
-  titleFrame.size.width += widthChange;
-  [title setFrame:titleFrame];
+    CGRect titleFrame = title.frame;
+    CGSize titleSize = [title sizeThatFits:CGSizeMake(NSUIntegerMax, CGRectGetHeight(titleFrame))];
+    CGFloat widthChange = titleSize.width - CGRectGetWidth(titleFrame);
+    titleFrame.size.width += widthChange;
+    [title setFrame:titleFrame];
 
-  CGRect valueFrame = value.frame;
-  valueFrame.origin.x += widthChange;
-  valueFrame.size.width -= widthChange;
-  [value setFrame:valueFrame];
+    CGRect valueFrame = value.frame;
+    valueFrame.origin.x += widthChange;
+    valueFrame.size.width -= widthChange;
+    [value setFrame:valueFrame];
 }
 
 @end

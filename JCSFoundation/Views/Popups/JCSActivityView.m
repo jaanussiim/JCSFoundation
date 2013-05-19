@@ -26,12 +26,12 @@
 @implementation JCSActivityView
 
 + (instancetype)activityViewWithMessage:(NSString *)message {
-  NSString *expectedNibName = NSStringFromClass([self class]);
-  JCSActivityView *activityView = (JCSActivityView *) [UIView loadViewFromXib:expectedNibName];
+    NSString *expectedNibName = NSStringFromClass([self class]);
+    JCSActivityView *activityView = (JCSActivityView *) [UIView loadViewFromXib:expectedNibName];
 
-  [activityView.messageLabel setText:message];
+    [activityView.messageLabel setText:message];
 
-  return activityView;
+    return activityView;
 }
 
 @end

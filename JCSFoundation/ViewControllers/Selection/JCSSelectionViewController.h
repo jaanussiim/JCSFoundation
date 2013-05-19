@@ -26,6 +26,6 @@
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable;
 - (id <JCSSelectable>)objectAtIndexPath:(NSIndexPath *)indexPath;
-- (NSIndexPath *)indexPathForObject:(id<JCSSelectable>)object;
+- (NSIndexPath *)indexPathForObject:(id <JCSSelectable>)object;
 
 @end

@@ -29,115 +29,115 @@
 @implementation JCSCameraCapture
 
 - (void)startSession {
-  [self.session startRunning];
+    [self.session startRunning];
 }
 
 - (void)stopSession {
-  [self.session stopRunning];
+    [self.session stopRunning];
 }
 
 - (AVCaptureVideoPreviewLayer *)previewLayer {
-  AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-  [captureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-  return captureVideoPreviewLayer;
+    AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+    [captureVideoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    return captureVideoPreviewLayer;
 }
 
 - (void)setUp {
-  AVCaptureSession *captureSession = [[AVCaptureSession alloc] init];
-  [captureSession setSessionPreset:AVCaptureSessionPresetPhoto];
-  [self setSession:captureSession];
+    AVCaptureSession *captureSession = [[AVCaptureSession alloc] init];
+    [captureSession setSessionPreset:AVCaptureSessionPresetPhoto];
+    [self setSession:captureSession];
 
-  [self configureSessionForDevice:AVCaptureDevicePositionBack];
+    [self configureSessionForDevice:AVCaptureDevicePositionBack];
 
-  AVCaptureStillImageOutput *output = [[AVCaptureStillImageOutput alloc] init];
-  NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
-  [output setOutputSettings:outputSettings];
+    AVCaptureStillImageOutput *output = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [output setOutputSettings:outputSettings];
 
-  [self setImageOutput:output];
-  [self.session addOutput:output];
+    [self setImageOutput:output];
+    [self.session addOutput:output];
 }
 
 - (void)captureImageWithCompletionHandler:(JCSCameraCaptureBlock)completion {
-  AVCaptureConnection *videoConnection = nil;
-  for (AVCaptureConnection *connection in self.imageOutput.connections) {
-    for (AVCaptureInputPort *port in [connection inputPorts]) {
-      if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
-        videoConnection = connection;
-        break;
-      }
-    }
-    if (videoConnection) {
-      break;
-    }
-  }
-
-  NSLog(@"Capture device %d - %d", self.device.position, self.device.isAdjustingFocus);
-  [self.imageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
-      ^(CMSampleBufferRef sampleBuffer, NSError *error) {
-        NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:sampleBuffer];
-        JCSFLog(@"Image data size %d", [imageData length]);
-
-        NSURL *libraryFolder = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
-        libraryFolder = [libraryFolder URLByAppendingPathComponent:@"JCSFoundation" isDirectory:YES];
-        libraryFolder = [libraryFolder URLByAppendingPathComponent:@"JCSCameraCapture" isDirectory:YES];
-
-        NSError *createFolderError = nil;
-        [[NSFileManager defaultManager] createDirectoryAtURL:libraryFolder withIntermediateDirectories:YES attributes:nil error:&createFolderError];
-        if (createFolderError) {
-          JCSFLog(@"Create folder error:%@", createFolderError);
+    AVCaptureConnection *videoConnection = nil;
+    for (AVCaptureConnection *connection in self.imageOutput.connections) {
+        for (AVCaptureInputPort *port in [connection inputPorts]) {
+            if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
+                videoConnection = connection;
+                break;
+            }
         }
-
-
-        NSURL *photoPath = [libraryFolder URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", [[NSProcessInfo processInfo] globallyUniqueString]]];
-        NSError *fileWriteError = nil;
-        [imageData writeToURL:photoPath options:NSDataWritingAtomic error:&fileWriteError];
-        if (fileWriteError) {
-          JCSFLog(@"File write error:%@", fileWriteError);
+        if (videoConnection) {
+            break;
         }
+    }
 
-        completion(photoPath);
-      }];
+    NSLog(@"Capture device %d - %d", self.device.position, self.device.isAdjustingFocus);
+    [self.imageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
+            ^(CMSampleBufferRef sampleBuffer, NSError *error) {
+                NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:sampleBuffer];
+                JCSFLog(@"Image data size %d", [imageData length]);
+
+                NSURL *libraryFolder = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
+                libraryFolder = [libraryFolder URLByAppendingPathComponent:@"JCSFoundation" isDirectory:YES];
+                libraryFolder = [libraryFolder URLByAppendingPathComponent:@"JCSCameraCapture" isDirectory:YES];
+
+                NSError *createFolderError = nil;
+                [[NSFileManager defaultManager] createDirectoryAtURL:libraryFolder withIntermediateDirectories:YES attributes:nil error:&createFolderError];
+                if (createFolderError) {
+                    JCSFLog(@"Create folder error:%@", createFolderError);
+                }
+
+
+                NSURL *photoPath = [libraryFolder URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg", [[NSProcessInfo processInfo] globallyUniqueString]]];
+                NSError *fileWriteError = nil;
+                [imageData writeToURL:photoPath options:NSDataWritingAtomic error:&fileWriteError];
+                if (fileWriteError) {
+                    JCSFLog(@"File write error:%@", fileWriteError);
+                }
+
+                completion(photoPath);
+            }];
 }
 
 
 - (void)configureSessionForDevice:(AVCaptureDevicePosition)position {
-  [self.session beginConfiguration];
+    [self.session beginConfiguration];
 
-  NSArray *existingInputs = [self.session inputs];
-  for (AVCaptureInput *input in existingInputs) {
-    [self.session removeInput:input];
-  }
-
-  AVCaptureDevice *camera = nil;
-  NSArray *captureDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-  for (AVCaptureDevice *device in captureDevices) {
-    if (device.position != position) {
-      continue;
+    NSArray *existingInputs = [self.session inputs];
+    for (AVCaptureInput *input in existingInputs) {
+        [self.session removeInput:input];
     }
 
-    camera = device;
-  }
+    AVCaptureDevice *camera = nil;
+    NSArray *captureDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in captureDevices) {
+        if (device.position != position) {
+            continue;
+        }
 
-  if (!camera) {
-    //TODO jaanus: error callback?
-    JCSFLog(@"No device created");
-    return;
-  }
+        camera = device;
+    }
 
-  [self setDevice:camera];
+    if (!camera) {
+        //TODO jaanus: error callback?
+        JCSFLog(@"No device created");
+        return;
+    }
 
-  NSError *error = nil;
-  AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:camera error:&error];
-  if (error) {
-    NSLog(@"Error:%@", error);
-    //TODO jaanus: error callback?
-    JCSFLog(@"Input device not created:%@", error);
-    return;
-  }
+    [self setDevice:camera];
 
-  [self.session addInput:input];
+    NSError *error = nil;
+    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:camera error:&error];
+    if (error) {
+        NSLog(@"Error:%@", error);
+        //TODO jaanus: error callback?
+        JCSFLog(@"Input device not created:%@", error);
+        return;
+    }
 
-  [self.session commitConfiguration];
+    [self.session addInput:input];
+
+    [self.session commitConfiguration];
 }
 
 @end

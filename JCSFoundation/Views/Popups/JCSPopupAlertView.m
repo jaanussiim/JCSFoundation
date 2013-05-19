@@ -33,48 +33,48 @@
 @implementation JCSPopupAlertView
 
 + (id)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
-  NSString *expectedNibName = NSStringFromClass([self class]);
-  JCSPopupAlertView *alertView = (JCSPopupAlertView *) [UIView loadViewFromXib:expectedNibName];
+    NSString *expectedNibName = NSStringFromClass([self class]);
+    JCSPopupAlertView *alertView = (JCSPopupAlertView *) [UIView loadViewFromXib:expectedNibName];
 
-  [alertView setTitle:alertTitle message:message];
+    [alertView setTitle:alertTitle message:message];
 
-  return alertView;
+    return alertView;
 }
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle cancelButtonTitle:(NSString *)cancelTitle {
-  [self.confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
-  [self.cancelButton setTitle:cancelTitle forState:UIControlStateNormal];
+    [self.confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
+    [self.cancelButton setTitle:cancelTitle forState:UIControlStateNormal];
 }
 
 
 - (void)setTitle:(NSString *)title message:(NSString *)message {
-  [self.titleLabel setText:title];
-  [self.messageLabel setText:message];
+    [self.titleLabel setText:title];
+    [self.messageLabel setText:message];
 }
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle {
-  [self.confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
-  [self.cancelButton removeFromSuperview];
+    [self.confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
+    [self.cancelButton removeFromSuperview];
 
-  CGRect confirmFrame = self.cancelButton.frame;
-  confirmFrame.origin.x = (CGRectGetWidth(self.frame) - CGRectGetWidth(confirmFrame)) / 2;
-  [self.confirmButton setFrame:confirmFrame];
+    CGRect confirmFrame = self.cancelButton.frame;
+    confirmFrame.origin.x = (CGRectGetWidth(self.frame) - CGRectGetWidth(confirmFrame)) / 2;
+    [self.confirmButton setFrame:confirmFrame];
 }
 
 - (IBAction)confirmPressed:(id)sender {
-  [self executeActionAndDismiss:self.confirmAction];
+    [self executeActionAndDismiss:self.confirmAction];
 }
 
 - (IBAction)cancelPressed:(id)sender {
-  [self executeActionAndDismiss:nil];
+    [self executeActionAndDismiss:nil];
 }
 
 - (void)executeActionAndDismiss:(JCSActionBlock)actionBlock {
-  if (actionBlock) {
-    actionBlock();
-  }
+    if (actionBlock) {
+        actionBlock();
+    }
 
-  [self dismiss];
+    [self dismiss];
 }
 
 @end

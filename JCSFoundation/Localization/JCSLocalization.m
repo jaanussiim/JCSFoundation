@@ -24,6 +24,7 @@
   }); \
   return _sharedObject; \
 
+
 @interface JCSLocalization ()
 
 @property (nonatomic, strong) NSBundle *languageBundle;
@@ -33,57 +34,57 @@
 @implementation JCSLocalization
 
 + (JCSLocalization *)sharedInstance {
-  DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-    return [[JCSLocalization alloc] initSingleton];
-  });
+    DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
+        return [[JCSLocalization alloc] initSingleton];
+    });
 }
 
 - (id)init {
-  @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                 reason:[NSString stringWithFormat:@"You must use [%@ %@] instead",
-                                                                   NSStringFromClass([self class]),
-                                                                   NSStringFromSelector(@selector(sharedInstance))]
-                               userInfo:nil];
-  return nil;
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:[NSString stringWithFormat:@"You must use [%@ %@] instead",
+                                                                     NSStringFromClass([self class]),
+                                                                     NSStringFromSelector(@selector(sharedInstance))]
+                                 userInfo:nil];
+    return nil;
 }
 
 - (id)initSingleton {
-  self = [super init];
+    self = [super init];
 
-  if (self) {
+    if (self) {
 
-  }
+    }
 
-  return self;
+    return self;
 }
 
 - (NSString *)localizedStringForKey:(NSString *)key {
-  return NSLocalizedStringFromTableInBundle(key, @"", [self languageBundle], nil);
+    return NSLocalizedStringFromTableInBundle(key, @"", [self languageBundle], nil);
 }
 
 - (NSBundle *)languageBundle {
-  if (_languageBundle) {
-    return _languageBundle;
-  }
+    if (_languageBundle) {
+        return _languageBundle;
+    }
 
-  if (!self.forcedLocale) {
-    [self setForcedLocale:[NSLocale systemLocale]];
-  }
+    if (!self.forcedLocale) {
+        [self setForcedLocale:[NSLocale systemLocale]];
+    }
 
-  NSString *languageCode = [self.forcedLocale objectForKey:NSLocaleLanguageCode];
-  NSBundle *bundle = [self loadLanguageBundleWithCode:languageCode];
+    NSString *languageCode = [self.forcedLocale objectForKey:NSLocaleLanguageCode];
+    NSBundle *bundle = [self loadLanguageBundleWithCode:languageCode];
 
-  if (!bundle) {
-    bundle = [self loadLanguageBundleWithCode:@"en"];
-  }
+    if (!bundle) {
+        bundle = [self loadLanguageBundleWithCode:@"en"];
+    }
 
-  [self setLanguageBundle:bundle];
+    [self setLanguageBundle:bundle];
 
-  return bundle;
+    return bundle;
 }
 
 - (NSBundle *)loadLanguageBundleWithCode:(NSString *)languageCode {
-  return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:languageCode ofType:@"lproj"]];
+    return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:languageCode ofType:@"lproj"]];
 }
 
 @end

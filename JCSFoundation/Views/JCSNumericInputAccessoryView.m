@@ -19,15 +19,15 @@
 @implementation JCSNumericInputAccessoryView
 
 - (id)initWithFrame:(CGRect)frame {
-  self = [super initWithFrame:frame];
-  if (self) {
-    // Initialization code
-  }
-  return self;
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
 }
 
 - (void)setReturnButtonTitle:(NSString *)title action:(JCSActionBlock)action {
-  JCS_ABSTRACT_METHOD;
+    JCS_ABSTRACT_METHOD;
 }
 
 @end

@@ -19,16 +19,16 @@
 @implementation JCSQuickAlertView
 
 + (JCSQuickAlertView *)alertViewWithTitle:(NSString *)alertTitle message:(NSString *)message {
-  JCSQuickAlertView *alertView = [[JCSQuickAlertView alloc] initWithTitle:alertTitle
-                                                                  message:message
-                                                                 delegate:nil
-                                                        cancelButtonTitle:nil
-                                                        otherButtonTitles:nil];
-  return alertView;
+    JCSQuickAlertView *alertView = [[JCSQuickAlertView alloc] initWithTitle:alertTitle
+                                                                    message:message
+                                                                   delegate:nil
+                                                          cancelButtonTitle:nil
+                                                          otherButtonTitles:nil];
+    return alertView;
 }
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle {
-  [self addButtonWithTitle:confirmTitle];
+    [self addButtonWithTitle:confirmTitle];
 }
 
 @end

@@ -20,7 +20,7 @@
 
 @interface JCSSelectionCell : UITableViewCell
 
-- (void)configureWithSelectable:(id<JCSSelectable>)selectable;
+- (void)configureWithSelectable:(id <JCSSelectable>)selectable;
 - (void)markSelected:(BOOL)isSelected;
 
 @end

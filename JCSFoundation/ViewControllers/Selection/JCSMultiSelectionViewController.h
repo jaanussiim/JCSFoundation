@@ -25,6 +25,6 @@ typedef void (^JCSMultiSelectionBlock)(NSArray *selected);
 @property (nonatomic, copy) JCSMultiSelectionBlock selectionCompletionBlock;
 @property (nonatomic, strong) NSArray *selectedObjects;
 
-- (void)addToSelected:(id<JCSSelectable>)selectable;
+- (void)addToSelected:(id <JCSSelectable>)selectable;
 
 @end

@@ -18,11 +18,11 @@
 
 @protocol JCSSelectable;
 
-typedef void (^JCSSingleSelectionBlock)(id<JCSSelectable> selected);
+typedef void (^JCSSingleSelectionBlock)(id <JCSSelectable> selected);
 
 @interface JCSSingleSelectionViewController : JCSSelectionViewController
 
 @property (nonatomic, copy) JCSSingleSelectionBlock selectionCompletionBlock;
-@property (nonatomic, strong) id<JCSSelectable> selected;
+@property (nonatomic, strong) id <JCSSelectable> selected;
 
 @end

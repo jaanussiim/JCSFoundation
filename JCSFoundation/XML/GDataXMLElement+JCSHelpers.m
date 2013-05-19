@@ -19,25 +19,25 @@
 @implementation GDataXMLElement (JCSHelpers)
 
 - (NSString *)firstValueForField:(NSString *)fieldName {
-  return [[[self firstElementNamed:fieldName] stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    return [[[self firstElementNamed:fieldName] stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
 - (GDataXMLElement *)firstElementNamed:(NSString *)elementName {
-  NSArray *elements = [self elementsForName:elementName];
-  if ([elements count] > 0) {
-    return elements[0];
-  }
+    NSArray *elements = [self elementsForName:elementName];
+    if ([elements count] > 0) {
+        return elements[0];
+    }
 
-  return nil;
+    return nil;
 }
 
 - (NSInteger)firstIntegerValueForField:(NSString *)fieldName {
-  NSString *value = [self firstValueForField:fieldName];
-  return [value integerValue];
+    NSString *value = [self firstValueForField:fieldName];
+    return [value integerValue];
 }
 
 - (BOOL)hasFieldNamed:(NSString *)fieldName {
-  return [[self elementsForName:fieldName] count] > 0;
+    return [[self elementsForName:fieldName] count] > 0;
 }
 
 @end

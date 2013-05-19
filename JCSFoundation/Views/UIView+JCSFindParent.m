@@ -19,14 +19,14 @@
 @implementation UIView (JCSFindParent)
 
 - (UIView *)findParentViewOfType:(Class)class {
-  UIView *checked = self;
-  while ((checked = [checked superview]) != nil) {
-    if ([checked isKindOfClass:class]) {
-      return checked;
+    UIView *checked = self;
+    while ((checked = [checked superview]) != nil) {
+        if ([checked isKindOfClass:class]) {
+            return checked;
+        }
     }
-  }
 
-  return nil;
+    return nil;
 }
 
 @end

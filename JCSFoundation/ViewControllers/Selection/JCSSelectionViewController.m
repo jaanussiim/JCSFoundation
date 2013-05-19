@@ -30,121 +30,121 @@ NSString *const kJCSSelectionCellIdentifier = @"JCSSelectionCellIdentifier";
 @implementation JCSSelectionViewController
 
 - (id)initWithStyle:(UITableViewStyle)style {
-  self = [super initWithStyle:style];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
 
-  [self.tableView registerNib:self.selectionCellNib forCellReuseIdentifier:kJCSSelectionCellIdentifier];
-  [self setMeasureCell:[self.tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier]];
+    [self.tableView registerNib:self.selectionCellNib forCellReuseIdentifier:kJCSSelectionCellIdentifier];
+    [self setMeasureCell:[self.tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier]];
 
-  if (self.rightBarButton) {
-    [self.navigationItem setRightBarButtonItem:self.rightBarButton];
-  }
+    if (self.rightBarButton) {
+        [self.navigationItem setRightBarButtonItem:self.rightBarButton];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+    [super viewWillAppear:animated];
 
-  [self.selectableObjectsController setDelegate:self];
+    [self.selectableObjectsController setDelegate:self];
 }
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  if (self.selectableObjectsController) {
-    return [[self.selectableObjectsController sections] count];
-  }
+    if (self.selectableObjectsController) {
+        return [[self.selectableObjectsController sections] count];
+    }
 
-  return 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  if (self.selectableObjectsController) {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.selectableObjectsController sections] objectAtIndex:(NSUInteger) section];
-    return [sectionInfo numberOfObjects];
-  }
+    if (self.selectableObjectsController) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.selectableObjectsController sections] objectAtIndex:(NSUInteger) section];
+        return [sectionInfo numberOfObjects];
+    }
 
-  return [self.selectableObjectsArray count];
+    return [self.selectableObjectsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  JCSSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier];
+    JCSSelectionCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSSelectionCellIdentifier];
 
-  id<JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
-  [cell configureWithSelectable:selectable];
-  [cell markSelected:[self isSelected:selectable]];
+    id <JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
+    [cell configureWithSelectable:selectable];
+    [cell markSelected:[self isSelected:selectable]];
 
-  return cell;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  id<JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
-  [self.measureCell configureWithSelectable:selectable];
-  return CGRectGetHeight(self.measureCell.frame);
+    id <JCSSelectable> selectable = [self objectAtIndexPath:indexPath];
+    [self.measureCell configureWithSelectable:selectable];
+    return CGRectGetHeight(self.measureCell.frame);
 }
 
-- (id<JCSSelectable>)objectAtIndexPath:(NSIndexPath *)indexPath {
-  if (self.selectableObjectsController) {
-    return [self.selectableObjectsController objectAtIndexPath:indexPath];
-  } else {
-    return [self.selectableObjectsArray objectAtIndex:(NSUInteger) indexPath.row];
-  }
+- (id <JCSSelectable>)objectAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.selectableObjectsController) {
+        return [self.selectableObjectsController objectAtIndexPath:indexPath];
+    } else {
+        return [self.selectableObjectsArray objectAtIndex:(NSUInteger) indexPath.row];
+    }
 }
 
 - (NSIndexPath *)indexPathForObject:(id <JCSSelectable>)object {
-  if (self.selectableObjectsController) {
-    return [self.selectableObjectsController indexPathForObject:object];
-  }
+    if (self.selectableObjectsController) {
+        return [self.selectableObjectsController indexPathForObject:object];
+    }
 
-  NSUInteger indexOfObject = [self.selectableObjectsArray indexOfObject:object];
-  return [NSIndexPath indexPathForRow:indexOfObject inSection:0];
+    NSUInteger indexOfObject = [self.selectableObjectsArray indexOfObject:object];
+    return [NSIndexPath indexPathForRow:indexOfObject inSection:0];
 }
 
 
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
-  //TODO jaanus: some kind of warning here
-  return NO;
+    //TODO jaanus: some kind of warning here
+    return NO;
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-  [self.tableView beginUpdates];
+    [self.tableView beginUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-  UITableView *tableView = self.tableView;
+    UITableView *tableView = self.tableView;
 
-  switch (type) {
+    switch (type) {
 
-    case NSFetchedResultsChangeInsert:
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      break;
-    case NSFetchedResultsChangeDelete:
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      break;
-    case NSFetchedResultsChangeUpdate:
-      [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      break;
-    case NSFetchedResultsChangeMove:
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      break;
-  }
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+    }
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-  [self.tableView endUpdates];
+    [self.tableView endUpdates];
 }
 
 @end

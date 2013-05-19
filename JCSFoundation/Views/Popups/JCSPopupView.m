@@ -27,43 +27,43 @@ static NSTimeInterval const kJCSPopupAnimationTime = 0.3;
 @implementation JCSPopupView
 
 - (id)initWithFrame:(CGRect)frame {
-  self = [super initWithFrame:frame];
-  if (self) {
-    // Initialization code
-  }
-  return self;
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
 }
 
 - (void)show {
-  UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
 
-  UIView *dimView = [[UIView alloc] initWithFrame:window.bounds];
-  [dimView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.4]];
+    UIView *dimView = [[UIView alloc] initWithFrame:window.bounds];
+    [dimView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.4]];
 
-  [self setDimView:dimView];
-  [self setCenter:window.center];
+    [self setDimView:dimView];
+    [self setCenter:window.center];
 
-  [dimView setAlpha:0];
-  [self setAlpha:0];
+    [dimView setAlpha:0];
+    [self setAlpha:0];
 
-  [window addSubview:self];
-  [window insertSubview:dimView belowSubview:self];
+    [window addSubview:self];
+    [window insertSubview:dimView belowSubview:self];
 
-  [UIView animateWithDuration:kJCSPopupAnimationTime
-                   animations:^{
-                     [dimView setAlpha:1];
-                     [self setAlpha:1];
-                   }];
+    [UIView animateWithDuration:kJCSPopupAnimationTime
+                     animations:^{
+                         [dimView setAlpha:1];
+                         [self setAlpha:1];
+                     }];
 }
 
 - (void)dismiss {
-  [UIView animateWithDuration:kJCSPopupAnimationTime animations:^{
-    [self.dimView setAlpha:0];
-    [self setAlpha:0];
-  } completion:^(BOOL finished) {
-    [self.dimView removeFromSuperview];
-    [self removeFromSuperview];
-  }];
+    [UIView animateWithDuration:kJCSPopupAnimationTime animations:^{
+        [self.dimView setAlpha:0];
+        [self setAlpha:0];
+    }                completion:^(BOOL finished) {
+        [self.dimView removeFromSuperview];
+        [self removeFromSuperview];
+    }];
 }
 
 @end

@@ -29,97 +29,97 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 @implementation JCSFetchedTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style {
-  self = [super initWithStyle:style];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
 
-  [self.tableView registerNib:self.fetchedEntityCellNib forCellReuseIdentifier:kJCSFetchedTableViewCellIdentifier];
+    [self.tableView registerNib:self.fetchedEntityCellNib forCellReuseIdentifier:kJCSFetchedTableViewCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+    [super viewWillAppear:animated];
 
-  if (!self.allObjects) {
-    NSFetchedResultsController *controller = [self createFetchedController];
-    [controller setDelegate:self];
-    [self setAllObjects:controller];
+    if (!self.allObjects) {
+        NSFetchedResultsController *controller = [self createFetchedController];
+        [controller setDelegate:self];
+        [self setAllObjects:controller];
 
-    JCSFLog(@"%d objects fetched", [controller.fetchedObjects count]);
+        JCSFLog(@"%d objects fetched", [controller.fetchedObjects count]);
 
-    [self.tableView reloadData];
-  }
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [[self.allObjects sections] count];
+    return [[self.allObjects sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.allObjects sections] objectAtIndex:(NSUInteger) section];
-  return [sectionInfo numberOfObjects];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.allObjects sections] objectAtIndex:(NSUInteger) section];
+    return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  JCSFetchedTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSFetchedTableViewCellIdentifier];
-  id objectAtIndexPath = [self.allObjects objectAtIndexPath:indexPath];
-  [cell configureWithObject:objectAtIndexPath];
-  
-  return cell;
+    JCSFetchedTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSFetchedTableViewCellIdentifier];
+    id objectAtIndexPath = [self.allObjects objectAtIndexPath:indexPath];
+    [cell configureWithObject:objectAtIndexPath];
+
+    return cell;
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-  [self.tableView beginUpdates];
+    [self.tableView beginUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath {
-  UITableView *tableView = self.tableView;
+    UITableView *tableView = self.tableView;
 
-  switch (type) {
+    switch (type) {
 
-    case NSFetchedResultsChangeInsert:
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-      break;
-    case NSFetchedResultsChangeDelete:
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-      break;
-    case NSFetchedResultsChangeUpdate:
-      [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-      break;
-    case NSFetchedResultsChangeMove:
-      [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-      [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-      break;
-  }
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            break;
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-  [self.tableView endUpdates];
+    [self.tableView endUpdates];
 }
 
 - (NSFetchedResultsController *)createFetchedController {
-  JCS_ABSTRACT_METHOD;
-  return nil;
+    JCS_ABSTRACT_METHOD;
+    return nil;
 }
 
 @end
