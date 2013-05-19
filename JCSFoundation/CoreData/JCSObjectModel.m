@@ -163,30 +163,24 @@
         return;
     }
 
-    void (^performSave)() = ^{
+    [self saveContext:managedObjectContext completion:completion];
+}
+
+- (void)saveContext:(NSManagedObjectContext *)context completion:(JCSActionBlock)completion {
+    [context performBlock:^{
         NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        if ([context hasChanges] && ![context save:&error]) {
+            NSLog(@"saveContext: Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
 
-        void (^performWriterSave)() = ^{
-            NSError *saveError = nil;
-            if (![self.writingContext save:&saveError]) {
-                NSLog(@"Parent save error:%@", saveError);
-            }
-
-            if (completion) {
-                completion();
-            }
-        };
-
-        [self.writingContext performBlock:performWriterSave];
-    };
-
-    [managedObjectContext performBlock:performSave];
+        NSManagedObjectContext *parent = context.parentContext;
+        if (parent) {
+            [self saveContext:parent completion:completion];
+        } else if (completion) {
+            completion();
+        }
+    }];
 }
 
 - (void)deleteObject:(NSManagedObject *)object {
