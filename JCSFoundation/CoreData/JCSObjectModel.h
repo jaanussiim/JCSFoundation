@@ -36,6 +36,8 @@
 - (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 - (id)fetchEntityNamed:(NSString *)entityName atOffset:(NSUInteger)offset;
 
+- (NSArray *)fetchEntitiesNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName;
 
 - (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue;

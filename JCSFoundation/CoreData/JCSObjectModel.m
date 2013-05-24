@@ -127,6 +127,19 @@
     return [self fetchEntityNamed:entityName withPredicate:nil atOffset:offset];
 }
 
+- (NSArray *)fetchEntitiesNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate];
+
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    if (error != nil) {
+        JCSFLog(@"Fetch error %@", error);
+    }
+
+    return objects;
+}
+
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName {
     NSFetchRequest *request = [self fetchRequestForEntity:entityName predicate:nil];
 
