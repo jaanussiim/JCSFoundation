@@ -18,6 +18,6 @@
 
 @interface UITableViewCell (JCSPositioning)
 
-- (void)adjustWidthTitle:(UIView *)title value:(UIView *)value;
++ (void)adjustWidthForTitle:(UIView *)title value:(UIView *)value;
 
 @end

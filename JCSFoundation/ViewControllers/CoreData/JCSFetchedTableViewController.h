@@ -21,5 +21,6 @@
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 
 - (NSFetchedResultsController *)createFetchedController;
+- (void)tappedOnObject:(id)tapped;
 
 @end

@@ -84,6 +84,13 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    id tapped = [self.allObjects objectAtIndexPath:indexPath];
+    [self tappedOnObject:tapped];
+}
+
+- (void)tappedOnObject:(id)tapped {
+    JCSFLog(@"tapped on %@", tapped);
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {

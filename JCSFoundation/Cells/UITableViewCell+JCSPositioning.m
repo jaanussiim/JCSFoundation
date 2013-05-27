@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "UITableViewCell+JCSPositioning.h"
 
 @implementation UITableViewCell (JCSPositioning)
 
-- (void)adjustWidthTitle:(UIView *)title value:(UIView *)value {
++ (void)adjustWidthForTitle:(UIView *)title value:(UIView *)value {
     CGRect titleFrame = title.frame;
     CGSize titleSize = [title sizeThatFits:CGSizeMake(NSUIntegerMax, CGRectGetHeight(titleFrame))];
     CGFloat widthChange = titleSize.width - CGRectGetWidth(titleFrame);
