@@ -15,7 +15,7 @@
  */
 
 #import "UIImage+JCSImageSave.h"
-#import "JCSLogger/JCSLogger.h"
+#import "JCSFoundationConstants.h"
 
 @implementation UIImage (JCSImageSave)
 
@@ -37,7 +37,7 @@
     NSError *saveError = nil;
     [data writeToFile:path options:nil error:&saveError];
     if (saveError) {
-        CoreLogVerbose(@"Error saving image to %@: %@", path, saveError);
+        JCSFLog(@"Error saving image to %@: %@", path, saveError);
     }
 }
 
