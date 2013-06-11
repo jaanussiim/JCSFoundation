@@ -20,5 +20,6 @@
 
 - (void)addCellForPresentation:(UITableViewCell *)cell;
 - (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath;
+- (void)closeSection;
 
 @end

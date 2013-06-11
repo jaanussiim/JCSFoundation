@@ -21,7 +21,8 @@
 
 @interface JCSInputCellsViewController ()
 
-@property (nonatomic, strong) NSMutableArray *presentedCells;
+@property (nonatomic, strong) NSMutableArray *presentedSections;
+@property (nonatomic, strong) NSMutableArray *openSection;
 
 @end
 
@@ -38,7 +39,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setPresentedCells:[NSMutableArray array]];
+    [self setPresentedSections:[NSMutableArray array]];
+    [self setOpenSection:[NSMutableArray array]];
+    [self.presentedSections addObject:self.openSection];
 
 }
 
@@ -51,14 +54,16 @@
     [super viewWillAppear:animated];
 
     JCSTextEntryCell *lastCell;
-    for (UITableViewCell *cell in self.presentedCells) {
-        if (![self isEntryCell:cell]) {
-            continue;
-        }
+    for (NSArray *sectionCells in self.presentedSections) {
+        for (UITableViewCell *cell in sectionCells) {
+            if (![self isEntryCell:cell]) {
+                continue;
+            }
 
-        JCSTextEntryCell *textEntryCell = (JCSTextEntryCell *) cell;
-        [textEntryCell setReturnKeyType:UIReturnKeyNext];
-        lastCell = textEntryCell;
+            JCSTextEntryCell *textEntryCell = (JCSTextEntryCell *) cell;
+            [textEntryCell setReturnKeyType:UIReturnKeyNext];
+            lastCell = textEntryCell;
+        }
     }
 
     [lastCell setReturnKeyType:UIReturnKeyDone];
@@ -67,15 +72,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.presentedSections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.presentedCells count];
+    return [self.presentedSections[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.presentedCells objectAtIndex:(NSUInteger) indexPath.row];
+    return self.presentedSections[indexPath.section][indexPath.row];
 }
 
 #pragma mark - Table view delegate
@@ -92,12 +97,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.presentedCells objectAtIndex:(NSUInteger) indexPath.row];
+    UITableViewCell *cell = self.presentedSections[indexPath.section][indexPath.row];
     return CGRectGetHeight(cell.frame);
 }
 
 - (void)addCellForPresentation:(UITableViewCell *)cell {
-    [self.presentedCells addObject:cell];
+    [self.openSection addObject:cell];
 
     if ([cell isKindOfClass:[JCSTextEntryCell class]]) {
         JCSTextEntryCell *entryCell = (JCSTextEntryCell *) cell;
@@ -109,20 +114,67 @@
 }
 
 - (void)moveFocusToNextEntryCell:(UITableViewCell *)cell {
-    NSUInteger index = [self.presentedCells indexOfObject:cell];
-    if (index == NSNotFound) {
+    NSIndexPath *currentIndexPath = [self indexPathForCell:cell];
+    if (currentIndexPath == nil) {
         return;
     }
 
-    index++;
-    while (index < [self.presentedCells count]) {
-        UITableViewCell *nextCell = [self.presentedCells objectAtIndex:index];
-        if ([self isEntryCell:nextCell]) {
-            [self moveFocusToCell:nextCell];
-            return;
-        }
-        index++;
+    NSIndexPath *moveToIndexPath = [self nextEditableCellAfterIndexPath:currentIndexPath];
+    if (moveToIndexPath == nil) {
+        [UIApplication dismissKeyboard];
+        return;
     }
+
+    UITableViewCell *nextFocused = self.presentedSections[moveToIndexPath.section][moveToIndexPath.row];
+    [self moveFocusToCell:nextFocused];
+}
+
+- (NSIndexPath *)nextEditableCellAfterIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = (NSUInteger) indexPath.section;
+    NSUInteger row = (NSUInteger) indexPath.row;
+
+    for (; section < [self.presentedSections count]; section++) {
+        NSArray *sectionCells = self.presentedSections[section];
+        for (; row < [sectionCells count]; row++) {
+            id cell = sectionCells[row];
+            if (![self isEntryCell:cell]) {
+                continue;
+            }
+
+            NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:section];
+            if ([path isEqual:indexPath]) {
+                continue;
+            }
+
+            JCSTextEntryCell *entryCell = cell;
+            if (![entryCell.entryField isEnabled]) {
+                continue;
+            }
+
+            return path;
+        }
+
+        row = 0;
+    }
+
+    return nil;
+}
+
+- (NSIndexPath *)indexPathForCell:(UITableViewCell *)cell {
+    NSInteger section = 0;
+    for (NSArray *cells in self.presentedSections) {
+        NSInteger row = 0;
+        for (UITableViewCell *checked in cells) {
+            if (checked == cell) {
+                return [NSIndexPath indexPathForRow:row inSection:section];
+            }
+
+            row++;
+        }
+        section++;
+    }
+
+    return nil;
 }
 
 - (void)moveFocusToCell:(UITableViewCell *)cell {
@@ -147,6 +199,11 @@
 
 - (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath {
     JCSFLog(@"tappedCellAtIndexPath:%@", indexPath);
+}
+
+- (void)closeSection {
+    [self setOpenSection:[NSMutableArray array]];
+    [self.presentedSections addObject:self.openSection];
 }
 
 @end
