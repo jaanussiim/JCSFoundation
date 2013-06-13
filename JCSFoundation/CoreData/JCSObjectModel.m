@@ -128,7 +128,15 @@
 }
 
 - (NSArray *)fetchEntitiesNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
-    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate];
+    return [self fetchEntitiesNamed:entityName usingPredicate:predicate withSortDescriptors:nil];
+}
+
+- (NSArray *)fetchEntitiesNamed:(NSString *)entityName withSortDescriptors:(NSArray *)descriptors {
+    return [self fetchEntitiesNamed:entityName usingPredicate:nil withSortDescriptors:descriptors];
+}
+
+- (NSArray *)fetchEntitiesNamed:(NSString *)entityName usingPredicate:(NSPredicate *)predicate withSortDescriptors:(NSArray *)descriptors {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate sortDescriptors:descriptors];
 
     NSError *error = nil;
     NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];

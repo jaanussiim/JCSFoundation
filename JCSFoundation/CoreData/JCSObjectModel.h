@@ -37,6 +37,7 @@
 - (id)fetchEntityNamed:(NSString *)entityName atOffset:(NSUInteger)offset;
 
 - (NSArray *)fetchEntitiesNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
+- (NSArray *)fetchEntitiesNamed:(NSString *)entityName withSortDescriptors:(NSArray *)descriptors;
 
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName;
 
