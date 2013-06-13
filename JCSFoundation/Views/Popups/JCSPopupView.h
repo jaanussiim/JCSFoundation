@@ -19,6 +19,7 @@
 @interface JCSPopupView : UIView
 
 - (void)show;
+- (void)showOnView:(UIView *)view;
 - (void)dismiss;
 
 @end

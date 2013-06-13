@@ -36,18 +36,21 @@ static NSTimeInterval const kJCSPopupAnimationTime = 0.3;
 
 - (void)show {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [self showOnView:window];
+}
 
-    UIView *dimView = [[UIView alloc] initWithFrame:window.bounds];
+- (void)showOnView:(UIView *)view {
+    UIView *dimView = [[UIView alloc] initWithFrame:view.bounds];
     [dimView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.4]];
 
     [self setDimView:dimView];
-    [self setCenter:window.center];
+    [self setCenter:view.center];
 
     [dimView setAlpha:0];
     [self setAlpha:0];
 
-    [window addSubview:self];
-    [window insertSubview:dimView belowSubview:self];
+    [view addSubview:self];
+    [view insertSubview:dimView belowSubview:self];
 
     [UIView animateWithDuration:kJCSPopupAnimationTime
                      animations:^{

@@ -31,4 +31,8 @@
     [self addButtonWithTitle:confirmTitle];
 }
 
+- (void)showOnView:(UIView *)view {
+    [self show];
+}
+
 @end

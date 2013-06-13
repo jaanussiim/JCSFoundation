@@ -22,5 +22,6 @@
 
 - (void)setConfirmButtonTitle:(NSString *)confirmTitle;
 - (void)show;
+- (void)showOnView:(UIView *)view;
 
 @end
