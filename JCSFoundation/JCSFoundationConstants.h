@@ -19,3 +19,15 @@
 typedef void (^JCSActionBlock)();
 
 #define JCS_ABSTRACT_METHOD JCSFLog(@"You must override %@ in a subclass", NSStringFromSelector(_cmd)); [NSException raise:NSInternalInconsistencyException format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+#define JCS_WEAK __block __weak
+
+// Swiped from https://gist.github.com/steipete/5664345
+// A better assert. NSAssert is too runtime dependant, and assert() doesn't log.
+// http://www.mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
+// Accepts both:
+// - JCSAssert(x > 0);
+// - JCSAssert(y > 3, @"Bad value for y");
+#define JCSAssert(expression, ...) \
+do { if(!(expression)) { \
+NSLog(@"%@", [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
+abort(); }} while(0)
