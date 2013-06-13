@@ -70,7 +70,7 @@
 }
 
 - (void)useNumbersAndPunctuationKeyboard {
-    [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+    [self.entryField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
     [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
 
     if (!self.entryField.inputAccessoryView) {
