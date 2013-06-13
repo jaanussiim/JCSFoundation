@@ -32,6 +32,8 @@
 		EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2347C816E46E3D000C63A0 /* JCSCameraCapture.m */; };
 		EA2DB38F16E678F300BD26C4 /* JCSQuickActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2DB38D16E678F300BD26C4 /* JCSQuickActionSheet.h */; };
 		EA2DB39016E678F300BD26C4 /* JCSQuickActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2DB38E16E678F300BD26C4 /* JCSQuickActionSheet.m */; };
+		EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3703581767503900FBD4F3 /* NSMutableString+JCSIssues.h */; };
+		EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3703591767503900FBD4F3 /* NSMutableString+JCSIssues.m */; };
 		EA5094B216FA3BE10064B88A /* NSDate+JCSCalculations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5094B016FA3BE10064B88A /* NSDate+JCSCalculations.h */; };
 		EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */; };
 		EA59299A175A2212007C0072 /* JCSDropDownCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA592998175A2212007C0072 /* JCSDropDownCell.h */; };
@@ -119,6 +121,8 @@
 		EA2DB38C16E678D100BD26C4 /* JCSActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSActionSheet.h; sourceTree = "<group>"; };
 		EA2DB38D16E678F300BD26C4 /* JCSQuickActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickActionSheet.h; sourceTree = "<group>"; };
 		EA2DB38E16E678F300BD26C4 /* JCSQuickActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickActionSheet.m; sourceTree = "<group>"; };
+		EA3703581767503900FBD4F3 /* NSMutableString+JCSIssues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+JCSIssues.h"; sourceTree = "<group>"; };
+		EA3703591767503900FBD4F3 /* NSMutableString+JCSIssues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+JCSIssues.m"; sourceTree = "<group>"; };
 		EA5094B016FA3BE10064B88A /* NSDate+JCSCalculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JCSCalculations.h"; sourceTree = "<group>"; };
 		EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JCSCalculations.m"; sourceTree = "<group>"; };
 		EA592998175A2212007C0072 /* JCSDropDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDropDownCell.h; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			children = (
 				EA5094B016FA3BE10064B88A /* NSDate+JCSCalculations.h */,
 				EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */,
+				EA3703581767503900FBD4F3 /* NSMutableString+JCSIssues.h */,
+				EA3703591767503900FBD4F3 /* NSMutableString+JCSIssues.m */,
 				EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */,
 				EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */,
 				EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */,
@@ -487,6 +493,7 @@
 				EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */,
 				EA59299A175A2212007C0072 /* JCSDropDownCell.h in Headers */,
 				EA59299E175A22A5007C0072 /* NoCaretTextField.h in Headers */,
+				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +615,7 @@
 				EA222E68173B662C00C5D613 /* UIImage+JCSImageSave.m in Sources */,
 				EA59299B175A2212007C0072 /* JCSDropDownCell.m in Sources */,
 				EA59299F175A22A5007C0072 /* NoCaretTextField.m in Sources */,
+				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
