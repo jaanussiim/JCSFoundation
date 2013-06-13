@@ -21,5 +21,6 @@
 - (BOOL)hasValue;
 - (BOOL)isDecimalNumber;
 - (BOOL)isNumber;
+- (BOOL)isValidEmail;
 
 @end
