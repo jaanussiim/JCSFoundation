@@ -49,7 +49,7 @@
 
 
 - (void)setTitle:(NSString *)title selected:(id <JCSDropDownItem>)selected {
-    [self setTitle:title value:[selected displayValue]];
+    [self setTitle:title value:selected ? [selected displayValue] : @""];
     [self setSelectedItem:selected];
     [self updatePickerSelection];
 }

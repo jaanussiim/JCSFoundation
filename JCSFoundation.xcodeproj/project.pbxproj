@@ -38,8 +38,8 @@
 		EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */; };
 		EA59299A175A2212007C0072 /* JCSDropDownCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA592998175A2212007C0072 /* JCSDropDownCell.h */; };
 		EA59299B175A2212007C0072 /* JCSDropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA592999175A2212007C0072 /* JCSDropDownCell.m */; };
-		EA59299E175A22A5007C0072 /* NoCaretTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59299C175A22A5007C0072 /* NoCaretTextField.h */; };
-		EA59299F175A22A5007C0072 /* NoCaretTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59299D175A22A5007C0072 /* NoCaretTextField.m */; };
+		EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */; };
+		EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */; };
 		EA5D032D16CAD12300D4D42D /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */; };
 		EA5D032E16CAD12300D4D42D /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */; };
 		EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,8 +127,8 @@
 		EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JCSCalculations.m"; sourceTree = "<group>"; };
 		EA592998175A2212007C0072 /* JCSDropDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDropDownCell.h; sourceTree = "<group>"; };
 		EA592999175A2212007C0072 /* JCSDropDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDropDownCell.m; sourceTree = "<group>"; };
-		EA59299C175A22A5007C0072 /* NoCaretTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoCaretTextField.h; sourceTree = "<group>"; };
-		EA59299D175A22A5007C0072 /* NoCaretTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoCaretTextField.m; sourceTree = "<group>"; };
+		EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNoCaretTextField.h; sourceTree = "<group>"; };
+		EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNoCaretTextField.m; sourceTree = "<group>"; };
 		EA5929A9175A280B007C0072 /* JCSDropDownItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSDropDownItem.h; sourceTree = "<group>"; };
 		EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
 		EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Keyboard.m"; sourceTree = "<group>"; };
@@ -251,8 +251,8 @@
 				EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */,
 				EAA54F2517338A6600B65BF3 /* JCSQuickNumericInputAccessoryView.h */,
 				EAA54F2617338A6600B65BF3 /* JCSQuickNumericInputAccessoryView.m */,
-				EA59299C175A22A5007C0072 /* NoCaretTextField.h */,
-				EA59299D175A22A5007C0072 /* NoCaretTextField.m */,
+				EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */,
+				EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
 				EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */,
 				EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */,
@@ -492,7 +492,7 @@
 				EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */,
 				EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */,
 				EA59299A175A2212007C0072 /* JCSDropDownCell.h in Headers */,
-				EA59299E175A22A5007C0072 /* NoCaretTextField.h in Headers */,
+				EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */,
 				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +614,7 @@
 				EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */,
 				EA222E68173B662C00C5D613 /* UIImage+JCSImageSave.m in Sources */,
 				EA59299B175A2212007C0072 /* JCSDropDownCell.m in Sources */,
-				EA59299F175A22A5007C0072 /* NoCaretTextField.m in Sources */,
+				EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */,
 				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,20 +14,8 @@
  * limitations under the License.
  */
 
-#import "NoCaretTextField.h"
+#import <UIKit/UIKit.h>
 
-@implementation NoCaretTextField
-
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (CGRect)caretRectForPosition:(UITextPosition *)position {
-    return CGRectZero;
-}
+@interface JCSNoCaretTextField : UITextField
 
 @end
