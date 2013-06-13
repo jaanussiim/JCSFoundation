@@ -75,9 +75,18 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JCSFetchedTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSFetchedTableViewCellIdentifier];
     id objectAtIndexPath = [self.allObjects objectAtIndexPath:indexPath];
-    [cell configureWithObject:objectAtIndexPath];
+    [self configureCell:cell atIndexPath:indexPath withObject:objectAtIndexPath];
 
     return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
+    if ([cell isKindOfClass:[JCSFetchedTableCell class]]) {
+        JCSFetchedTableCell *fCell = (JCSFetchedTableCell *) cell;
+        [fCell configureWithObject:object];
+    } else {
+        JCSFLog(@"configureCell:atIndexPath:%@", indexPath);
+    }
 }
 
 #pragma mark - Table view delegate

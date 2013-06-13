@@ -18,6 +18,6 @@
 
 @interface JCSFetchedTableCell : UITableViewCell
 
-- (void)configureWithObject:(id)object;
+- (void)configureWithObject:(id)object __attribute__((deprecated));
 
 @end
