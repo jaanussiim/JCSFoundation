@@ -59,6 +59,9 @@
     [self updatePickerSelection];
 }
 
+- (id <JCSDropDownItem>)selectedValue {
+    return self.selectedItem;
+}
 
 - (NSString *)value {
     return [self.selectedItem value];

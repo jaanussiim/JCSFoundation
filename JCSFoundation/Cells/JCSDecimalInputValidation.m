@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
 #import "JCSDecimalInputValidation.h"
 
 @implementation JCSDecimalInputValidation
@@ -34,7 +33,21 @@
         return NO;
     }
 
-    return YES;
+    if ([string isEqualToString:@"-"] && range.location != 0) {
+        return NO;
+    }
+
+    NSString *stripped = [string stringByTrimmingCharactersInSet:[JCSDecimalInputValidation validSet]];
+    return [stripped length] == 0;
+}
+
+static NSCharacterSet *__validSet;
++ (NSCharacterSet *)validSet {
+    if (!__validSet) {
+        __validSet = [NSCharacterSet characterSetWithCharactersInString:@"-.1234567890"];
+    }
+
+    return __validSet;
 }
 
 @end

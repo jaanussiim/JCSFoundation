@@ -23,5 +23,6 @@
 
 - (void)setTitle:(NSString *)title selected:(id<JCSDropDownItem>)selected;
 - (void)setAllValues:(NSArray *)allValues;
+- (id<JCSDropDownItem>)selectedValue;
 
 @end
