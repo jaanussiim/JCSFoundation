@@ -82,7 +82,11 @@
 }
 
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors {
-    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName sortDescriptors:sortDescriptors];
+    return [self fetchedControllerForEntity:entityName predicate:nil sortDescriptors:sortDescriptors];
+}
+
+- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate sortDescriptors:sortDescriptors];
     NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
             initWithFetchRequest:fetchRequest
             managedObjectContext:self.managedObjectContext
