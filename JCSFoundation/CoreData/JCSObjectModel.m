@@ -201,8 +201,10 @@
 
         NSManagedObjectContext *parent = context.parentContext;
         if (parent) {
-            [self saveContext:parent completion:completion];
-        } else if (completion) {
+            [self saveContext:parent completion:nil];
+        }
+
+        if (completion) {
             completion();
         }
     }];

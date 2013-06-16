@@ -78,6 +78,15 @@
     }
 }
 
+- (void)useDecimalPadKeyboard {
+    [self.entryField setKeyboardType:UIKeyboardTypeDecimalPad];
+    [self setInputValidation:[[JCSDecimalInputValidation alloc] init]];
+
+    if (!self.entryField.inputAccessoryView) {
+        [self setNumericInputAccessoryView:[[JCSQuickNumericInputAccessoryView alloc] init]];
+    }
+}
+
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view {
     [self.entryField setInputAccessoryView:view];
     [self setNumberAccessoryView:view];

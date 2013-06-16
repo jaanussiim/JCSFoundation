@@ -33,6 +33,7 @@ typedef void (^JCSTextEntryCellActionBlock)(JCSTextEntryCell *cell);
 - (void)setValue:(NSString *)value;
 - (void)useNumbersKeyboard;
 - (void)useNumbersAndPunctuationKeyboard;
+- (void)useDecimalPadKeyboard;
 - (void)setNumericInputAccessoryView:(JCSNumericInputAccessoryView *)view;
 - (void)setAutocapitalizationType:(UITextAutocapitalizationType)type;
 - (void)setReturnKeyType:(UIReturnKeyType)type;

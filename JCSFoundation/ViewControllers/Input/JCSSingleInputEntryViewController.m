@@ -55,7 +55,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [UIApplication dismissKeyboard];
-    if ([self hasValidIput]) {
+    if ([self hasValidInput]) {
         [self notifyCompletionHandler];
     }
 
@@ -73,12 +73,12 @@
 
 - (IBAction)donePressed:(id)sender {
     [UIApplication dismissKeyboard];
-    if ([self hasValidIput]) {
+    if ([self hasValidInput]) {
         [self notifyCompletionHandler];
     }
 }
 
-- (BOOL)hasValidIput {
+- (BOOL)hasValidInput {
     if (!self.entryValidationBlock) {
         return YES;
     }

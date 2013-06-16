@@ -57,7 +57,6 @@
     return [NSArray arrayWithArray:self.selected];
 }
 
-
 - (BOOL)isSelected:(id <JCSSelectable>)selectable {
     return [self.selectedObjects containsObject:selectable];
 }
