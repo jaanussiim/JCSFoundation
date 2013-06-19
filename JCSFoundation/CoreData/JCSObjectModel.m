@@ -108,20 +108,13 @@
 - (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate atOffset:(NSUInteger)offset {
     NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate];
     [fetchRequest setFetchOffset:offset];
-
-    if (offset > 0) {
-        [fetchRequest setFetchLimit:1];
-    }
+    [fetchRequest setFetchLimit:1];
 
     NSError *error = nil;
     NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
 
     if (error != nil) {
         JCSFLog(@"Fetch error %@", error);
-    }
-
-    if ([objects count] > 1) {
-        JCSFLog(@"%d objects for fetch with entity %@", [objects count], entityName);
     }
 
     return [objects lastObject];
