@@ -18,7 +18,7 @@
 
 @interface JCSDateEntryCell : JCSTextEntryCell
 
-@property (nonatomic, strong, readonly) NSDate *selectedDate;
+@property (nonatomic, strong) NSDate *selectedDate;
 
 - (void)setTitle:(NSString *)title selectedDate:(NSDate *)selected;
 

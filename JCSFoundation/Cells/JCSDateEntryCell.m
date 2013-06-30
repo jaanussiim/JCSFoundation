@@ -19,7 +19,6 @@
 @interface JCSDateEntryCell ()
 
 @property (nonatomic, strong) UIDatePicker *picker;
-@property (nonatomic, strong) NSDate *selectedDate;
 
 @end
 
@@ -57,6 +56,11 @@
 
 - (void)updatePresentedValue {
     [self.entryField setText:[[JCSDateEntryCell displayFormatter] stringFromDate:self.selectedDate]];
+}
+
+- (void)setSelectedDate:(NSDate *)selectedDate {
+    _selectedDate = selectedDate;
+    [self updatePresentedValue];
 }
 
 static NSDateFormatter *__displayFormatter;

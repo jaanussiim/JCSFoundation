@@ -63,6 +63,13 @@
     return self.selectedItem;
 }
 
+- (void)setSelectedValue:(id <JCSDropDownItem>)selected {
+    [self.entryField setText:selected.displayValue];
+    [self setSelectedItem:selected];
+
+    [self updatePickerSelection];
+}
+
 - (NSString *)value {
     return [self.selectedItem value];
 }
@@ -99,8 +106,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     id<JCSDropDownItem> item = self.possibleValues[(NSUInteger) row];
-    [self.entryField setText:item.displayValue];
-    [self setSelectedItem:item];
+    [self setSelectedValue:item];
 }
 
 @end
