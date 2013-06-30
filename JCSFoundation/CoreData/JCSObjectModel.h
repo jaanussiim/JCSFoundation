@@ -45,6 +45,7 @@
 - (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue;
 
 - (void)deleteObject:(NSManagedObject *)object;
+- (void)deleteObject:(NSManagedObject *)object saveAfter:(BOOL)saveAfter;
 
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 

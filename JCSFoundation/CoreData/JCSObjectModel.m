@@ -204,8 +204,14 @@
 }
 
 - (void)deleteObject:(NSManagedObject *)object {
-    [self.managedObjectContext deleteObject:object];
+  [self deleteObject:object saveAfter:YES];
+}
+
+- (void)deleteObject:(NSManagedObject *)object saveAfter:(BOOL)saveAfter {
+  [self.managedObjectContext deleteObject:object];
+  if (saveAfter) {
     [self saveContext];
+  }
 }
 
 #pragma mark - Core Data stack
