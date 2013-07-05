@@ -15,6 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #import "JCSFoundationConstants.h"
 
 @interface JCSObjectModel : NSObject
