@@ -31,3 +31,11 @@ typedef void (^JCSActionBlock)();
 do { if(!(expression)) { \
 NSLog(@"%@", [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
 abort(); }} while(0)
+
+#define JCS_DEFINE_SHARED_INSTANCE_USING_BLOCK(block) \
+  static dispatch_once_t pred = 0; \
+  __strong static id _sharedObject = nil; \
+  dispatch_once(&pred, ^{ \
+    _sharedObject = block(); \
+  }); \
+  return _sharedObject; \
