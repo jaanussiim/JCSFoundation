@@ -40,9 +40,9 @@
     [op setThreadPriority:0.1];
     [op setQueuePriority:NSOperationQueuePriorityLow];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Response %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        [self handleResponseData:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
+        [self handleErrorResponse:operation.responseData error:error];
     }];
     [op start];
 }
@@ -55,5 +55,14 @@
 - (void)setOptionalHeaders:(NSMutableURLRequest *)request {
 
 }
+
+- (void)handleResponseData:(id)responseObject {
+    JCSFLog(@"handleResponse");
+}
+
+- (void)handleErrorResponse:(id)responseData error:(NSError *)error {
+    JCSFLog(@"handleErrorResponse");
+}
+
 
 @end

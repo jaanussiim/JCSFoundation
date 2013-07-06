@@ -14,17 +14,15 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "JCSJSONNetworkOperation.h"
 
-@class AFHTTPClient;
+@implementation JCSJSONNetworkOperation
 
-@interface JCSNetworkOperation : NSObject
+- (void)handleResponseData:(id)responseData {
+    NSError *jsonReadError = nil;
+    id response = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&jsonReadError];
 
-- (void)execute;
-- (void)postData:(NSDictionary *)data toPath:(NSString *)path;
-- (AFHTTPClient *)httpClient;
-- (void)setOptionalHeaders:(NSMutableURLRequest *)request;
-- (void)handleResponseData:(id)responseData;
-- (void)handleErrorResponse:(id)responseData error:(NSError *)error;
+    self.JSONResponseHandler(response, jsonReadError);
+}
 
 @end

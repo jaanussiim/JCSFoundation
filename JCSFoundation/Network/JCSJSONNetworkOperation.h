@@ -14,17 +14,12 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "JCSNetworkOperation.h"
 
-@class AFHTTPClient;
+typedef void (^JCSJSONNetworkResponseBlock)(id response, NSError *error);
 
-@interface JCSNetworkOperation : NSObject
+@interface JCSJSONNetworkOperation : JCSNetworkOperation
 
-- (void)execute;
-- (void)postData:(NSDictionary *)data toPath:(NSString *)path;
-- (AFHTTPClient *)httpClient;
-- (void)setOptionalHeaders:(NSMutableURLRequest *)request;
-- (void)handleResponseData:(id)responseData;
-- (void)handleErrorResponse:(id)responseData error:(NSError *)error;
+@property (nonatomic, copy) JCSJSONNetworkResponseBlock JSONResponseHandler;
 
 @end
