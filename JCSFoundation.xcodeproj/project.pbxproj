@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5C0D4F12AC854355B44FE124 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E0F395D9D548D8B5F4B807 /* libPods.a */; };
 		EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */; };
 		EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */; };
 		EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */ = {isa = PBXBuildFile; fileRef = EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */; };
@@ -92,25 +93,6 @@
 		EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */; };
 		EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */; };
 		EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */; };
-		EADB6C12178738B400526DE0 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BDD1787310200526DE0 /* AFHTTPClient.h */; };
-		EADB6C13178738B400526DE0 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BDE1787310200526DE0 /* AFHTTPClient.m */; };
-		EADB6C14178738B400526DE0 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BDF1787310200526DE0 /* AFHTTPRequestOperation.h */; };
-		EADB6C15178738B400526DE0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BE01787310200526DE0 /* AFHTTPRequestOperation.m */; };
-		EADB6C16178738B400526DE0 /* AFImageRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BE11787310200526DE0 /* AFImageRequestOperation.h */; };
-		EADB6C17178738B400526DE0 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BE21787310200526DE0 /* AFImageRequestOperation.m */; };
-		EADB6C18178738B400526DE0 /* AFJSONRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BE31787310200526DE0 /* AFJSONRequestOperation.h */; };
-		EADB6C19178738B400526DE0 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BE41787310200526DE0 /* AFJSONRequestOperation.m */; };
-		EADB6C1A178738B400526DE0 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BE51787310200526DE0 /* AFNetworkActivityIndicatorManager.h */; };
-		EADB6C1B178738B400526DE0 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BE61787310200526DE0 /* AFNetworkActivityIndicatorManager.m */; };
-		EADB6C1C178738B400526DE0 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BE71787310200526DE0 /* AFNetworking.h */; };
-		EADB6C1D178738B400526DE0 /* AFPropertyListRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BE81787310200526DE0 /* AFPropertyListRequestOperation.h */; };
-		EADB6C1E178738B400526DE0 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BE91787310200526DE0 /* AFPropertyListRequestOperation.m */; };
-		EADB6C1F178738B400526DE0 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BEA1787310200526DE0 /* AFURLConnectionOperation.h */; };
-		EADB6C20178738B400526DE0 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BEB1787310200526DE0 /* AFURLConnectionOperation.m */; };
-		EADB6C21178738B400526DE0 /* AFXMLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BEC1787310200526DE0 /* AFXMLRequestOperation.h */; };
-		EADB6C22178738B400526DE0 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BED1787310200526DE0 /* AFXMLRequestOperation.m */; };
-		EADB6C23178738B400526DE0 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BEE1787310200526DE0 /* UIImageView+AFNetworking.h */; };
-		EADB6C24178738B400526DE0 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BEF1787310200526DE0 /* UIImageView+AFNetworking.m */; };
 		EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */; };
 		EAEB273516D0D3AD00D126BD /* JCSSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */; };
 		EAEB273816D0D3CB00D126BD /* JCSSingleSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */; };
@@ -133,6 +115,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		66E0F395D9D548D8B5F4B807 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSLocalization.h; sourceTree = "<group>"; };
 		EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSLocalization.m; sourceTree = "<group>"; };
 		EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JCSImageSave.h"; sourceTree = "<group>"; };
@@ -210,25 +194,6 @@
 		EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNetworkOperation.h; sourceTree = "<group>"; };
 		EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNetworkOperation.m; sourceTree = "<group>"; };
-		EADB6BDD1787310200526DE0 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
-		EADB6BDE1787310200526DE0 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
-		EADB6BDF1787310200526DE0 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		EADB6BE01787310200526DE0 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		EADB6BE11787310200526DE0 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		EADB6BE21787310200526DE0 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
-		EADB6BE31787310200526DE0 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		EADB6BE41787310200526DE0 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
-		EADB6BE51787310200526DE0 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		EADB6BE61787310200526DE0 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		EADB6BE71787310200526DE0 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		EADB6BE81787310200526DE0 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		EADB6BE91787310200526DE0 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		EADB6BEA1787310200526DE0 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		EADB6BEB1787310200526DE0 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		EADB6BEC1787310200526DE0 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		EADB6BED1787310200526DE0 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
-		EADB6BEE1787310200526DE0 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		EADB6BEF1787310200526DE0 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionViewController.h; sourceTree = "<group>"; };
 		EAEB273316D0D3AD00D126BD /* JCSSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionViewController.m; sourceTree = "<group>"; };
 		EAEB273616D0D3CB00D126BD /* JCSSingleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleSelectionViewController.h; sourceTree = "<group>"; };
@@ -248,6 +213,7 @@
 			files = (
 				EAEB276916D11BE500D126BD /* CoreData.framework in Frameworks */,
 				EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */,
+				5C0D4F12AC854355B44FE124 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +359,7 @@
 				EAD0634E16A092D000FF6BA9 /* Products */,
 				EAD0635316A092D000FF6BA9 /* Supporting Files */,
 				EAD85B1F173A17D700C22211 /* Thirdparty */,
+				22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -409,6 +376,7 @@
 			children = (
 				EAEB276816D11BE500D126BD /* CoreData.framework */,
 				EAD0635016A092D000FF6BA9 /* Foundation.framework */,
+				66E0F395D9D548D8B5F4B807 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,7 +423,6 @@
 		EAD85B1F173A17D700C22211 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
-				EADB6BDC1787310200526DE0 /* AFNetworking */,
 				EAD85B20173A17D700C22211 /* UIImageCategories */,
 			);
 			path = Thirdparty;
@@ -481,32 +448,6 @@
 				EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		EADB6BDC1787310200526DE0 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				EADB6BDD1787310200526DE0 /* AFHTTPClient.h */,
-				EADB6BDE1787310200526DE0 /* AFHTTPClient.m */,
-				EADB6BDF1787310200526DE0 /* AFHTTPRequestOperation.h */,
-				EADB6BE01787310200526DE0 /* AFHTTPRequestOperation.m */,
-				EADB6BE11787310200526DE0 /* AFImageRequestOperation.h */,
-				EADB6BE21787310200526DE0 /* AFImageRequestOperation.m */,
-				EADB6BE31787310200526DE0 /* AFJSONRequestOperation.h */,
-				EADB6BE41787310200526DE0 /* AFJSONRequestOperation.m */,
-				EADB6BE51787310200526DE0 /* AFNetworkActivityIndicatorManager.h */,
-				EADB6BE61787310200526DE0 /* AFNetworkActivityIndicatorManager.m */,
-				EADB6BE71787310200526DE0 /* AFNetworking.h */,
-				EADB6BE81787310200526DE0 /* AFPropertyListRequestOperation.h */,
-				EADB6BE91787310200526DE0 /* AFPropertyListRequestOperation.m */,
-				EADB6BEA1787310200526DE0 /* AFURLConnectionOperation.h */,
-				EADB6BEB1787310200526DE0 /* AFURLConnectionOperation.m */,
-				EADB6BEC1787310200526DE0 /* AFXMLRequestOperation.h */,
-				EADB6BED1787310200526DE0 /* AFXMLRequestOperation.m */,
-				EADB6BEE1787310200526DE0 /* UIImageView+AFNetworking.h */,
-				EADB6BEF1787310200526DE0 /* UIImageView+AFNetworking.m */,
-			);
-			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		EAEB273016D0D35A00D126BD /* ViewControllers */ = {
@@ -581,16 +522,6 @@
 				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 				EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */,
 				EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */,
-				EADB6C12178738B400526DE0 /* AFHTTPClient.h in Headers */,
-				EADB6C14178738B400526DE0 /* AFHTTPRequestOperation.h in Headers */,
-				EADB6C16178738B400526DE0 /* AFImageRequestOperation.h in Headers */,
-				EADB6C18178738B400526DE0 /* AFJSONRequestOperation.h in Headers */,
-				EADB6C1A178738B400526DE0 /* AFNetworkActivityIndicatorManager.h in Headers */,
-				EADB6C1C178738B400526DE0 /* AFNetworking.h in Headers */,
-				EADB6C1D178738B400526DE0 /* AFPropertyListRequestOperation.h in Headers */,
-				EADB6C1F178738B400526DE0 /* AFURLConnectionOperation.h in Headers */,
-				EADB6C21178738B400526DE0 /* AFXMLRequestOperation.h in Headers */,
-				EADB6C23178738B400526DE0 /* UIImageView+AFNetworking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,10 +532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD0635B16A092D000FF6BA9 /* Build configuration list for PBXNativeTarget "JCSFoundation" */;
 			buildPhases = (
+				2B5B1CE11D664E83B9B178EB /* Check Pods Manifest.lock */,
 				EAD0634916A092D000FF6BA9 /* Sources */,
 				EAD0634A16A092D000FF6BA9 /* Frameworks */,
 				EA69987216AD42A000B20033 /* Headers */,
 				EA69986E16AD403C00B20033 /* Prepare Framework */,
+				A3FF148C4988431AA60254BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,6 +576,36 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B5B1CE11D664E83B9B178EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3FF148C4988431AA60254BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EA69986E16AD403C00B20033 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -715,15 +678,6 @@
 				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 				EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */,
 				EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */,
-				EADB6C13178738B400526DE0 /* AFHTTPClient.m in Sources */,
-				EADB6C15178738B400526DE0 /* AFHTTPRequestOperation.m in Sources */,
-				EADB6C17178738B400526DE0 /* AFImageRequestOperation.m in Sources */,
-				EADB6C19178738B400526DE0 /* AFJSONRequestOperation.m in Sources */,
-				EADB6C1B178738B400526DE0 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				EADB6C1E178738B400526DE0 /* AFPropertyListRequestOperation.m in Sources */,
-				EADB6C20178738B400526DE0 /* AFURLConnectionOperation.m in Sources */,
-				EADB6C22178738B400526DE0 /* AFXMLRequestOperation.m in Sources */,
-				EADB6C24178738B400526DE0 /* UIImageView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,7 +727,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -793,7 +747,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -801,6 +755,7 @@
 		};
 		EAD0635C16A092D000FF6BA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
@@ -808,9 +763,12 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
@@ -821,6 +779,7 @@
 		};
 		EAD0635D16A092D000FF6BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
@@ -828,9 +787,12 @@
 				DSTROOT = /tmp/JCSFoundation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCSFoundation/JCSFoundation-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
 				SKIP_INSTALL = YES;
