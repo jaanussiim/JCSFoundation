@@ -146,7 +146,11 @@
 }
 
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName {
-    NSFetchRequest *request = [self fetchRequestForEntity:entityName predicate:nil];
+    return [self countInstancesOfEntity:entityName withPredicate:nil];
+}
+
+- (NSUInteger)countInstancesOfEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
+    NSFetchRequest *request = [self fetchRequestForEntity:entityName predicate:predicate];
 
     NSError *error = nil;
     NSUInteger count = [self.managedObjectContext countForFetchRequest:request error:&error];
@@ -158,6 +162,7 @@
 
     return count;
 }
+
 
 - (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", attributeName, attributeValue];
@@ -179,6 +184,13 @@
 
     if (!managedObjectContext) {
         return;
+    }
+
+    if (managedObjectContext.concurrencyType == NSMainQueueConcurrencyType) {
+        JCSFLog(@"=============================");
+        JCSFLog(@"Calling save on main context!");
+        JCSFLog(@"%@",[NSThread callStackSymbols]);
+        JCSFLog(@"=============================");
     }
 
     [self saveContext:managedObjectContext completion:completion];
