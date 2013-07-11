@@ -37,6 +37,10 @@
     return [[NSDate gregorian] dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
++ (NSTimeInterval)unixTimestamp {
+    return [[NSDate date] timeIntervalSince1970];
+}
+
 + (NSDate *)dateForUnit:(NSCalendarUnit)unit beforeDate:(NSDate *)date {
     NSDate *result;
     [[NSDate gregorian] rangeOfUnit:unit

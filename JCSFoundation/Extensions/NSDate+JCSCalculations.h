@@ -22,5 +22,6 @@
 - (NSDate *)previousDay;
 - (NSDate *)dateAtStartOfDay;
 - (NSDate *)dateByAddingDays:(NSInteger)numberOfDaysToAdd;
++ (NSTimeInterval)unixTimestamp;
 
 @end
