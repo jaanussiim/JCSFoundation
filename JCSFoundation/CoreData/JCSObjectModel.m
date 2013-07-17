@@ -145,6 +145,26 @@
     return objects;
 }
 
+- (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:nil];
+    [fetchRequest setResultType:NSDictionaryResultType];
+    [fetchRequest setPropertiesToFetch:@[attributeName]];
+
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    if (error != nil) {
+        JCSFLog(@"Fetch error %@", error);
+    }
+
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:[objects count]];
+    for (NSDictionary *dictionary in objects) {
+        [result addObject:dictionary[attributeName]];
+    }
+
+    return [NSArray arrayWithArray:result];
+}
+
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName {
     return [self countInstancesOfEntity:entityName withPredicate:nil];
 }
@@ -162,7 +182,6 @@
 
     return count;
 }
-
 
 - (BOOL)hasExistingEntity:(NSString *)entityName checkAttributeNamed:(NSString *)attributeName attributeValue:(NSString *)attributeValue {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K CONTAINS[cd] %@", attributeName, attributeValue];
@@ -221,6 +240,16 @@
 
 - (void)deleteObject:(NSManagedObject *)object saveAfter:(BOOL)saveAfter {
     [self.managedObjectContext deleteObject:object];
+
+    if (saveAfter) {
+        [self saveContext];
+    }
+}
+
+- (void)deleteObjects:(NSArray *)objects saveAfter:(BOOL)saveAfter {
+    for (NSManagedObject *object in objects) {
+        [self deleteObject:object saveAfter:NO];
+    }
 
     if (saveAfter) {
         [self saveContext];
