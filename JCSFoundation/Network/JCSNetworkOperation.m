@@ -29,6 +29,10 @@
     [self executeOperationWithMethod:@"POST" path:path parameters:data];
 }
 
+- (void)getToPath:(NSString *)path withParameters:(NSDictionary *)parameters {
+    [self executeOperationWithMethod:@"GET" path:path parameters:parameters];
+}
+
 - (void)postBinaryDataFromFiles:(NSDictionary *)files usingParams:(NSDictionary *)params toPath:(NSString *)postPath {
     NSMutableURLRequest *request = [[self httpClient] multipartFormRequestWithMethod:@"POST" path:postPath parameters:params constructingBodyWithBlock: ^(id <AFMultipartFormData> formData) {
         for (NSString *key in files) {

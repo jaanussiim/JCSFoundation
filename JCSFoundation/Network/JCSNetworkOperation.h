@@ -22,6 +22,7 @@
 
 - (void)execute;
 - (void)postData:(NSDictionary *)data toPath:(NSString *)path;
+- (void)getToPath:(NSString *)path withParameters:(NSDictionary *)parameters;
 - (void)postBinaryDataFromFiles:(NSDictionary *)files usingParams:(NSDictionary *)params toPath:(NSString *)postPath;
 - (AFHTTPClient *)httpClient;
 - (void)setOptionalHeaders:(NSMutableURLRequest *)request;
