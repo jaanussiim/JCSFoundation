@@ -76,6 +76,8 @@
 		EAAEEFEE16D73E72008CBBA2 /* JCSTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
 		EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */; };
+		EAC9912917969B9E0042AD89 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC9912717969B9E0042AD89 /* NSString+MD5.h */; };
+		EAC9912A17969B9E0042AD89 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9912817969B9E0042AD89 /* NSString+MD5.m */; };
 		EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */; };
 		EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */; };
 		EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */; };
@@ -91,6 +93,8 @@
 		EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B24173A17D700C22211 /* UIImage+Resize.m */; };
 		EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */; };
 		EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */; };
+		EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */; };
+		EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */; };
 		EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */; };
 		EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */; };
 		EAEB273416D0D3AD00D126BD /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */; };
@@ -174,6 +178,8 @@
 		EAAEEFEC16D73E72008CBBA2 /* JCSTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSTextEntryCell.m; sourceTree = "<group>"; };
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
 		EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSFindParent.m"; sourceTree = "<group>"; };
+		EAC9912717969B9E0042AD89 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		EAC9912817969B9E0042AD89 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+JCSHelpers.h"; sourceTree = "<group>"; };
 		EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+JCSHelpers.m"; sourceTree = "<group>"; };
 		EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 		EAD85B24173A17D700C22211 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
 		EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSJSONNetworkOperation.h; sourceTree = "<group>"; };
+		EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSJSONNetworkOperation.m; sourceTree = "<group>"; };
 		EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNetworkOperation.h; sourceTree = "<group>"; };
 		EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNetworkOperation.m; sourceTree = "<group>"; };
 		EAEB273216D0D3AD00D126BD /* JCSSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionViewController.h; sourceTree = "<group>"; };
@@ -282,6 +290,8 @@
 				EA3703591767503900FBD4F3 /* NSMutableString+JCSIssues.m */,
 				EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */,
 				EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */,
+				EAC9912717969B9E0042AD89 /* NSString+MD5.h */,
+				EAC9912817969B9E0042AD89 /* NSString+MD5.m */,
 				EA5D032B16CAD12300D4D42D /* UIApplication+Keyboard.h */,
 				EA5D032C16CAD12300D4D42D /* UIApplication+Keyboard.m */,
 			);
@@ -444,6 +454,8 @@
 		EADB6BD61787208E00526DE0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */,
+				EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */,
 				EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */,
 				EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */,
 			);
@@ -522,6 +534,8 @@
 				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 				EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */,
 				EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */,
+				EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */,
+				EAC9912917969B9E0042AD89 /* NSString+MD5.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +692,8 @@
 				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 				EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */,
 				EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */,
+				EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */,
+				EAC9912A17969B9E0042AD89 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

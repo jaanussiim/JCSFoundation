@@ -29,10 +29,26 @@
     [self executeOperationWithMethod:@"POST" path:path parameters:data];
 }
 
+- (void)postBinaryDataFromFiles:(NSDictionary *)files usingParams:(NSDictionary *)params toPath:(NSString *)postPath {
+    NSMutableURLRequest *request = [[self httpClient] multipartFormRequestWithMethod:@"POST" path:postPath parameters:params constructingBodyWithBlock: ^(id <AFMultipartFormData> formData) {
+        for (NSString *key in files) {
+            [formData appendPartWithFileURL:[NSURL fileURLWithPath:files[key]] name:key error:nil];
+        }
+    }];
+
+    [self executeRequest:request];
+}
+
 - (void)executeOperationWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
     NSLog(@"%@ to %@", method, path);
+    NSLog(@"Data: %@", parameters);
 
     NSMutableURLRequest *request = [[self httpClient] requestWithMethod:method path:path parameters:parameters];
+    [self executeRequest:request];
+}
+
+- (void)executeRequest:(NSMutableURLRequest *)request {
+    NSLog(@"Body:%@", [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]);
 
     [self setOptionalHeaders:request];
 
@@ -40,6 +56,7 @@
     [op setThreadPriority:0.1];
     [op setQueuePriority:NSOperationQueuePriorityLow];
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
         [self handleResponseData:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self handleErrorResponse:operation.responseData error:error];
@@ -63,6 +80,5 @@
 - (void)handleErrorResponse:(id)responseData error:(NSError *)error {
     JCSFLog(@"handleErrorResponse");
 }
-
 
 @end
