@@ -194,6 +194,10 @@
     return [[attributeValue lowercaseString] isEqualToString:[[existing valueForKeyPath:attributeName] lowercaseString]];
 }
 
+- (void)performBlock:(JCSActionBlock)actionBlock {
+    [self.managedObjectContext performBlock:actionBlock];
+}
+
 - (void)saveContext {
     [self saveContext:nil];
 }
