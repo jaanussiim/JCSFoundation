@@ -165,6 +165,25 @@
     return [NSArray arrayWithArray:result];
 }
 
+- (NSDictionary *)fetchPropertiesWithDescriptions:(NSArray *)descriptions onEntity:(NSString *)entityName usingPredicate:(NSPredicate *)predicate {
+    NSFetchRequest *request = [self fetchRequestForEntity:entityName predicate:predicate];
+    [request setResultType:NSDictionaryResultType];
+    [request setPropertiesToFetch:descriptions];
+
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:request error:&error];
+
+    if (error != nil) {
+        JCSFLog(@"Fetch error %@", error);
+    }
+
+    if ([objects count] > 1) {
+        JCSFLog(@"Fetched %d objects: %@", [objects count], objects);
+    }
+
+    return [objects lastObject];
+}
+
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName {
     return [self countInstancesOfEntity:entityName withPredicate:nil];
 }
@@ -196,6 +215,16 @@
 
 - (void)performBlock:(JCSActionBlock)actionBlock {
     [self.managedObjectContext performBlock:actionBlock];
+}
+
+- (NSExpressionDescription *)descriptionWithPath:(NSString *)keyPath function:(NSString *)function resultName:(NSString *)name type:(NSAttributeType)type {
+    NSExpression *pathExpression = [NSExpression expressionForKeyPath:keyPath];
+    NSExpression *functionExpression = [NSExpression expressionForFunction:function arguments:[NSArray arrayWithObject:pathExpression]];
+    NSExpressionDescription *description = [[NSExpressionDescription alloc] init];
+    [description setName:name];
+    [description setExpression:functionExpression];
+    [description setExpressionResultType:type];
+    return description;
 }
 
 - (void)saveContext {

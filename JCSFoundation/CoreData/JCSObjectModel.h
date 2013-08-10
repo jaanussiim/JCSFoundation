@@ -44,6 +44,8 @@
 
 - (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName;
 
+- (NSDictionary *)fetchPropertiesWithDescriptions:(NSArray *)descriptions onEntity:(NSString *)entityName usingPredicate:(NSPredicate *)predicate;
+
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName;
 - (NSUInteger)countInstancesOfEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 
@@ -54,6 +56,8 @@
 - (void)deleteObjects:(NSArray *)objects saveAfter:(BOOL)saveAfter;
 
 - (void)performBlock:(JCSActionBlock)actionBlock;
+
+- (NSExpressionDescription *)descriptionWithPath:(NSString *)keyPath function:(NSString *)function resultName:(NSString *)name type:(NSAttributeType)type;
 
 + (NSURL *)fileUrlInDocumentsFolder:(NSString *)fileName;
 
