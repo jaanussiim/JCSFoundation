@@ -20,6 +20,7 @@
 @interface JCSFetchedTableViewController : UITableViewController
 
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
+@property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
 
 - (NSFetchedResultsController *)createFetchedController;
 - (void)tappedOnObject:(id)tapped;

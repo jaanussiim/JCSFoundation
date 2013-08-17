@@ -124,6 +124,21 @@
     return [self fetchEntityNamed:entityName withPredicate:nil atOffset:offset];
 }
 
+- (id)fetchFirstEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate sortDescriptors:sortDescriptors];
+    [fetchRequest setFetchOffset:0];
+    [fetchRequest setFetchLimit:1];
+
+    NSError *error = nil;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    if (error != nil) {
+        JCSFLog(@"Fetch error %@", error);
+    }
+
+    return [objects lastObject];
+}
+
 - (NSArray *)fetchEntitiesNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
     return [self fetchEntitiesNamed:entityName usingPredicate:predicate withSortDescriptors:nil];
 }
