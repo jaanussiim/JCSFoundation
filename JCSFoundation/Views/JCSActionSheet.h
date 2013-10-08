@@ -21,7 +21,7 @@
 
 + (id)actionSheetWithMessage:(NSString *)message;
 - (void)show;
-- (void)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
+- (NSInteger)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
 - (void)addCancelButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
 
 @end

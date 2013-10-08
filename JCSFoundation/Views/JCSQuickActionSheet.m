@@ -40,9 +40,10 @@
     [self showInView:window];
 }
 
-- (void)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
+- (NSInteger)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
     NSInteger index = [self addButtonWithTitle:title];
     [self.actionsMapping setObject:action forKey:@(index)];
+    return index;
 }
 
 - (void)addCancelButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
