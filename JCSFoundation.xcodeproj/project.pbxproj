@@ -54,6 +54,10 @@
 		EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */; };
 		EA7AC30E16D9FC1D00633E52 /* JCSQuickAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */; };
 		EA7AC30F16D9FC1D00633E52 /* JCSQuickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */; };
+		EA800B71180523560026C670 /* JCSFetchedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA800B6F180523560026C670 /* JCSFetchedCollectionViewController.h */; };
+		EA800B72180523560026C670 /* JCSFetchedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B70180523560026C670 /* JCSFetchedCollectionViewController.m */; };
+		EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */; };
+		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
 		EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */; };
 		EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */; };
 		EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */; };
@@ -157,6 +161,10 @@
 		EA7AC30C16D9FC1D00633E52 /* JCSQuickAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickAlertView.h; sourceTree = "<group>"; };
 		EA7AC30D16D9FC1D00633E52 /* JCSQuickAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickAlertView.m; sourceTree = "<group>"; };
 		EA7AC31016DA00C900633E52 /* JCSAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
+		EA800B6F180523560026C670 /* JCSFetchedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedCollectionViewController.h; sourceTree = "<group>"; };
+		EA800B70180523560026C670 /* JCSFetchedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedCollectionViewController.m; sourceTree = "<group>"; };
+		EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCoreDataChangeAction.h; sourceTree = "<group>"; };
+		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
 		EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
 		EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupAlertView.m; sourceTree = "<group>"; };
 		EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
@@ -307,6 +315,8 @@
 		EA71D10F16D4997D0059CC4D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */,
+				EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */,
 				EA71D11016D499950059CC4D /* JCSObjectModel.h */,
 				EA71D11116D499950059CC4D /* JCSObjectModel.m */,
 			);
@@ -329,6 +339,8 @@
 		EAA2A64F16D4C1AE00001229 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				EA800B6F180523560026C670 /* JCSFetchedCollectionViewController.h */,
+				EA800B70180523560026C670 /* JCSFetchedCollectionViewController.m */,
 				EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */,
 				EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */,
 				EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */,
@@ -531,6 +543,7 @@
 				EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */,
 				EAA54F231733871F00B65BF3 /* JCSDecimalInputValidation.h in Headers */,
 				EAA54F2717338A6600B65BF3 /* JCSQuickNumericInputAccessoryView.h in Headers */,
+				EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */,
 				EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */,
 				EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */,
 				EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */,
@@ -541,6 +554,7 @@
 				EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */,
 				EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */,
 				EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */,
+				EA800B71180523560026C670 /* JCSFetchedCollectionViewController.h in Headers */,
 				EAC9912917969B9E0042AD89 /* NSString+MD5.h in Headers */,
 				EAF31B72179A7CC1004EA135 /* NSDate+ISO8601.h in Headers */,
 			);
@@ -575,7 +589,7 @@
 		EAD0634416A092D000FF6BA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = JaanusSiim;
 			};
 			buildConfigurationList = EAD0634716A092D000FF6BA9 /* Build configuration list for PBXProject "JCSFoundation" */;
@@ -682,9 +696,11 @@
 				EA7AC30F16D9FC1D00633E52 /* JCSQuickAlertView.m in Sources */,
 				EACE155F16E0801100A5CCCD /* JCSNumericInputAccessoryView.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
+				EA800B72180523560026C670 /* JCSFetchedCollectionViewController.m in Sources */,
 				EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */,
 				EA2DB39016E678F300BD26C4 /* JCSQuickActionSheet.m in Sources */,
 				EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */,
+				EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */,
 				EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */,
 				EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */,
 				EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */,
@@ -751,8 +767,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -771,7 +787,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -781,7 +797,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/JCSFoundation.dst;
@@ -791,7 +806,8 @@
 					/usr/include/libxml2,
 					"$(inherited)",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
@@ -805,7 +821,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/JCSFoundation.dst;
@@ -815,7 +830,7 @@
 					/usr/include/libxml2,
 					"$(inherited)",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
