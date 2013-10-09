@@ -77,6 +77,13 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+
+    id tapped = [self.allObjects objectAtIndexPath:indexPath];
+    [self tappedOnObject:tapped];
+}
+
 - (void)configureCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
     JCSFLog(@"configureCell:atIndexPath:%@", indexPath);
 }
