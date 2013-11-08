@@ -34,6 +34,7 @@
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName;
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors;
+- (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName predicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors sectionNameKeyPath:(NSString *)sectionNameKeyPath;
 
 - (id)fetchEntityNamed:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 - (id)fetchEntityNamed:(NSString *)entityName atOffset:(NSUInteger)offset;
