@@ -25,31 +25,47 @@
 		5C0D4F12AC854355B44FE124 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E0F395D9D548D8B5F4B807 /* libPods.a */; };
 		BA66500A09837507EFD91380 /* JCSSelectionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665152EBD859859082DB58 /* JCSSelectionCell.h */; };
 		BA66506C38AC444194BC327D /* JCSNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */; };
+		BA6650A5AD413B139D8159F5 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */; };
 		BA6650C5D0916CB706145199 /* JCSQuickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */; };
+		BA66519805D68A343E7F560C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66569D5C77592183003983 /* UIImage+Resize.m */; };
 		BA665226C2DD34B553985A33 /* JCSMultiSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665501037996A45B5E2F29 /* JCSMultiSelectionViewController.h */; };
+		BA6652349CF7AC87376100D0 /* NSString+JCSValidations.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */; };
 		BA66526D9B704E5CC6C6E8A9 /* JCSFetchedCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665A7603653044442212E4 /* JCSFetchedCollectionViewController.h */; };
+		BA6653672B6C2C2C63D10189 /* UIView+JCSLoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665775E77C2676BD22FD8E /* UIView+JCSLoadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA665378A95C5685D06BE894 /* JCSFetchedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6655FD2FCA2ABC78CC5B8D /* JCSFetchedCollectionViewController.m */; };
 		BA6653D9E9E91C7972C0D3E1 /* JCSInputCellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */; };
+		BA6654047309FE2AAD348F6D /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6655735952C9FA9E0CB3B1 /* NSDate+ISO8601.m */; };
+		BA66540838D9DFDEEEB81EAB /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665A051E4B735765AFAD0D /* UIImage+Resize.h */; };
 		BA66542B723C2AF392B10FF8 /* JCSInputCellsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6652067A8B06F263DEDF89 /* JCSInputCellsViewController.h */; };
+		BA66543DEE10E4BBB9F68829 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665A2D460863263D555967 /* UITableViewCell+JCSPositioning.h */; };
+		BA6654568F1A44ECBB2800E2 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D00FA2AD43A5541D6E0 /* NSString+MD5.h */; };
 		BA6654E5D018821644B13095 /* JCSSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6657D268355BAD171CB081 /* JCSSelectionCell.m */; };
+		BA6656BB9D48AA1FED3FA069 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */; };
 		BA66579F2D009AC6F0940081 /* JCSQuickAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */; };
 		BA66580F3A6F799D9925C9E8 /* JCSSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */; };
 		BA66586F268225D2342670D6 /* JCSDropDownCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665E0247F1C899AFF7F473 /* JCSDropDownCell.h */; };
 		BA6658765B9B952015CB7804 /* JCSDecimalInputValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */; };
+		BA66589CD271916023256921 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665DA11B1CED6961903CC8 /* NSString+MD5.m */; };
 		BA6658C635909F0BF1EB45B8 /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D35AD10AFE625FD2E46 /* UIApplication+Keyboard.h */; };
 		BA6658EA7B9930D2945C4DF7 /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66565AED5724D976D0B9C6 /* JCSSelectionViewController.h */; };
 		BA66590A3EC6D1B6CD769BDA /* JCSMultiSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */; };
 		BA6659AF23831BA403EFF3E2 /* JCSDecimalInputValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C007C2C2EDA3439996A /* JCSDecimalInputValidation.h */; };
+		BA6659B59C14139A45D0D220 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665784AB5C1334CD8F506B /* UIImage+RoundedCorner.m */; };
 		BA665A801291D363D1A7D969 /* JCSTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6652EF0F9FFED685D4589F /* JCSTextEntryCell.m */; };
 		BA665AD007BE8681FA075D8B /* JCSQuickNumericInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */; };
+		BA665AE4A28C2D934848B8D1 /* NSDate+ISO8601.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D37F04BE98471C80C6A /* NSDate+ISO8601.h */; };
 		BA665AFB96EB744E89386F49 /* JCSQuickActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66585C81709C173512C8E0 /* JCSQuickActionSheet.m */; };
 		BA665BB7B8171AB3C21EABA5 /* JCSSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */; };
+		BA665BC68215BCD94B5B866D /* NSString+JCSValidations.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6651A38C628649941C6AE7 /* NSString+JCSValidations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA665BE2416729C68CA82EA8 /* JCSSingleSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C3E7D55AC22AA895859 /* JCSSingleSelectionViewController.h */; };
 		BA665CC2256892B0D1792A82 /* JCSQuickActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */; };
 		BA665CC7BF83C8CD09093F8B /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665986D4D5A62FFE7DFB27 /* UIApplication+Keyboard.m */; };
+		BA665D77E0AAD629FC3DDDA4 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66582A84CB7A49BD2E9C95 /* UIImage+Alpha.h */; };
+		BA665D9067123399C1258927 /* UIView+JCSLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665865A3AAEFAD98EA17D0 /* UIView+JCSLoadView.m */; };
 		BA665DAD035A9126EE5CB7B7 /* JCSDropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */; };
 		BA665DAF6F910CDB19EB780F /* JCSNumericInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C4DA92020255D496400 /* JCSNumericInputAccessoryView.h */; };
 		BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */; };
+		BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */; };
 		BA665EE36802FA57373253B6 /* JCSQuickNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */; };
 		EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */; };
 		EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */; };
@@ -65,15 +81,9 @@
 		EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */; };
 		EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */; };
 		EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */; };
-		EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA5D034616CAD92D00D4D42D /* UIView+JCSLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5D034416CAD92D00D4D42D /* UIView+JCSLoadView.m */; };
-		EA69986316AD3DCF00B20033 /* NSString+JCSValidations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */; };
 		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA69987416AD42B900B20033 /* NSString+JCSValidations.h in Headers */ = {isa = PBXBuildFile; fileRef = EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71D11016D499950059CC4D /* JCSObjectModel.h */; };
 		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
-		EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */; };
-		EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */; };
 		EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */; };
 		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
 		EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */; };
@@ -90,8 +100,6 @@
 		EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
 		EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */; };
-		EAC9912917969B9E0042AD89 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC9912717969B9E0042AD89 /* NSString+MD5.h */; };
-		EAC9912A17969B9E0042AD89 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC9912817969B9E0042AD89 /* NSString+MD5.m */; };
 		EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */; };
 		EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */; };
 		EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */; };
@@ -99,19 +107,11 @@
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
 		EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */; };
 		EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */; };
-		EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B21173A17D700C22211 /* UIImage+Alpha.h */; };
-		EAD85B28173A17D700C22211 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B22173A17D700C22211 /* UIImage+Alpha.m */; };
-		EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B23173A17D700C22211 /* UIImage+Resize.h */; };
-		EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B24173A17D700C22211 /* UIImage+Resize.m */; };
-		EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */; };
-		EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */; };
 		EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */; };
 		EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */; };
 		EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */; };
 		EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */; };
 		EAEB276916D11BE500D126BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB276816D11BE500D126BD /* CoreData.framework */; };
-		EAF31B72179A7CC1004EA135 /* NSDate+ISO8601.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF31B70179A7CC1004EA135 /* NSDate+ISO8601.h */; };
-		EAF31B73179A7CC1004EA135 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF31B71179A7CC1004EA135 /* NSDate+ISO8601.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,37 +130,53 @@
 		BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickActionSheet.h; sourceTree = "<group>"; };
 		BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickNumericInputAccessoryView.m; sourceTree = "<group>"; };
 		BA665152EBD859859082DB58 /* JCSSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionCell.h; sourceTree = "<group>"; };
+		BA6651A38C628649941C6AE7 /* NSString+JCSValidations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JCSValidations.h"; sourceTree = "<group>"; };
 		BA6652067A8B06F263DEDF89 /* JCSInputCellsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInputCellsViewController.h; sourceTree = "<group>"; };
+		BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
 		BA6652EF0F9FFED685D4589F /* JCSTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSTextEntryCell.m; sourceTree = "<group>"; };
 		BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickAlertView.m; sourceTree = "<group>"; };
 		BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDropDownCell.m; sourceTree = "<group>"; };
 		BA665501037996A45B5E2F29 /* JCSMultiSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSMultiSelectionViewController.h; sourceTree = "<group>"; };
+		BA6655735952C9FA9E0CB3B1 /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
 		BA66559C775B5ECCF55C8EB2 /* JCSDropDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDropDownItem.h; sourceTree = "<group>"; };
 		BA6655FD2FCA2ABC78CC5B8D /* JCSFetchedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedCollectionViewController.m; sourceTree = "<group>"; };
 		BA66565AED5724D976D0B9C6 /* JCSSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionViewController.h; sourceTree = "<group>"; };
+		BA66569D5C77592183003983 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JCSPositioning.m"; sourceTree = "<group>"; };
 		BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickAlertView.h; sourceTree = "<group>"; };
 		BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSMultiSelectionViewController.m; sourceTree = "<group>"; };
+		BA665775E77C2676BD22FD8E /* UIView+JCSLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSLoadView.h"; sourceTree = "<group>"; };
+		BA665784AB5C1334CD8F506B /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		BA6657D268355BAD171CB081 /* JCSSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionCell.m; sourceTree = "<group>"; };
+		BA66582A84CB7A49BD2E9C95 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		BA66585C81709C173512C8E0 /* JCSQuickActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickActionSheet.m; sourceTree = "<group>"; };
+		BA665865A3AAEFAD98EA17D0 /* UIView+JCSLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSLoadView.m"; sourceTree = "<group>"; };
 		BA665986D4D5A62FFE7DFB27 /* UIApplication+Keyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Keyboard.m"; sourceTree = "<group>"; };
 		BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSTextEntryCell.h; sourceTree = "<group>"; };
+		BA665A051E4B735765AFAD0D /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		BA665A2D460863263D555967 /* UITableViewCell+JCSPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JCSPositioning.h"; sourceTree = "<group>"; };
 		BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDecimalInputValidation.m; sourceTree = "<group>"; };
 		BA665A7603653044442212E4 /* JCSFetchedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedCollectionViewController.h; sourceTree = "<group>"; };
 		BA665B06E9F463919A9080AC /* JCSInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInputValidation.h; sourceTree = "<group>"; };
 		BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleSelectionViewController.m; sourceTree = "<group>"; };
+		BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCSValidations.m"; sourceTree = "<group>"; };
 		BA665C007C2C2EDA3439996A /* JCSDecimalInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDecimalInputValidation.h; sourceTree = "<group>"; };
 		BA665C3E7D55AC22AA895859 /* JCSSingleSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleSelectionViewController.h; sourceTree = "<group>"; };
 		BA665C4DA92020255D496400 /* JCSNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNumericInputAccessoryView.h; sourceTree = "<group>"; };
 		BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionViewController.m; sourceTree = "<group>"; };
 		BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSInputCellsViewController.m; sourceTree = "<group>"; };
+		BA665D00FA2AD43A5541D6E0 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		BA665D35AD10AFE625FD2E46 /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
+		BA665D37F04BE98471C80C6A /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
 		BA665D8BA0F2C8A85FE52F1D /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
+		BA665DA11B1CED6961903CC8 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		BA665DB2911DE6E0DD67D1FE /* JCSSelectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectable.h; sourceTree = "<group>"; };
 		BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNumericInputAccessoryView.m; sourceTree = "<group>"; };
 		BA665E0247F1C899AFF7F473 /* JCSDropDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDropDownCell.h; sourceTree = "<group>"; };
 		BA665E1E619E7E10E409A190 /* JCSFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFoundationConstants.h; sourceTree = "<group>"; };
 		BA665E5C24386BA202A09F6B /* JCSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActionSheet.h; sourceTree = "<group>"; };
 		BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickNumericInputAccessoryView.h; sourceTree = "<group>"; };
+		BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSLocalization.h; sourceTree = "<group>"; };
 		EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSLocalization.m; sourceTree = "<group>"; };
 		EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JCSImageSave.h"; sourceTree = "<group>"; };
@@ -175,14 +191,8 @@
 		EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JCSCalculations.m"; sourceTree = "<group>"; };
 		EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNoCaretTextField.h; sourceTree = "<group>"; };
 		EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNoCaretTextField.m; sourceTree = "<group>"; };
-		EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSLoadView.h"; sourceTree = "<group>"; };
-		EA5D034416CAD92D00D4D42D /* UIView+JCSLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSLoadView.m"; sourceTree = "<group>"; };
-		EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JCSValidations.h"; sourceTree = "<group>"; };
-		EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCSValidations.m"; sourceTree = "<group>"; };
 		EA71D11016D499950059CC4D /* JCSObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSObjectModel.h; sourceTree = "<group>"; };
 		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
-		EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JCSPositioning.h"; sourceTree = "<group>"; };
-		EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JCSPositioning.m"; sourceTree = "<group>"; };
 		EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCoreDataChangeAction.h; sourceTree = "<group>"; };
 		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
 		EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
@@ -200,8 +210,6 @@
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
 		EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSFindParent.m"; sourceTree = "<group>"; };
 		EAB6E41E182F9A5D0001E094 /* JCSFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JCSFoundation.podspec; sourceTree = "<group>"; };
-		EAC9912717969B9E0042AD89 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		EAC9912817969B9E0042AD89 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+JCSHelpers.h"; sourceTree = "<group>"; };
 		EACDE6E216FD1052000BFCAA /* GDataXMLElement+JCSHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+JCSHelpers.m"; sourceTree = "<group>"; };
 		EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
@@ -212,19 +220,11 @@
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
 		EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleInputEntryViewController.h; sourceTree = "<group>"; };
 		EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleInputEntryViewController.m; sourceTree = "<group>"; };
-		EAD85B21173A17D700C22211 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
-		EAD85B22173A17D700C22211 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
-		EAD85B23173A17D700C22211 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		EAD85B24173A17D700C22211 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
-		EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSJSONNetworkOperation.h; sourceTree = "<group>"; };
 		EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSJSONNetworkOperation.m; sourceTree = "<group>"; };
 		EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNetworkOperation.h; sourceTree = "<group>"; };
 		EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNetworkOperation.m; sourceTree = "<group>"; };
 		EAEB276816D11BE500D126BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		EAF31B70179A7CC1004EA135 /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
-		EAF31B71179A7CC1004EA135 /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +241,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA6657D58F82B8FD6376EF55 /* UIImageCategories */ = {
+			isa = PBXGroup;
+			children = (
+				BA66582A84CB7A49BD2E9C95 /* UIImage+Alpha.h */,
+				BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */,
+				BA665A051E4B735765AFAD0D /* UIImage+Resize.h */,
+				BA66569D5C77592183003983 /* UIImage+Resize.m */,
+				BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */,
+				BA665784AB5C1334CD8F506B /* UIImage+RoundedCorner.m */,
+			);
+			path = UIImageCategories;
+			sourceTree = "<group>";
+		};
 		EA0183EB16EDA2AB005E1DAC /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +268,7 @@
 			children = (
 				EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */,
 				EA222E66173B662C00C5D613 /* UIImage+JCSImageSave.m */,
+				BA6657D58F82B8FD6376EF55 /* UIImageCategories */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -278,8 +292,6 @@
 				EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
 				EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */,
-				EA5D034316CAD92D00D4D42D /* UIView+JCSLoadView.h */,
-				EA5D034416CAD92D00D4D42D /* UIView+JCSLoadView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,16 +299,10 @@
 		EA69985F16AD3DB400B20033 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EAF31B70179A7CC1004EA135 /* NSDate+ISO8601.h */,
-				EAF31B71179A7CC1004EA135 /* NSDate+ISO8601.m */,
 				EA5094B016FA3BE10064B88A /* NSDate+JCSCalculations.h */,
 				EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */,
 				EA3703581767503900FBD4F3 /* NSMutableString+JCSIssues.h */,
 				EA3703591767503900FBD4F3 /* NSMutableString+JCSIssues.m */,
-				EA69986116AD3DCF00B20033 /* NSString+JCSValidations.h */,
-				EA69986216AD3DCF00B20033 /* NSString+JCSValidations.m */,
-				EAC9912717969B9E0042AD89 /* NSString+MD5.h */,
-				EAC9912817969B9E0042AD89 /* NSString+MD5.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,8 +347,6 @@
 			children = (
 				EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */,
 				EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */,
-				EA7AC2F616D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h */,
-				EA7AC2F716D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -353,6 +357,16 @@
 				BA665E1E619E7E10E409A190 /* JCSFoundationConstants.h */,
 				BA665986D4D5A62FFE7DFB27 /* UIApplication+Keyboard.m */,
 				BA665D35AD10AFE625FD2E46 /* UIApplication+Keyboard.h */,
+				BA6651A38C628649941C6AE7 /* NSString+JCSValidations.h */,
+				BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */,
+				BA665865A3AAEFAD98EA17D0 /* UIView+JCSLoadView.m */,
+				BA665775E77C2676BD22FD8E /* UIView+JCSLoadView.h */,
+				BA665A2D460863263D555967 /* UITableViewCell+JCSPositioning.h */,
+				BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */,
+				BA665DA11B1CED6961903CC8 /* NSString+MD5.m */,
+				BA665D00FA2AD43A5541D6E0 /* NSString+MD5.h */,
+				BA6655735952C9FA9E0CB3B1 /* NSDate+ISO8601.m */,
+				BA665D37F04BE98471C80C6A /* NSDate+ISO8601.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -486,22 +500,8 @@
 		EAD85B1F173A17D700C22211 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
-				EAD85B20173A17D700C22211 /* UIImageCategories */,
 			);
 			path = Thirdparty;
-			sourceTree = "<group>";
-		};
-		EAD85B20173A17D700C22211 /* UIImageCategories */ = {
-			isa = PBXGroup;
-			children = (
-				EAD85B21173A17D700C22211 /* UIImage+Alpha.h */,
-				EAD85B22173A17D700C22211 /* UIImage+Alpha.m */,
-				EAD85B23173A17D700C22211 /* UIImage+Resize.h */,
-				EAD85B24173A17D700C22211 /* UIImage+Resize.m */,
-				EAD85B25173A17D700C22211 /* UIImage+RoundedCorner.h */,
-				EAD85B26173A17D700C22211 /* UIImage+RoundedCorner.m */,
-			);
-			path = UIImageCategories;
 			sourceTree = "<group>";
 		};
 		EADB6BD61787208E00526DE0 /* Network */ = {
@@ -540,8 +540,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
-				EA69987416AD42B900B20033 /* NSString+JCSValidations.h in Headers */,
-				EA5D034516CAD92D00D4D42D /* UIView+JCSLoadView.h in Headers */,
 				EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */,
 				EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */,
 				EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */,
@@ -550,7 +548,6 @@
 				EAA2A65216D4C1D800001229 /* JCSFetchedTableViewController.h in Headers */,
 				EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
-				EA7AC2F816D8AD7B00633E52 /* UITableViewCell+JCSPositioning.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
 				EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */,
 				EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */,
@@ -558,17 +555,12 @@
 				EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */,
 				EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */,
 				EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */,
-				EAD85B27173A17D700C22211 /* UIImage+Alpha.h in Headers */,
-				EAD85B29173A17D700C22211 /* UIImage+Resize.h in Headers */,
-				EAD85B2B173A17D700C22211 /* UIImage+RoundedCorner.h in Headers */,
 				EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */,
 				EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */,
 				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 				EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */,
 				EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */,
 				EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */,
-				EAC9912917969B9E0042AD89 /* NSString+MD5.h in Headers */,
-				EAF31B72179A7CC1004EA135 /* NSDate+ISO8601.h in Headers */,
 				BA66586F268225D2342670D6 /* JCSDropDownCell.h in Headers */,
 				BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */,
 				BA6659AF23831BA403EFF3E2 /* JCSDecimalInputValidation.h in Headers */,
@@ -583,6 +575,14 @@
 				BA665CC2256892B0D1792A82 /* JCSQuickActionSheet.h in Headers */,
 				BA66542B723C2AF392B10FF8 /* JCSInputCellsViewController.h in Headers */,
 				BA6658C635909F0BF1EB45B8 /* UIApplication+Keyboard.h in Headers */,
+				BA665BC68215BCD94B5B866D /* NSString+JCSValidations.h in Headers */,
+				BA6653672B6C2C2C63D10189 /* UIView+JCSLoadView.h in Headers */,
+				BA66543DEE10E4BBB9F68829 /* UITableViewCell+JCSPositioning.h in Headers */,
+				BA665D77E0AAD629FC3DDDA4 /* UIImage+Alpha.h in Headers */,
+				BA66540838D9DFDEEEB81EAB /* UIImage+Resize.h in Headers */,
+				BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */,
+				BA6654568F1A44ECBB2800E2 /* NSString+MD5.h in Headers */,
+				BA665AE4A28C2D934848B8D1 /* NSDate+ISO8601.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,8 +701,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA69986316AD3DCF00B20033 /* NSString+JCSValidations.m in Sources */,
-				EA5D034616CAD92D00D4D42D /* UIView+JCSLoadView.m in Sources */,
 				EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */,
 				EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */,
 				EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */,
@@ -711,7 +709,6 @@
 				EAA2A65316D4C1D800001229 /* JCSFetchedTableViewController.m in Sources */,
 				EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
-				EA7AC2F916D8AD7B00633E52 /* UITableViewCell+JCSPositioning.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
 				EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */,
 				EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */,
@@ -719,17 +716,12 @@
 				EA5094B316FA3BE10064B88A /* NSDate+JCSCalculations.m in Sources */,
 				EACDE6E616FD1053000BFCAA /* GDataXMLElement+JCSHelpers.m in Sources */,
 				EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */,
-				EAD85B28173A17D700C22211 /* UIImage+Alpha.m in Sources */,
-				EAD85B2A173A17D700C22211 /* UIImage+Resize.m in Sources */,
-				EAD85B2C173A17D700C22211 /* UIImage+RoundedCorner.m in Sources */,
 				EA222E68173B662C00C5D613 /* UIImage+JCSImageSave.m in Sources */,
 				EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */,
 				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 				EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */,
 				EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */,
 				EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */,
-				EAC9912A17969B9E0042AD89 /* NSString+MD5.m in Sources */,
-				EAF31B73179A7CC1004EA135 /* NSDate+ISO8601.m in Sources */,
 				BA665DAD035A9126EE5CB7B7 /* JCSDropDownCell.m in Sources */,
 				BA665A801291D363D1A7D969 /* JCSTextEntryCell.m in Sources */,
 				BA6658765B9B952015CB7804 /* JCSDecimalInputValidation.m in Sources */,
@@ -744,6 +736,14 @@
 				BA665AFB96EB744E89386F49 /* JCSQuickActionSheet.m in Sources */,
 				BA6653D9E9E91C7972C0D3E1 /* JCSInputCellsViewController.m in Sources */,
 				BA665CC7BF83C8CD09093F8B /* UIApplication+Keyboard.m in Sources */,
+				BA6652349CF7AC87376100D0 /* NSString+JCSValidations.m in Sources */,
+				BA665D9067123399C1258927 /* UIView+JCSLoadView.m in Sources */,
+				BA6656BB9D48AA1FED3FA069 /* UITableViewCell+JCSPositioning.m in Sources */,
+				BA6650A5AD413B139D8159F5 /* UIImage+Alpha.m in Sources */,
+				BA66519805D68A343E7F560C /* UIImage+Resize.m in Sources */,
+				BA6659B59C14139A45D0D220 /* UIImage+RoundedCorner.m in Sources */,
+				BA66589CD271916023256921 /* NSString+MD5.m in Sources */,
+				BA6654047309FE2AAD348F6D /* NSDate+ISO8601.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

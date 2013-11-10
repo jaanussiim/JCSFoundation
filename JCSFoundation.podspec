@@ -37,4 +37,10 @@ Pod::Spec.new do |spec|
     ss.dependency 'AFNetworking', '~> 1.3.3'
     ss.ios.source_files = 'JCSFoundation/Network/*.{h,m}'
   end
+
+  spec.subspec 'Image' do |ss|
+    ss.platform = :ios, '6.0'
+    ss.dependency 'JCSFoundation/Core'
+    ss.ios.source_files = 'JCSFoundation/Image/**/*.{h,m}'
+  end
 end
