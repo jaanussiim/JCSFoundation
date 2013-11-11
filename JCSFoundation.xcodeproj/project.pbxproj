@@ -40,6 +40,9 @@
 		BA66543DEE10E4BBB9F68829 /* UITableViewCell+JCSPositioning.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665A2D460863263D555967 /* UITableViewCell+JCSPositioning.h */; };
 		BA6654568F1A44ECBB2800E2 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D00FA2AD43A5541D6E0 /* NSString+MD5.h */; };
 		BA6654E5D018821644B13095 /* JCSSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6657D268355BAD171CB081 /* JCSSelectionCell.m */; };
+		BA6655BBABBDDE5B7B311E17 /* JCSPopupAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665D8EB5DB282EC6BF9F4B /* JCSPopupAlertView.m */; };
+		BA6656011A288DA8D2ADE47D /* JCSPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66508BC211A4DAC1E0CF0C /* JCSPopupView.m */; };
+		BA66567A8DACBF70CFC8E356 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665ED937E783EFE989663C /* JCSPopupAlertView.h */; };
 		BA6656BB9D48AA1FED3FA069 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */; };
 		BA66579F2D009AC6F0940081 /* JCSQuickAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */; };
 		BA66580F3A6F799D9925C9E8 /* JCSSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */; };
@@ -47,6 +50,7 @@
 		BA6658765B9B952015CB7804 /* JCSDecimalInputValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */; };
 		BA66589CD271916023256921 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665DA11B1CED6961903CC8 /* NSString+MD5.m */; };
 		BA6658C635909F0BF1EB45B8 /* UIApplication+Keyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D35AD10AFE625FD2E46 /* UIApplication+Keyboard.h */; };
+		BA6658C7DB1E6103C9686C0B /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665D16560BE9CC3DB60023 /* JCSPopupView.h */; };
 		BA6658EA7B9930D2945C4DF7 /* JCSSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66565AED5724D976D0B9C6 /* JCSSelectionViewController.h */; };
 		BA66590A3EC6D1B6CD769BDA /* JCSMultiSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */; };
 		BA6659AF23831BA403EFF3E2 /* JCSDecimalInputValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C007C2C2EDA3439996A /* JCSDecimalInputValidation.h */; };
@@ -58,6 +62,8 @@
 		BA665BB7B8171AB3C21EABA5 /* JCSSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */; };
 		BA665BC68215BCD94B5B866D /* NSString+JCSValidations.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6651A38C628649941C6AE7 /* NSString+JCSValidations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA665BE2416729C68CA82EA8 /* JCSSingleSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C3E7D55AC22AA895859 /* JCSSingleSelectionViewController.h */; };
+		BA665C023165817A42808101 /* JCSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B721A58E6F6A304DCCE /* JCSActivityView.m */; };
+		BA665C9098F3C3D96B2091E2 /* JCSActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66575ED0CC9C73FCDEA41F /* JCSActivityView.h */; };
 		BA665CC2256892B0D1792A82 /* JCSQuickActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */; };
 		BA665CC7BF83C8CD09093F8B /* UIApplication+Keyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665986D4D5A62FFE7DFB27 /* UIApplication+Keyboard.m */; };
 		BA665D77E0AAD629FC3DDDA4 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66582A84CB7A49BD2E9C95 /* UIImage+Alpha.h */; };
@@ -86,12 +92,6 @@
 		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
 		EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */; };
 		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
-		EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */; };
-		EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */; };
-		EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */; };
-		EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */; };
-		EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA84DD9516CFC3F200177B30 /* JCSActivityView.h */; };
-		EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA84DD9616CFC3F200177B30 /* JCSActivityView.m */; };
 		EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */; };
 		EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */; };
 		EAA2A65216D4C1D800001229 /* JCSFetchedTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */; };
@@ -128,6 +128,7 @@
 		22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		66E0F395D9D548D8B5F4B807 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickActionSheet.h; sourceTree = "<group>"; };
+		BA66508BC211A4DAC1E0CF0C /* JCSPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupView.m; sourceTree = "<group>"; };
 		BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickNumericInputAccessoryView.m; sourceTree = "<group>"; };
 		BA665152EBD859859082DB58 /* JCSSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectionCell.h; sourceTree = "<group>"; };
 		BA6651A38C628649941C6AE7 /* NSString+JCSValidations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JCSValidations.h"; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		BA66569D5C77592183003983 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JCSPositioning.m"; sourceTree = "<group>"; };
 		BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickAlertView.h; sourceTree = "<group>"; };
+		BA66575ED0CC9C73FCDEA41F /* JCSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActivityView.h; sourceTree = "<group>"; };
 		BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSMultiSelectionViewController.m; sourceTree = "<group>"; };
 		BA665775E77C2676BD22FD8E /* UIView+JCSLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSLoadView.h"; sourceTree = "<group>"; };
 		BA665784AB5C1334CD8F506B /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDecimalInputValidation.m; sourceTree = "<group>"; };
 		BA665A7603653044442212E4 /* JCSFetchedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedCollectionViewController.h; sourceTree = "<group>"; };
 		BA665B06E9F463919A9080AC /* JCSInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInputValidation.h; sourceTree = "<group>"; };
+		BA665B721A58E6F6A304DCCE /* JCSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSActivityView.m; sourceTree = "<group>"; };
 		BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleSelectionViewController.m; sourceTree = "<group>"; };
 		BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCSValidations.m"; sourceTree = "<group>"; };
 		BA665C007C2C2EDA3439996A /* JCSDecimalInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDecimalInputValidation.h; sourceTree = "<group>"; };
@@ -166,9 +169,11 @@
 		BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionViewController.m; sourceTree = "<group>"; };
 		BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSInputCellsViewController.m; sourceTree = "<group>"; };
 		BA665D00FA2AD43A5541D6E0 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		BA665D16560BE9CC3DB60023 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
 		BA665D35AD10AFE625FD2E46 /* UIApplication+Keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Keyboard.h"; sourceTree = "<group>"; };
 		BA665D37F04BE98471C80C6A /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
 		BA665D8BA0F2C8A85FE52F1D /* JCSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSAlertView.h; sourceTree = "<group>"; };
+		BA665D8EB5DB282EC6BF9F4B /* JCSPopupAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupAlertView.m; sourceTree = "<group>"; };
 		BA665DA11B1CED6961903CC8 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		BA665DB2911DE6E0DD67D1FE /* JCSSelectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSelectable.h; sourceTree = "<group>"; };
 		BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNumericInputAccessoryView.m; sourceTree = "<group>"; };
@@ -176,6 +181,7 @@
 		BA665E1E619E7E10E409A190 /* JCSFoundationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFoundationConstants.h; sourceTree = "<group>"; };
 		BA665E5C24386BA202A09F6B /* JCSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActionSheet.h; sourceTree = "<group>"; };
 		BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickNumericInputAccessoryView.h; sourceTree = "<group>"; };
+		BA665ED937E783EFE989663C /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
 		BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSLocalization.h; sourceTree = "<group>"; };
 		EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSLocalization.m; sourceTree = "<group>"; };
@@ -195,12 +201,6 @@
 		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
 		EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCoreDataChangeAction.h; sourceTree = "<group>"; };
 		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
-		EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
-		EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupAlertView.m; sourceTree = "<group>"; };
-		EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupView.h; sourceTree = "<group>"; };
-		EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupView.m; sourceTree = "<group>"; };
-		EA84DD9516CFC3F200177B30 /* JCSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActivityView.h; sourceTree = "<group>"; };
-		EA84DD9616CFC3F200177B30 /* JCSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSActivityView.m; sourceTree = "<group>"; };
 		EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDateEntryCell.h; sourceTree = "<group>"; };
 		EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDateEntryCell.m; sourceTree = "<group>"; };
 		EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableViewController.h; sourceTree = "<group>"; };
@@ -287,7 +287,6 @@
 		EA5D033116CAD48E00D4D42D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EA84DD8C16CFC3C800177B30 /* Popups */,
 				EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */,
 				EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */,
 				EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */,
@@ -316,19 +315,6 @@
 				EA71D11116D499950059CC4D /* JCSObjectModel.m */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		EA84DD8C16CFC3C800177B30 /* Popups */ = {
-			isa = PBXGroup;
-			children = (
-				EA84DD9516CFC3F200177B30 /* JCSActivityView.h */,
-				EA84DD9616CFC3F200177B30 /* JCSActivityView.m */,
-				EA84DD8D16CFC3C800177B30 /* JCSPopupAlertView.h */,
-				EA84DD8E16CFC3C800177B30 /* JCSPopupAlertView.m */,
-				EA84DD9116CFC3DA00177B30 /* JCSPopupView.h */,
-				EA84DD9216CFC3DA00177B30 /* JCSPopupView.m */,
-			);
-			path = Popups;
 			sourceTree = "<group>";
 		};
 		EAA2A64F16D4C1AE00001229 /* CoreData */ = {
@@ -406,12 +392,18 @@
 		EAB6E421182FA3980001E094 /* PopupViews */ = {
 			isa = PBXGroup;
 			children = (
-				BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */,
-				BA665D8BA0F2C8A85FE52F1D /* JCSAlertView.h */,
-				BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */,
-				BA66585C81709C173512C8E0 /* JCSQuickActionSheet.m */,
-				BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */,
 				BA665E5C24386BA202A09F6B /* JCSActionSheet.h */,
+				BA66575ED0CC9C73FCDEA41F /* JCSActivityView.h */,
+				BA665B721A58E6F6A304DCCE /* JCSActivityView.m */,
+				BA665D8BA0F2C8A85FE52F1D /* JCSAlertView.h */,
+				BA665ED937E783EFE989663C /* JCSPopupAlertView.h */,
+				BA665D8EB5DB282EC6BF9F4B /* JCSPopupAlertView.m */,
+				BA665D16560BE9CC3DB60023 /* JCSPopupView.h */,
+				BA66508BC211A4DAC1E0CF0C /* JCSPopupView.m */,
+				BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */,
+				BA66585C81709C173512C8E0 /* JCSQuickActionSheet.m */,
+				BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */,
+				BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */,
 			);
 			path = PopupViews;
 			sourceTree = "<group>";
@@ -520,16 +512,8 @@
 			children = (
 				EAA2A64F16D4C1AE00001229 /* CoreData */,
 				EAD70CEF16D1F9A90021EDCF /* Input */,
-				EAEB273116D0D38E00D126BD /* Selection */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		EAEB273116D0D38E00D126BD /* Selection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,9 +524,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
-				EA84DD8F16CFC3C800177B30 /* JCSPopupAlertView.h in Headers */,
-				EA84DD9316CFC3DA00177B30 /* JCSPopupView.h in Headers */,
-				EA84DD9716CFC3F200177B30 /* JCSActivityView.h in Headers */,
 				EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */,
 				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
 				EAA2A65216D4C1D800001229 /* JCSFetchedTableViewController.h in Headers */,
@@ -583,6 +564,9 @@
 				BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */,
 				BA6654568F1A44ECBB2800E2 /* NSString+MD5.h in Headers */,
 				BA665AE4A28C2D934848B8D1 /* NSDate+ISO8601.h in Headers */,
+				BA6658C7DB1E6103C9686C0B /* JCSPopupView.h in Headers */,
+				BA665C9098F3C3D96B2091E2 /* JCSActivityView.h in Headers */,
+				BA66567A8DACBF70CFC8E356 /* JCSPopupAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,9 +685,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA84DD9016CFC3C800177B30 /* JCSPopupAlertView.m in Sources */,
-				EA84DD9416CFC3DA00177B30 /* JCSPopupView.m in Sources */,
-				EA84DD9816CFC3F200177B30 /* JCSActivityView.m in Sources */,
 				EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */,
 				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
 				EAA2A65316D4C1D800001229 /* JCSFetchedTableViewController.m in Sources */,
@@ -744,6 +725,9 @@
 				BA6659B59C14139A45D0D220 /* UIImage+RoundedCorner.m in Sources */,
 				BA66589CD271916023256921 /* NSString+MD5.m in Sources */,
 				BA6654047309FE2AAD348F6D /* NSDate+ISO8601.m in Sources */,
+				BA665C023165817A42808101 /* JCSActivityView.m in Sources */,
+				BA6656011A288DA8D2ADE47D /* JCSPopupView.m in Sources */,
+				BA6655BBABBDDE5B7B311E17 /* JCSPopupAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
