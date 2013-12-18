@@ -26,10 +26,13 @@
 - (id)initWithDataModelName:(NSString *)modelName storeType:(NSString *)storeType;
 - (id)initWithDataModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType;
 
+- (id)sharedBackgroundInstance;
 - (id)spawnBackgroundInstance;
 
 - (void)saveContext;
 - (void)saveContext:(JCSActionBlock)completion;
+
+- (BOOL)databaseFileExists;
 
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName;
 - (NSFetchedResultsController *)fetchedControllerForEntity:(NSString *)entityName sortDescriptors:(NSArray *)sortDescriptors;
@@ -45,6 +48,7 @@
 - (NSArray *)fetchEntitiesNamed:(NSString *)entityName usingPredicate:(NSPredicate *)predicate withSortDescriptors:(NSArray *)descriptors;
 
 - (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName;
+- (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate;
 
 - (NSDictionary *)fetchPropertiesWithDescriptions:(NSArray *)descriptions onEntity:(NSString *)entityName usingPredicate:(NSPredicate *)predicate;
 

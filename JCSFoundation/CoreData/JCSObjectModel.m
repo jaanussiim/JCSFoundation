@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) NSManagedObjectContext *writingContext;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, strong) JCSObjectModel *backgroundInstance;
 
 @end
 
@@ -54,6 +55,15 @@
         _writingContext = context;
     }
     return self;
+}
+
+- (id)sharedBackgroundInstance {
+    if (self.backgroundInstance) {
+        return self.backgroundInstance;
+    }
+
+    [self setBackgroundInstance:[self spawnBackgroundInstance]];
+    return self.backgroundInstance;
 }
 
 - (id)spawnBackgroundInstance {
@@ -165,7 +175,11 @@
 }
 
 - (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName {
-    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:nil];
+    return [self fetchAttributeNamed:attributeName forEntity:entityName withPredicate:nil];
+}
+
+- (NSArray *)fetchAttributeNamed:(NSString *)attributeName forEntity:(NSString *)entityName withPredicate:(NSPredicate *)predicate {
+    NSFetchRequest *fetchRequest = [self fetchRequestForEntity:entityName predicate:predicate];
     [fetchRequest setResultType:NSDictionaryResultType];
     [fetchRequest setPropertiesToFetch:@[attributeName]];
 
@@ -284,6 +298,10 @@
             completion();
         }
     }];
+}
+
+- (BOOL)databaseFileExists {
+    return [[NSFileManager defaultManager] fileExistsAtPath:[self.storeURL path]];
 }
 
 - (void)deleteObject:(NSManagedObject *)object {
