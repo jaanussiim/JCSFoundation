@@ -16,7 +16,6 @@
 
 #import "JCSFetchedTableViewController.h"
 #import "JCSFoundationConstants.h"
-#import "JCSFetchedTableCell.h"
 
 NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellIdentifier";
 
@@ -73,7 +72,7 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JCSFetchedTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSFetchedTableViewCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kJCSFetchedTableViewCellIdentifier];
     id objectAtIndexPath = [self.allObjects objectAtIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath withObject:objectAtIndexPath];
 
@@ -81,12 +80,7 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {
-    if ([cell isKindOfClass:[JCSFetchedTableCell class]]) {
-        JCSFetchedTableCell *fCell = (JCSFetchedTableCell *) cell;
-        [fCell configureWithObject:object];
-    } else {
-        JCSFLog(@"configureCell:atIndexPath:%@", indexPath);
-    }
+    JCSFLog(@"configureCell:atIndexPath:%@", indexPath);
 }
 
 #pragma mark - Table view delegate

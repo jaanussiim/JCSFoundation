@@ -96,8 +96,6 @@
 		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
 		EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */; };
 		EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */; };
-		EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */; };
-		EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
 		EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */; };
 		EACDE6E516FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E116FD1052000BFCAA /* GDataXMLElement+JCSHelpers.h */; };
@@ -205,8 +203,6 @@
 		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
 		EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDateEntryCell.h; sourceTree = "<group>"; };
 		EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDateEntryCell.m; sourceTree = "<group>"; };
-		EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableCell.h; sourceTree = "<group>"; };
-		EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableCell.m; sourceTree = "<group>"; };
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
 		EAAEEFFD16D7465F008CBBA2 /* UIView+JCSFindParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSFindParent.m"; sourceTree = "<group>"; };
 		EAB6E41E182F9A5D0001E094 /* JCSFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JCSFoundation.podspec; sourceTree = "<group>"; };
@@ -313,15 +309,6 @@
 				EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */,
 				EA71D11016D499950059CC4D /* JCSObjectModel.h */,
 				EA71D11116D499950059CC4D /* JCSObjectModel.m */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		EAA2A64F16D4C1AE00001229 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */,
-				EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -510,7 +497,6 @@
 		EAEB273016D0D35A00D126BD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EAA2A64F16D4C1AE00001229 /* CoreData */,
 				EAD70CEF16D1F9A90021EDCF /* Input */,
 			);
 			path = ViewControllers;
@@ -526,7 +512,6 @@
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
 				EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */,
 				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
-				EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
 				EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */,
@@ -687,7 +672,6 @@
 			files = (
 				EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */,
 				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
-				EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
 				EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */,
