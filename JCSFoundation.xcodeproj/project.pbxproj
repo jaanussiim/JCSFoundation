@@ -44,6 +44,7 @@
 		BA6656011A288DA8D2ADE47D /* JCSPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66508BC211A4DAC1E0CF0C /* JCSPopupView.m */; };
 		BA66567A8DACBF70CFC8E356 /* JCSPopupAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665ED937E783EFE989663C /* JCSPopupAlertView.h */; };
 		BA6656BB9D48AA1FED3FA069 /* UITableViewCell+JCSPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6656AC7F7B235DA2BA628E /* UITableViewCell+JCSPositioning.m */; };
+		BA66575A5D125633CB26BD72 /* JCSFetchedTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665015F826F683D87E5A46 /* JCSFetchedTableViewController.h */; };
 		BA66579F2D009AC6F0940081 /* JCSQuickAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66570E43DC1E655E82426C /* JCSQuickAlertView.h */; };
 		BA66580F3A6F799D9925C9E8 /* JCSSingleSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */; };
 		BA66586F268225D2342670D6 /* JCSDropDownCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665E0247F1C899AFF7F473 /* JCSDropDownCell.h */; };
@@ -70,6 +71,7 @@
 		BA665D9067123399C1258927 /* UIView+JCSLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665865A3AAEFAD98EA17D0 /* UIView+JCSLoadView.m */; };
 		BA665DAD035A9126EE5CB7B7 /* JCSDropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */; };
 		BA665DAF6F910CDB19EB780F /* JCSNumericInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665C4DA92020255D496400 /* JCSNumericInputAccessoryView.h */; };
+		BA665E1D99D1C7A7A5BB9466 /* JCSFetchedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665547DE88CA4CAD9975B0 /* JCSFetchedTableViewController.m */; };
 		BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */; };
 		BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */; };
 		BA665EE36802FA57373253B6 /* JCSQuickNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */; };
@@ -94,8 +96,6 @@
 		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
 		EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */; };
 		EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */; };
-		EAA2A65216D4C1D800001229 /* JCSFetchedTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */; };
-		EAA2A65316D4C1D800001229 /* JCSFetchedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65116D4C1D800001229 /* JCSFetchedTableViewController.m */; };
 		EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */; };
 		EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */; };
 		EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */; };
@@ -127,6 +127,7 @@
 /* Begin PBXFileReference section */
 		22B18E9DCA504C2BAED346D2 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		66E0F395D9D548D8B5F4B807 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA665015F826F683D87E5A46 /* JCSFetchedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableViewController.h; sourceTree = "<group>"; };
 		BA66505CD0DC8858FEA580FA /* JCSQuickActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickActionSheet.h; sourceTree = "<group>"; };
 		BA66508BC211A4DAC1E0CF0C /* JCSPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSPopupView.m; sourceTree = "<group>"; };
 		BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickNumericInputAccessoryView.m; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSQuickAlertView.m; sourceTree = "<group>"; };
 		BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDropDownCell.m; sourceTree = "<group>"; };
 		BA665501037996A45B5E2F29 /* JCSMultiSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSMultiSelectionViewController.h; sourceTree = "<group>"; };
+		BA665547DE88CA4CAD9975B0 /* JCSFetchedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableViewController.m; sourceTree = "<group>"; };
 		BA6655735952C9FA9E0CB3B1 /* NSDate+ISO8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ISO8601.m"; sourceTree = "<group>"; };
 		BA66559C775B5ECCF55C8EB2 /* JCSDropDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDropDownItem.h; sourceTree = "<group>"; };
 		BA6655FD2FCA2ABC78CC5B8D /* JCSFetchedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedCollectionViewController.m; sourceTree = "<group>"; };
@@ -203,8 +205,6 @@
 		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
 		EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDateEntryCell.h; sourceTree = "<group>"; };
 		EA92D969176A5C2D0078D0C4 /* JCSDateEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDateEntryCell.m; sourceTree = "<group>"; };
-		EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableViewController.h; sourceTree = "<group>"; };
-		EAA2A65116D4C1D800001229 /* JCSFetchedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableViewController.m; sourceTree = "<group>"; };
 		EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedTableCell.h; sourceTree = "<group>"; };
 		EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSFetchedTableCell.m; sourceTree = "<group>"; };
 		EAAEEFFC16D7465F008CBBA2 /* UIView+JCSFindParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSFindParent.h"; sourceTree = "<group>"; };
@@ -322,8 +322,6 @@
 			children = (
 				EAA2A65816D4C5DF00001229 /* JCSFetchedTableCell.h */,
 				EAA2A65916D4C5DF00001229 /* JCSFetchedTableCell.m */,
-				EAA2A65016D4C1D800001229 /* JCSFetchedTableViewController.h */,
-				EAA2A65116D4C1D800001229 /* JCSFetchedTableViewController.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -385,6 +383,8 @@
 				BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */,
 				BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */,
 				BA6652067A8B06F263DEDF89 /* JCSInputCellsViewController.h */,
+				BA665547DE88CA4CAD9975B0 /* JCSFetchedTableViewController.m */,
+				BA665015F826F683D87E5A46 /* JCSFetchedTableViewController.h */,
 			);
 			path = UserInput;
 			sourceTree = "<group>";
@@ -526,7 +526,6 @@
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
 				EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */,
 				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
-				EAA2A65216D4C1D800001229 /* JCSFetchedTableViewController.h in Headers */,
 				EAA2A65A16D4C5DF00001229 /* JCSFetchedTableCell.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
@@ -567,6 +566,7 @@
 				BA6658C7DB1E6103C9686C0B /* JCSPopupView.h in Headers */,
 				BA665C9098F3C3D96B2091E2 /* JCSActivityView.h in Headers */,
 				BA66567A8DACBF70CFC8E356 /* JCSPopupAlertView.h in Headers */,
+				BA66575A5D125633CB26BD72 /* JCSFetchedTableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +687,6 @@
 			files = (
 				EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */,
 				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
-				EAA2A65316D4C1D800001229 /* JCSFetchedTableViewController.m in Sources */,
 				EAA2A65B16D4C5DF00001229 /* JCSFetchedTableCell.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
@@ -728,6 +727,7 @@
 				BA665C023165817A42808101 /* JCSActivityView.m in Sources */,
 				BA6656011A288DA8D2ADE47D /* JCSPopupView.m in Sources */,
 				BA6655BBABBDDE5B7B311E17 /* JCSPopupAlertView.m in Sources */,
+				BA665E1D99D1C7A7A5BB9466 /* JCSFetchedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
