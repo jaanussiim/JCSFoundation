@@ -83,6 +83,12 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
     JCSFLog(@"configureCell:atIndexPath:%@", indexPath);
 }
 
+- (void)removeObjects {
+    [self.allObjects setDelegate:nil];
+    [self setAllObjects:nil];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
