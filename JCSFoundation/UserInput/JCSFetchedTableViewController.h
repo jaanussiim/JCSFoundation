@@ -17,10 +17,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface JCSFetchedTableViewController : UITableViewController
+@interface JCSFetchedTableViewController : UIViewController
 
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 @property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
+@property (nonatomic, strong) UITableView *tableView;
 
 - (NSFetchedResultsController *)createFetchedController;
 - (void)tappedOnObject:(id)tapped;
