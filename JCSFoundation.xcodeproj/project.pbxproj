@@ -75,6 +75,8 @@
 		BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */; };
 		BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */; };
 		BA665EE36802FA57373253B6 /* JCSQuickNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */; };
+		EA007983186D818F00D16DFD /* JCSInlinePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA007981186D818F00D16DFD /* JCSInlinePickerCell.h */; };
+		EA007984186D818F00D16DFD /* JCSInlinePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA007982186D818F00D16DFD /* JCSInlinePickerCell.m */; };
 		EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */; };
 		EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */; };
 		EA222E67173B662C00C5D613 /* UIImage+JCSImageSave.h in Headers */ = {isa = PBXBuildFile; fileRef = EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */; };
@@ -183,6 +185,8 @@
 		BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSQuickNumericInputAccessoryView.h; sourceTree = "<group>"; };
 		BA665ED937E783EFE989663C /* JCSPopupAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSPopupAlertView.h; sourceTree = "<group>"; };
 		BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		EA007981186D818F00D16DFD /* JCSInlinePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInlinePickerCell.h; sourceTree = "<group>"; };
+		EA007982186D818F00D16DFD /* JCSInlinePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSInlinePickerCell.m; sourceTree = "<group>"; };
 		EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSLocalization.h; sourceTree = "<group>"; };
 		EA0183ED16EDA2C9005E1DAC /* JCSLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSLocalization.m; sourceTree = "<group>"; };
 		EA222E65173B662C00C5D613 /* UIImage+JCSImageSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JCSImageSave.h"; sourceTree = "<group>"; };
@@ -345,33 +349,35 @@
 		EAB6E420182F9DB30001E094 /* UserInput */ = {
 			isa = PBXGroup;
 			children = (
-				BA665E0247F1C899AFF7F473 /* JCSDropDownCell.h */,
-				BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */,
-				BA6652EF0F9FFED685D4589F /* JCSTextEntryCell.m */,
-				BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */,
-				BA66559C775B5ECCF55C8EB2 /* JCSDropDownItem.h */,
-				BA665B06E9F463919A9080AC /* JCSInputValidation.h */,
 				BA665C007C2C2EDA3439996A /* JCSDecimalInputValidation.h */,
 				BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */,
-				BA665C4DA92020255D496400 /* JCSNumericInputAccessoryView.h */,
-				BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */,
-				BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */,
-				BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */,
+				BA665E0247F1C899AFF7F473 /* JCSDropDownCell.h */,
+				BA6654D651BCB1380ED90463 /* JCSDropDownCell.m */,
+				BA66559C775B5ECCF55C8EB2 /* JCSDropDownItem.h */,
 				BA665A7603653044442212E4 /* JCSFetchedCollectionViewController.h */,
 				BA6655FD2FCA2ABC78CC5B8D /* JCSFetchedCollectionViewController.m */,
-				BA665C3E7D55AC22AA895859 /* JCSSingleSelectionViewController.h */,
-				BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */,
-				BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */,
-				BA66565AED5724D976D0B9C6 /* JCSSelectionViewController.h */,
-				BA665DB2911DE6E0DD67D1FE /* JCSSelectable.h */,
-				BA6657D268355BAD171CB081 /* JCSSelectionCell.m */,
-				BA665152EBD859859082DB58 /* JCSSelectionCell.h */,
+				BA665015F826F683D87E5A46 /* JCSFetchedTableViewController.h */,
+				BA665547DE88CA4CAD9975B0 /* JCSFetchedTableViewController.m */,
+				EA007981186D818F00D16DFD /* JCSInlinePickerCell.h */,
+				EA007982186D818F00D16DFD /* JCSInlinePickerCell.m */,
+				BA6652067A8B06F263DEDF89 /* JCSInputCellsViewController.h */,
+				BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */,
+				BA665B06E9F463919A9080AC /* JCSInputValidation.h */,
 				BA665501037996A45B5E2F29 /* JCSMultiSelectionViewController.h */,
 				BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */,
-				BA665C8D30DF9C3420F8564E /* JCSInputCellsViewController.m */,
-				BA6652067A8B06F263DEDF89 /* JCSInputCellsViewController.h */,
-				BA665547DE88CA4CAD9975B0 /* JCSFetchedTableViewController.m */,
-				BA665015F826F683D87E5A46 /* JCSFetchedTableViewController.h */,
+				BA665C4DA92020255D496400 /* JCSNumericInputAccessoryView.h */,
+				BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */,
+				BA665E740EE2DD09343D97AE /* JCSQuickNumericInputAccessoryView.h */,
+				BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */,
+				BA665DB2911DE6E0DD67D1FE /* JCSSelectable.h */,
+				BA665152EBD859859082DB58 /* JCSSelectionCell.h */,
+				BA6657D268355BAD171CB081 /* JCSSelectionCell.m */,
+				BA66565AED5724D976D0B9C6 /* JCSSelectionViewController.h */,
+				BA665C6874CA75EE23DD40BD /* JCSSelectionViewController.m */,
+				BA665C3E7D55AC22AA895859 /* JCSSingleSelectionViewController.h */,
+				BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */,
+				BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */,
+				BA6652EF0F9FFED685D4589F /* JCSTextEntryCell.m */,
 			);
 			path = UserInput;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				BA66543DEE10E4BBB9F68829 /* UITableViewCell+JCSPositioning.h in Headers */,
 				BA665D77E0AAD629FC3DDDA4 /* UIImage+Alpha.h in Headers */,
 				BA66540838D9DFDEEEB81EAB /* UIImage+Resize.h in Headers */,
+				EA007983186D818F00D16DFD /* JCSInlinePickerCell.h in Headers */,
 				BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */,
 				BA6654568F1A44ECBB2800E2 /* NSString+MD5.h in Headers */,
 				BA665AE4A28C2D934848B8D1 /* NSDate+ISO8601.h in Headers */,
@@ -674,6 +681,7 @@
 				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
+				EA007984186D818F00D16DFD /* JCSInlinePickerCell.m in Sources */,
 				EA2347CA16E46E3D000C63A0 /* JCSCameraCapture.m in Sources */,
 				EA0183EF16EDA2C9005E1DAC /* JCSLocalization.m in Sources */,
 				EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */,

@@ -15,17 +15,10 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+#import "JCSFoundationConstants.h"
 
-@interface JCSFetchedTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface JCSInlinePickerCell : UITableViewCell
 
-@property (nonatomic, strong) UINib *fetchedEntityCellNib;
-@property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
-@property (nonatomic, strong) UITableView *tableView;
-
-- (NSFetchedResultsController *)createFetchedController;
-- (void)tappedOnObject:(id)tapped;
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
-- (void)removeObjects;
+@property (nonatomic, copy) JCSActionBlock willPresentHandler;
 
 @end

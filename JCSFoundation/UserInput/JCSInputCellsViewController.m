@@ -18,11 +18,14 @@
 #import "JCSTextEntryCell.h"
 #import "JCSFoundationConstants.h"
 #import "UIApplication+Keyboard.h"
+#import "JCSInlinePickerCell.h"
 
 @interface JCSInputCellsViewController ()
 
 @property (nonatomic, strong) NSMutableArray *presentedSections;
 @property (nonatomic, strong) NSMutableArray *openSection;
+@property (nonatomic, strong) NSMutableDictionary *pickerCells;
+@property (nonatomic, strong) NSIndexPath *presentingPickerForIndexPath;
 
 @end
 
@@ -41,6 +44,7 @@
 
     [self setPresentedSections:[NSMutableArray array]];
     [self setOpenSection:[NSMutableArray array]];
+    [self setPickerCells:[NSMutableDictionary dictionary]];
     [self.presentedSections addObject:self.openSection];
 
 }
@@ -90,6 +94,8 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if ([self isCellEditable:cell]) {
         [self moveFocusToCell:cell];
+    } else if ([self hasInlinePickerAttachedAtIndexPath:indexPath]) {
+        [self handleInlinePickerForIndexPath:indexPath];
     } else {
         [UIApplication dismissKeyboard];
         [self tappedCellAtIndexPath:indexPath];
@@ -204,6 +210,65 @@
 - (void)closeSection {
     [self setOpenSection:[NSMutableArray array]];
     [self.presentedSections addObject:self.openSection];
+}
+
+- (void)addInlinePickerCell:(JCSInlinePickerCell *)pickerCell forIndexPath:(NSIndexPath *)indexPath {
+    self.pickerCells[indexPath] = pickerCell;
+}
+
+- (BOOL)hasInlinePickerAttachedAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *checked = [self indexPathWithoutPossiblePickerOffset:indexPath];
+    return self.pickerCells[checked] != nil;
+}
+
+- (void)handleInlinePickerForIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView beginUpdates];
+
+    NSIndexPath *handled = [self indexPathWithoutPossiblePickerOffset:indexPath];
+
+    NSIndexPath *previous = self.presentingPickerForIndexPath;
+    if (previous) {
+        [self dismissPickerForIndexPath:previous];
+    }
+
+    if (![handled isEqual:previous]) {
+        [self presentPickerForIndexPath:handled];
+    }
+
+    [self.tableView endUpdates];
+}
+
+- (void)presentPickerForIndexPath:(NSIndexPath *)indexPath {
+    JCSInlinePickerCell *pickerCell = self.pickerCells[indexPath];
+    NSIndexPath *insertPath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    NSMutableArray *section = self.presentedSections[insertPath.section];
+    [section insertObject:pickerCell atIndex:insertPath.row];
+
+    [self.tableView insertRowsAtIndexPaths:@[insertPath] withRowAnimation:UITableViewRowAnimationFade];
+
+    if (pickerCell.willPresentHandler) {
+        pickerCell.willPresentHandler();
+    }
+
+    [self setPresentingPickerForIndexPath:indexPath];
+}
+
+- (void)dismissPickerForIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *removePath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    NSMutableArray *section = self.presentedSections[removePath.section];
+    [section removeObjectAtIndex:removePath.row];
+
+    [self.tableView deleteRowsAtIndexPaths:@[removePath] withRowAnimation:UITableViewRowAnimationFade];
+
+    [self setPresentingPickerForIndexPath:nil];
+}
+
+- (NSIndexPath *)indexPathWithoutPossiblePickerOffset:(NSIndexPath *)indexPath {
+    if (!self.presentingPickerForIndexPath || self.presentingPickerForIndexPath.section != indexPath.section || self.presentingPickerForIndexPath.row >= indexPath.row) {
+        return indexPath;
+    }
+
+    return [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section];
 }
 
 @end

@@ -14,18 +14,22 @@
  * limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
+#import "JCSInlinePickerCell.h"
 
-@interface JCSFetchedTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@implementation JCSInlinePickerCell
 
-@property (nonatomic, strong) UINib *fetchedEntityCellNib;
-@property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
-@property (nonatomic, strong) UITableView *tableView;
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
 
-- (NSFetchedResultsController *)createFetchedController;
-- (void)tappedOnObject:(id)tapped;
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
-- (void)removeObjects;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
 
 @end
