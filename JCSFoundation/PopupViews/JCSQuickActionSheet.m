@@ -52,6 +52,12 @@
     [self setCancelButtonIndex:index];
 }
 
+- (void)addDestructiveButtonWithTitle:(NSString *)title action:(JCSActionBlock)action {
+    NSInteger index = [self addButtonWithTitle:title];
+    [self.actionsMapping setObject:action forKey:@(index)];
+    [self setDestructiveButtonIndex:index];
+}
+
 - (NSMutableDictionary *)actionsMapping {
     if (!_actionsMapping) {
         _actionsMapping = [[NSMutableDictionary alloc] init];

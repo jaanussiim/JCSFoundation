@@ -23,5 +23,6 @@
 - (void)show;
 - (NSInteger)addButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
 - (void)addCancelButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
+- (void)addDestructiveButtonWithTitle:(NSString *)title action:(JCSActionBlock)action;
 
 @end
