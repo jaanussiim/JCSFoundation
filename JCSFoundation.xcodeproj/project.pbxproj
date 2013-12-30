@@ -27,6 +27,7 @@
 		BA66506C38AC444194BC327D /* JCSNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665DBAD10DEB6A7D76E1E7 /* JCSNumericInputAccessoryView.m */; };
 		BA6650A5AD413B139D8159F5 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665EEFE608BDF8F719DE06 /* UIImage+Alpha.m */; };
 		BA6650C5D0916CB706145199 /* JCSQuickAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6653E037A2B04FBA52D166 /* JCSQuickAlertView.m */; };
+		BA6650E79568F0DB121D39FF /* JCSSingleInputEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66577D1534E6FCFB283282 /* JCSSingleInputEntryViewController.m */; };
 		BA66519805D68A343E7F560C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = BA66569D5C77592183003983 /* UIImage+Resize.m */; };
 		BA665226C2DD34B553985A33 /* JCSMultiSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665501037996A45B5E2F29 /* JCSMultiSelectionViewController.h */; };
 		BA6652349CF7AC87376100D0 /* NSString+JCSValidations.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */; };
@@ -75,6 +76,7 @@
 		BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */; };
 		BA665EC17CDF8254AB2139C7 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6652CEA3D52E0C04BDF779 /* UIImage+RoundedCorner.h */; };
 		BA665EE36802FA57373253B6 /* JCSQuickNumericInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA665130694D0F09ACFB5F46 /* JCSQuickNumericInputAccessoryView.m */; };
+		BA665F9AFC8D9B7F92961E9E /* JCSSingleInputEntryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA665B41EA3CA137C28A2D9B /* JCSSingleInputEntryViewController.h */; };
 		EA007983186D818F00D16DFD /* JCSInlinePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA007981186D818F00D16DFD /* JCSInlinePickerCell.h */; };
 		EA007984186D818F00D16DFD /* JCSInlinePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA007982186D818F00D16DFD /* JCSInlinePickerCell.m */; };
 		EA0183EE16EDA2C9005E1DAC /* JCSLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0183EC16EDA2C9005E1DAC /* JCSLocalization.h */; };
@@ -105,8 +107,6 @@
 		EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */; };
 		EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E416FD1052000BFCAA /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
-		EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */; };
-		EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */; };
 		EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */; };
 		EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */; };
 		EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */; };
@@ -150,6 +150,7 @@
 		BA66575ED0CC9C73FCDEA41F /* JCSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSActivityView.h; sourceTree = "<group>"; };
 		BA66576295DA73833E033FDB /* JCSMultiSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSMultiSelectionViewController.m; sourceTree = "<group>"; };
 		BA665775E77C2676BD22FD8E /* UIView+JCSLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JCSLoadView.h"; sourceTree = "<group>"; };
+		BA66577D1534E6FCFB283282 /* JCSSingleInputEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleInputEntryViewController.m; sourceTree = "<group>"; };
 		BA665784AB5C1334CD8F506B /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		BA6657D268355BAD171CB081 /* JCSSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSelectionCell.m; sourceTree = "<group>"; };
 		BA66582A84CB7A49BD2E9C95 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		BA665A69CF38B6955DF202FE /* JCSDecimalInputValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSDecimalInputValidation.m; sourceTree = "<group>"; };
 		BA665A7603653044442212E4 /* JCSFetchedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSFetchedCollectionViewController.h; sourceTree = "<group>"; };
 		BA665B06E9F463919A9080AC /* JCSInputValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSInputValidation.h; sourceTree = "<group>"; };
+		BA665B41EA3CA137C28A2D9B /* JCSSingleInputEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleInputEntryViewController.h; sourceTree = "<group>"; };
 		BA665B721A58E6F6A304DCCE /* JCSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSActivityView.m; sourceTree = "<group>"; };
 		BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleSelectionViewController.m; sourceTree = "<group>"; };
 		BA665B98D946537BBECA4EC1 /* NSString+JCSValidations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JCSValidations.m"; sourceTree = "<group>"; };
@@ -218,8 +220,6 @@
 		EAD0635016A092D000FF6BA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCSFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
-		EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSSingleInputEntryViewController.h; sourceTree = "<group>"; };
-		EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSSingleInputEntryViewController.m; sourceTree = "<group>"; };
 		EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSJSONNetworkOperation.h; sourceTree = "<group>"; };
 		EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSJSONNetworkOperation.m; sourceTree = "<group>"; };
 		EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNetworkOperation.h; sourceTree = "<group>"; };
@@ -378,6 +378,8 @@
 				BA665B7A2D91DA7995CA39A5 /* JCSSingleSelectionViewController.m */,
 				BA66599DEE31AF7801F012FC /* JCSTextEntryCell.h */,
 				BA6652EF0F9FFED685D4589F /* JCSTextEntryCell.m */,
+				BA665B41EA3CA137C28A2D9B /* JCSSingleInputEntryViewController.h */,
+				BA66577D1534E6FCFB283282 /* JCSSingleInputEntryViewController.m */,
 			);
 			path = UserInput;
 			sourceTree = "<group>";
@@ -456,7 +458,6 @@
 				EADB6BD61787208E00526DE0 /* Network */,
 				EAB6E421182FA3980001E094 /* PopupViews */,
 				EAB6E420182F9DB30001E094 /* UserInput */,
-				EAEB273016D0D35A00D126BD /* ViewControllers */,
 				EA5D033116CAD48E00D4D42D /* Views */,
 				EACDE6E016FD1052000BFCAA /* XML */,
 				EAD0635516A092D000FF6BA9 /* JCSFoundation.h */,
@@ -471,15 +472,6 @@
 			);
 			name = "Supporting Files";
 			path = JCSFoundation;
-			sourceTree = "<group>";
-		};
-		EAD70CEF16D1F9A90021EDCF /* Input */ = {
-			isa = PBXGroup;
-			children = (
-				EAD70CF016D1F9E40021EDCF /* JCSSingleInputEntryViewController.h */,
-				EAD70CF116D1F9E40021EDCF /* JCSSingleInputEntryViewController.m */,
-			);
-			path = Input;
 			sourceTree = "<group>";
 		};
 		EAD85B1F173A17D700C22211 /* Thirdparty */ = {
@@ -500,14 +492,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		EAEB273016D0D35A00D126BD /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				EAD70CEF16D1F9A90021EDCF /* Input */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -516,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
-				EAD70CF216D1F9E40021EDCF /* JCSSingleInputEntryViewController.h in Headers */,
 				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
@@ -559,6 +542,7 @@
 				BA665C9098F3C3D96B2091E2 /* JCSActivityView.h in Headers */,
 				BA66567A8DACBF70CFC8E356 /* JCSPopupAlertView.h in Headers */,
 				BA66575A5D125633CB26BD72 /* JCSFetchedTableViewController.h in Headers */,
+				BA665F9AFC8D9B7F92961E9E /* JCSSingleInputEntryViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD70CF316D1F9E40021EDCF /* JCSSingleInputEntryViewController.m in Sources */,
 				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
@@ -720,6 +703,7 @@
 				BA6656011A288DA8D2ADE47D /* JCSPopupView.m in Sources */,
 				BA6655BBABBDDE5B7B311E17 /* JCSPopupAlertView.m in Sources */,
 				BA665E1D99D1C7A7A5BB9466 /* JCSFetchedTableViewController.m in Sources */,
+				BA6650E79568F0DB121D39FF /* JCSSingleInputEntryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
