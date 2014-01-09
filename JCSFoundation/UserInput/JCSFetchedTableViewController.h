@@ -17,7 +17,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface JCSFetchedTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface JCSFetchedTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 @property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;

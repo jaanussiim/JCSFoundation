@@ -19,7 +19,7 @@
 
 NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellIdentifier";
 
-@interface JCSFetchedTableViewController () <NSFetchedResultsControllerDelegate>
+@interface JCSFetchedTableViewController ()
 
 @property (nonatomic, strong) NSFetchedResultsController *allObjects;
 
