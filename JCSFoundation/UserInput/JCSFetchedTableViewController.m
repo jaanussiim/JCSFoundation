@@ -27,6 +27,10 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 
 @implementation JCSFetchedTableViewController
 
+- (void)dealloc {
+    [self.allObjects setDelegate:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 

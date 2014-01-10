@@ -38,6 +38,10 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
     return self;
 }
 
+- (void)dealloc {
+    [self.allObjects setDelegate:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
