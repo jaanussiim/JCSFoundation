@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "Standard toolset classes and categories."
   spec.homepage     = "https://github.com/jaanussiim/JCSFoundation"
   spec.author       = { "Jaanus Siim" => "jaanus@jaanussiim.com" }
-  spec.source       = { :git => "https://github.com/jaanussiim/JCSFoundation.git" }#, :tag => "v#{spec.version}" }
+  spec.source       = { :git => "https://github.com/jaanussiim/JCSFoundation.git", :tag => "v#{spec.version}" }
   spec.license      = { :type => 'Apache 2', :file => 'LICENSE.txt' }
   spec.requires_arc = true
 
