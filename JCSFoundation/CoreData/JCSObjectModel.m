@@ -57,15 +57,6 @@
     return self;
 }
 
-- (id)sharedBackgroundInstance {
-    if (self.backgroundInstance) {
-        return self.backgroundInstance;
-    }
-
-    [self setBackgroundInstance:[self spawnBackgroundInstance]];
-    return self.backgroundInstance;
-}
-
 - (id)spawnBackgroundInstance {
     Class modelClass = [self class];
     JCSObjectModel *model = [[modelClass alloc] initPrivateModelWithCoordinator:self.persistentStoreCoordinator writerContext:self.managedObjectContext];

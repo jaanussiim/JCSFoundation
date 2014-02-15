@@ -26,7 +26,6 @@
 - (id)initWithDataModelName:(NSString *)modelName storeType:(NSString *)storeType;
 - (id)initWithDataModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType;
 
-- (id)sharedBackgroundInstance;
 - (id)spawnBackgroundInstance;
 
 - (void)saveContext;
