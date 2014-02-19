@@ -31,13 +31,6 @@ Pod::Spec.new do |spec|
     ss.ios.source_files = 'JCSFoundation/PopupViews/*.{h,m}'
   end
 
-  spec.subspec 'Network' do |ss|
-    ss.platform = :ios, '7.0'
-    ss.dependency 'JCSFoundation/Core'
-    ss.dependency 'AFNetworking', '~> 2.0.3'
-    ss.ios.source_files = 'JCSFoundation/Network/*.{h,m}'
-  end
-
   spec.subspec 'Image' do |ss|
     ss.platform = :ios, '6.0'
     ss.dependency 'JCSFoundation/Core'

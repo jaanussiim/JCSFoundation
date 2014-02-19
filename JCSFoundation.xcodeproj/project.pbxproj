@@ -107,10 +107,6 @@
 		EACDE6E716FD1053000BFCAA /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = EACDE6E316FD1052000BFCAA /* GDataXMLNode.h */; };
 		EACDE6E816FD1053000BFCAA /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EACDE6E416FD1052000BFCAA /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EAD0635116A092D000FF6BA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD0635016A092D000FF6BA9 /* Foundation.framework */; };
-		EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */; };
-		EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */; };
-		EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */; };
-		EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */; };
 		EAEB276916D11BE500D126BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEB276816D11BE500D126BD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,10 +216,6 @@
 		EAD0635016A092D000FF6BA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAD0635416A092D000FF6BA9 /* JCSFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCSFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		EAD0635516A092D000FF6BA9 /* JCSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSFoundation.h; sourceTree = "<group>"; };
-		EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSJSONNetworkOperation.h; sourceTree = "<group>"; };
-		EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSJSONNetworkOperation.m; sourceTree = "<group>"; };
-		EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNetworkOperation.h; sourceTree = "<group>"; };
-		EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNetworkOperation.m; sourceTree = "<group>"; };
 		EAEB276816D11BE500D126BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -455,7 +447,6 @@
 				EA69985F16AD3DB400B20033 /* Extensions */,
 				EA222E64173B661800C5D613 /* Image */,
 				EA0183EB16EDA2AB005E1DAC /* Localization */,
-				EADB6BD61787208E00526DE0 /* Network */,
 				EAB6E421182FA3980001E094 /* PopupViews */,
 				EAB6E420182F9DB30001E094 /* UserInput */,
 				EA5D033116CAD48E00D4D42D /* Views */,
@@ -481,17 +472,6 @@
 			path = Thirdparty;
 			sourceTree = "<group>";
 		};
-		EADB6BD61787208E00526DE0 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				EAD984D91787F899005D3D18 /* JCSJSONNetworkOperation.h */,
-				EAD984DA1787F899005D3D18 /* JCSJSONNetworkOperation.m */,
-				EADB6BD7178720A000526DE0 /* JCSNetworkOperation.h */,
-				EADB6BD8178720A000526DE0 /* JCSNetworkOperation.m */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -513,8 +493,6 @@
 				EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */,
 				EA37035A1767503900FBD4F3 /* NSMutableString+JCSIssues.h in Headers */,
 				EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */,
-				EADB6BD9178720A000526DE0 /* JCSNetworkOperation.h in Headers */,
-				EAD984DB1787F899005D3D18 /* JCSJSONNetworkOperation.h in Headers */,
 				BA66586F268225D2342670D6 /* JCSDropDownCell.h in Headers */,
 				BA665E9C22339CDC9E58B703 /* JCSTextEntryCell.h in Headers */,
 				BA6659AF23831BA403EFF3E2 /* JCSDecimalInputValidation.h in Headers */,
@@ -675,8 +653,6 @@
 				EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */,
 				EA37035B1767503900FBD4F3 /* NSMutableString+JCSIssues.m in Sources */,
 				EA92D96B176A5C2D0078D0C4 /* JCSDateEntryCell.m in Sources */,
-				EADB6BDA178720A000526DE0 /* JCSNetworkOperation.m in Sources */,
-				EAD984DC1787F899005D3D18 /* JCSJSONNetworkOperation.m in Sources */,
 				BA665DAD035A9126EE5CB7B7 /* JCSDropDownCell.m in Sources */,
 				BA665A801291D363D1A7D969 /* JCSTextEntryCell.m in Sources */,
 				BA6658765B9B952015CB7804 /* JCSDecimalInputValidation.m in Sources */,
