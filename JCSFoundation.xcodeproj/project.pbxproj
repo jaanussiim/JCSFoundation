@@ -94,8 +94,6 @@
 		EA59299E175A22A5007C0072 /* JCSNoCaretTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */; };
 		EA59299F175A22A5007C0072 /* JCSNoCaretTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */; };
 		EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD0635516A092D000FF6BA9 /* JCSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA71D11016D499950059CC4D /* JCSObjectModel.h */; };
-		EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA71D11116D499950059CC4D /* JCSObjectModel.m */; };
 		EA800B751805247F0026C670 /* JCSCoreDataChangeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */; };
 		EA800B761805247F0026C670 /* JCSCoreDataChangeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */; };
 		EA92D96A176A5C2D0078D0C4 /* JCSDateEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */; };
@@ -199,8 +197,6 @@
 		EA5094B116FA3BE10064B88A /* NSDate+JCSCalculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JCSCalculations.m"; sourceTree = "<group>"; };
 		EA59299C175A22A5007C0072 /* JCSNoCaretTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSNoCaretTextField.h; sourceTree = "<group>"; };
 		EA59299D175A22A5007C0072 /* JCSNoCaretTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSNoCaretTextField.m; sourceTree = "<group>"; };
-		EA71D11016D499950059CC4D /* JCSObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSObjectModel.h; sourceTree = "<group>"; };
-		EA71D11116D499950059CC4D /* JCSObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSObjectModel.m; sourceTree = "<group>"; };
 		EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCoreDataChangeAction.h; sourceTree = "<group>"; };
 		EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
 		EA92D968176A5C2D0078D0C4 /* JCSDateEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSDateEntryCell.h; sourceTree = "<group>"; };
@@ -303,8 +299,6 @@
 			children = (
 				EA800B731805247F0026C670 /* JCSCoreDataChangeAction.h */,
 				EA800B741805247F0026C670 /* JCSCoreDataChangeAction.m */,
-				EA71D11016D499950059CC4D /* JCSObjectModel.h */,
-				EA71D11116D499950059CC4D /* JCSObjectModel.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -480,7 +474,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA69987316AD42B700B20033 /* JCSFoundation.h in Headers */,
-				EA71D11216D499950059CC4D /* JCSObjectModel.h in Headers */,
 				EAAEEFFE16D7465F008CBBA2 /* UIView+JCSFindParent.h in Headers */,
 				EA2347B716E349DB000C63A0 /* JCSPhotoCaptureView.h in Headers */,
 				EA2347C916E46E3D000C63A0 /* JCSCameraCapture.h in Headers */,
@@ -639,7 +632,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA71D11316D499950059CC4D /* JCSObjectModel.m in Sources */,
 				EAAEEFFF16D7465F008CBBA2 /* UIView+JCSFindParent.m in Sources */,
 				EA2347B816E349DB000C63A0 /* JCSPhotoCaptureView.m in Sources */,
 				EA007984186D818F00D16DFD /* JCSInlinePickerCell.m in Sources */,
