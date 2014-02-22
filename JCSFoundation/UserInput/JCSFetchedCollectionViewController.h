@@ -26,5 +26,6 @@
 - (NSFetchedResultsController *)createFetchedController;
 - (void)tappedOnObject:(id)tapped;
 - (void)configureCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
+- (void)contentChanged;
 
 @end

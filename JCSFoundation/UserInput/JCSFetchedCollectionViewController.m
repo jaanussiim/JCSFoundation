@@ -133,7 +133,13 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
                     break;
             }
         }
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        [self contentChanged];
+    }];
+}
+
+- (void)contentChanged {
+
 }
 
 @end
