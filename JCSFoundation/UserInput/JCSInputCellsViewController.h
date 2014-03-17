@@ -20,7 +20,7 @@
 
 @interface JCSInputCellsViewController : UITableViewController
 
-- (void)addCellForPresentation:(UITableViewCell *)cell;
+- (NSIndexPath *)addCellForPresentation:(UITableViewCell *)cell;
 - (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath;
 - (void)closeSection;
 - (void)addInlinePickerCell:(JCSInlinePickerCell *)pickerCell forIndexPath:(NSIndexPath *)indexPath;

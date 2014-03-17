@@ -107,7 +107,8 @@
     return CGRectGetHeight(cell.frame);
 }
 
-- (void)addCellForPresentation:(UITableViewCell *)cell {
+- (NSIndexPath *)addCellForPresentation:(UITableViewCell *)cell {
+    NSUInteger index = [self.openSection count];
     [self.openSection addObject:cell];
 
     if ([cell isKindOfClass:[JCSTextEntryCell class]]) {
@@ -117,6 +118,8 @@
             [self moveFocusToNextEntryCell:textCell];
         }];
     }
+
+    return [NSIndexPath indexPathForRow:index inSection:self.presentedSections.count - 1];
 }
 
 - (void)moveFocusToNextEntryCell:(UITableViewCell *)cell {
