@@ -95,6 +95,7 @@
     if ([self isCellEditable:cell]) {
         [self moveFocusToCell:cell];
     } else if ([self hasInlinePickerAttachedAtIndexPath:indexPath]) {
+        [UIApplication dismissKeyboard];
         [self handleInlinePickerForIndexPath:indexPath];
     } else {
         [UIApplication dismissKeyboard];
