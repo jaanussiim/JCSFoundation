@@ -18,10 +18,12 @@
 
 @class NSFetchedResultsController;
 
-@interface JCSFetchedCollectionViewController : UICollectionViewController
+@interface JCSFetchedCollectionViewController : UIViewController
 
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 @property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
+@property (nonatomic, strong, readonly) UICollectionView *collectionView;
+
 
 - (NSFetchedResultsController *)createFetchedController;
 - (void)tappedOnObject:(id)tapped;

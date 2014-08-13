@@ -21,10 +21,11 @@
 
 NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollectionViewCellIdentifier";
 
-@interface JCSFetchedCollectionViewController () <NSFetchedResultsControllerDelegate>
+@interface JCSFetchedCollectionViewController () <NSFetchedResultsControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *allObjects;
 @property (nonatomic, strong) NSMutableArray *changeActions;
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
 @end
 
