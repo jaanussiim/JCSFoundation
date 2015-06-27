@@ -220,6 +220,10 @@
     self.pickerCells[indexPath] = pickerCell;
 }
 
+- (NSUInteger)currentOpenSection {
+    return self.presentedSections.count - 1;
+}
+
 - (BOOL)hasInlinePickerAttachedAtIndexPath:(NSIndexPath *)indexPath {
     NSIndexPath *checked = [self indexPathWithoutPossiblePickerOffset:indexPath];
     return self.pickerCells[checked] != nil;

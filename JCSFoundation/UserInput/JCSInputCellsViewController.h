@@ -24,5 +24,6 @@
 - (void)tappedCellAtIndexPath:(NSIndexPath *)indexPath;
 - (void)closeSection;
 - (void)addInlinePickerCell:(JCSInlinePickerCell *)pickerCell forIndexPath:(NSIndexPath *)indexPath;
+- (NSUInteger)currentOpenSection;
 
 @end
