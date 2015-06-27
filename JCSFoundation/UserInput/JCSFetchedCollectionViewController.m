@@ -68,6 +68,10 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
     }
 }
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return [self.allObjects.sections count];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.allObjects sections] objectAtIndex:(NSUInteger) section];
     return [sectionInfo numberOfObjects];
@@ -141,6 +145,21 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
 
 - (void)contentChanged {
 
+}
+
+- (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller {
+    self.allObjects = controller;
+
+    NSError *fetchError = nil;
+    [self.allObjects performFetch:&fetchError];
+    if (fetchError) {
+        NSLog(@"Fetch error:%@", fetchError);
+    }
+
+    [self.collectionView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self contentChanged];
+    });
 }
 
 @end
