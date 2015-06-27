@@ -156,10 +156,11 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
         NSLog(@"Fetch error:%@", fetchError);
     }
 
-    [self.collectionView reloadData];
-    dispatch_async(dispatch_get_main_queue(), ^{
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.allObjects.sections.count)]];
+    } completion:^(BOOL finished) {
         [self contentChanged];
-    });
+    }];
 }
 
 @end
