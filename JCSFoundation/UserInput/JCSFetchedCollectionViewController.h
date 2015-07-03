@@ -23,6 +23,7 @@
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 @property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
 @property (nonatomic, strong, readonly) UICollectionView *collectionView;
+@property (nonatomic, assign) BOOL ignoreOffScreenUpdates;
 
 
 - (NSFetchedResultsController *)createFetchedController;

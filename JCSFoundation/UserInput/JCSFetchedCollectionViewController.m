@@ -119,6 +119,8 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.collectionView performBatchUpdates:^{
+        NSArray *visibleItems = self.collectionView.indexPathsForVisibleItems;
+
         NSArray *actions = [NSArray arrayWithArray:self.changeActions];
         JCSFLog(@"Perform %d update actions", [actions count]);
         for (JCSCoreDataChangeAction *action in actions) {
@@ -133,9 +135,13 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
                 case NSFetchedResultsChangeMove:
                     [self.collectionView moveItemAtIndexPath:action.indexPath toIndexPath:action.nextIndexPath];
                     break;
-                case NSFetchedResultsChangeUpdate:
+                case NSFetchedResultsChangeUpdate: {
+                    if (self.ignoreOffScreenUpdates && ![visibleItems containsObject:action.indexPath]) {
+                        continue;
+                    }
                     [self.collectionView reloadItemsAtIndexPaths:@[action.indexPath]];
                     break;
+                }
             }
         }
     } completion:^(BOOL finished) {
