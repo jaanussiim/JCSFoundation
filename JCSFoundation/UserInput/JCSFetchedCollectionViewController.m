@@ -155,6 +155,7 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
 
 - (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller {
     self.allObjects = controller;
+    [self.allObjects setDelegate:self];
 
     NSError *fetchError = nil;
     [self.allObjects performFetch:&fetchError];
