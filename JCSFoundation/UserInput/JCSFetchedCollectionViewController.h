@@ -31,5 +31,7 @@
 - (void)configureCell:(UICollectionViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object;
 - (void)contentChanged;
 - (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller;
+- (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller fetch:(BOOL)fetch;
+- (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors;
 
 @end

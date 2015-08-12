@@ -154,8 +154,31 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
 }
 
 - (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller {
+    [self changeFetchedControllerTo:controller fetch:YES];
+}
+
+- (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller fetch:(BOOL)fetch {
     self.allObjects = controller;
     [self.allObjects setDelegate:self];
+
+    if (fetch) {
+        NSError *fetchError = nil;
+        [self.allObjects performFetch:&fetchError];
+        if (fetchError) {
+            NSLog(@"Fetch error:%@", fetchError);
+        }
+    }
+
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.allObjects.sections.count)]];
+    } completion:^(BOOL finished) {
+        [self contentChanged];
+    }];
+}
+
+- (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors {
+    [self.allObjects.fetchRequest setPredicate:predicate];
+    [self.allObjects.fetchRequest setSortDescriptors:descriptors];
 
     NSError *fetchError = nil;
     [self.allObjects performFetch:&fetchError];
@@ -169,5 +192,6 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
         [self contentChanged];
     }];
 }
+
 
 @end
