@@ -177,6 +177,10 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
 }
 
 - (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors {
+    [self updateFetchedControllerWithPredicate:predicate sortDescriptors:descriptors animate:YES];
+}
+
+- (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors animate:(BOOL)animate {
     [self.allObjects.fetchRequest setPredicate:predicate];
     [self.allObjects.fetchRequest setSortDescriptors:descriptors];
 
@@ -186,11 +190,16 @@ NSString *const kJCSFetchedCollectionViewCellIdentifier = @"JCSFetchedCollection
         NSLog(@"Fetch error:%@", fetchError);
     }
 
-    [self.collectionView performBatchUpdates:^{
-        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.allObjects.sections.count)]];
-    } completion:^(BOOL finished) {
+    if (animate) {
+        [self.collectionView performBatchUpdates:^{
+            [self.collectionView reloadSections:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, self.allObjects.sections.count)]];
+        } completion:^(BOOL finished) {
+            [self contentChanged];
+        }];
+    } else {
+        [self.collectionView reloadData];
         [self contentChanged];
-    }];
+    }
 }
 
 

@@ -33,5 +33,6 @@
 - (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller;
 - (void)changeFetchedControllerTo:(NSFetchedResultsController *)controller fetch:(BOOL)fetch;
 - (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors;
+- (void)updateFetchedControllerWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)descriptors animate:(BOOL)animate;
 
 @end
