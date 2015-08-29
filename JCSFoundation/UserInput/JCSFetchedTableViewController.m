@@ -22,6 +22,8 @@ NSString *const kJCSFetchedTableViewCellIdentifier = @"JCSFetchedTableViewCellId
 @interface JCSFetchedTableViewController ()
 
 @property (nonatomic, strong) NSFetchedResultsController *allObjects;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 
 @end
 

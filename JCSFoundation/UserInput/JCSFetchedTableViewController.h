@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) UINib *fetchedEntityCellNib;
 @property (nonatomic, strong, readonly) NSFetchedResultsController *allObjects;
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong, readonly) UITableView *tableView;
 
 - (NSFetchedResultsController *)createFetchedController;
 - (void)tappedOnObject:(id)tapped;
