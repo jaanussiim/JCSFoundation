@@ -15,7 +15,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "JCSAlertView.h"
+#import <JCSFoundation/JCSAlertView.h>
 
 @interface JCSQuickAlertView : UIAlertView <JCSAlertView>
 
